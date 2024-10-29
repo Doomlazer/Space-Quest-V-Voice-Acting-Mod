@@ -8,6 +8,10 @@ To install, get a copy of Space Quest V from the Space Quest Collection, and run
 
 After installation, download the [RESOURCE.AUD](https://huggingface.co/cdb13/Space-Quest-V-Voice-Acting-Mod/blob/main/RESOURCE.AUD) file, which contains the synthetized voices, and add it inside the Space Quest 5 folder.
 
+## Examples
+
+Examples can be found in the [demo](https://github.com/cdb-boop/Space-Quest-V-Voice-Acting-Mod/tree/main/demo) folder.
+
 ## Synthetic Voices
 
 Ordered by vocal appearance.
