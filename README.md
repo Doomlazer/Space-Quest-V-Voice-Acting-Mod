@@ -4,6 +4,8 @@ I added full voice acting to Space Quest V. Fixed some bugs along the way.
 
 ## Installation
 
+Only DOSBOX is supported. ScummVM fails to show Messenger text boxes, even with overrides, when audio is played. Text is required for branching dialogue.
+
 To install, get a copy of Space Quest V from the Space Quest Collection, and run the `exe` found in the [Releases](https://github.com/cdb-boop/Space-Quest-V-Voice-Acting-Mod/releases). Provide the `exe` with the path to your Space Quest 5 folder.
 
 After installation, download the [RESOURCE.AUD](https://huggingface.co/cdb13/Space-Quest-V-Voice-Acting-Mod/blob/main/RESOURCE.AUD) file, which contains the synthetized voices, and add it inside the Space Quest 5 folder.
