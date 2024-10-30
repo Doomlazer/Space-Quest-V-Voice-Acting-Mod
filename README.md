@@ -8,6 +8,8 @@ To install, get a copy of Space Quest V from the Space Quest Collection, and run
 
 After installation, download the ~500MB [RESOURCE.AUD](https://huggingface.co/cdb13/Space-Quest-V-Voice-Acting-Mod/blob/main/RESOURCE.AUD) file, which contains the synthetized voices, and add it inside the Space Quest 5 folder.
 
+Note that the game must be played with both text and audio, as the branching dialog requires text output from the Messager.
+
 ## Examples
 
 Example of synthetized voices can be found in the [demo](https://github.com/cdb-boop/Space-Quest-V-Voice-Acting-Mod/tree/main/demo) folder.
@@ -57,6 +59,7 @@ Ordered by vocal appearance.
 
 ### Unresolved bugs
 
+* The game must be played with both text and audio.
 * Dialog in the "Captain's Log" introduction does not move forward automatically.
 * Dialog in the inventory does not move forward automatically.
 * Branching dialog on Genetix is missing Roger's voiced message for selection.
