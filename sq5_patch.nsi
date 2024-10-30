@@ -38,19 +38,20 @@ Section
   Delete "MESSAGE.MAP"
   Delete "RESOURCE.MSG"
 
-  ; Remove all patch files
-  ;Delete "$INSTDIR\*.FON"
-  ;Delete "$INSTDIR\*.fon"
-  ;Delete "$INSTDIR\*.P56"
-  ;Delete "$INSTDIR\*.p56"
-  ;Delete "$INSTDIR\*.V56"
-  ;Delete "$INSTDIR\*.v56"
+  ; Remove ALL patch files
+  ; Is this case-sensitive?
+  Delete "$INSTDIR\*.FON"
+  Delete "$INSTDIR\*.fon"
+  Delete "$INSTDIR\*.P56"
+  Delete "$INSTDIR\*.p56"
+  Delete "$INSTDIR\*.V56"
+  Delete "$INSTDIR\*.v56"
   Delete "$INSTDIR\*.HEP"
   Delete "$INSTDIR\*.hep"
   Delete "$INSTDIR\*.SCR"
   Delete "$INSTDIR\*.scr"
-  ;Delete "$INSTDIR\*.TEX"
-  ;Delete "$INSTDIR\*.tex"
+  Delete "$INSTDIR\*.TEX"
+  Delete "$INSTDIR\*.tex"
 
   ; Update Sierra engine
   !insertmacro Patch "SIERRA.EXE" "SIERRA.EXE" ".\patch\SIERRA.EXE.PAT"

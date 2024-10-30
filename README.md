@@ -4,13 +4,9 @@ I added full voice acting to Space Quest V. Fixed some bugs along the way.
 
 ## Installation
 
-To install, get a copy of Space Quest V from the Space Quest Collection, and run the `exe` found in the [Releases](https://github.com/cdb-boop/Space-Quest-V-Voice-Acting-Mod/releases). Provide the `exe` with the path to your Space Quest 5 folder.
+To install, get a copy of Space Quest V from the Space Quest Collection, and run the `exe` found in the [Releases](https://github.com/cdb-boop/Space-Quest-V-Voice-Acting-Mod/releases). Provide the `exe` with the path to your Space Quest 5 folder. The installer should remove all patch files, as they may cause issues running the game.
 
-After installation, download the [RESOURCE.AUD](https://huggingface.co/cdb13/Space-Quest-V-Voice-Acting-Mod/blob/main/RESOURCE.AUD) file, which contains the synthetized voices, and add it inside the Space Quest 5 folder.
-
-### ScummVM
-
-Currently, only DOSBOX is supported, as text is required when selecting branching dialog. ScummVM fails to show Messenger text boxes, even with overriding audio to use both audio and text. If you think you know what is wrong, please reach out.
+After installation, download the ~500MB [RESOURCE.AUD](https://huggingface.co/cdb13/Space-Quest-V-Voice-Acting-Mod/blob/main/RESOURCE.AUD) file, which contains the synthetized voices, and add it inside the Space Quest 5 folder.
 
 ## Examples
 
@@ -61,7 +57,6 @@ Ordered by vocal appearance.
 
 ### Unresolved bugs
 
-* ScummVM not showing both audio and text.
 * Dialog in the "Captain's Log" introduction does not move forward automatically.
 * Dialog in the inventory does not move forward automatically.
 * Branching dialog on Genetix is missing Roger's voiced message for selection.
