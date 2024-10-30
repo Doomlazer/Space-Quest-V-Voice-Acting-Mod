@@ -10,6 +10,8 @@ After installation, download the ~500MB [RESOURCE.AUD](https://huggingface.co/cd
 
 Note that the game must be played with both text and audio, as the branching dialog requires text output from the Messager.
 
+There is currently an issue with ScummVM. If you load a saved game, the Messager will no longer display text.
+
 ## Examples
 
 Example of synthetized voices can be found in the [demo](https://github.com/cdb-boop/Space-Quest-V-Voice-Acting-Mod/tree/main/demo) folder.
