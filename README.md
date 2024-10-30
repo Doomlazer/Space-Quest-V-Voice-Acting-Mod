@@ -4,11 +4,13 @@ I added full voice acting to Space Quest V. Fixed some bugs along the way.
 
 ## Installation
 
-Only DOSBOX is supported. ScummVM fails to show Messenger text boxes, even with overrides, when audio is played. Text is required for branching dialogue.
-
 To install, get a copy of Space Quest V from the Space Quest Collection, and run the `exe` found in the [Releases](https://github.com/cdb-boop/Space-Quest-V-Voice-Acting-Mod/releases). Provide the `exe` with the path to your Space Quest 5 folder.
 
 After installation, download the [RESOURCE.AUD](https://huggingface.co/cdb13/Space-Quest-V-Voice-Acting-Mod/blob/main/RESOURCE.AUD) file, which contains the synthetized voices, and add it inside the Space Quest 5 folder.
+
+### ScummVM
+
+Currently, only DOSBOX is supported, as text is required when selecting branching dialog. ScummVM fails to show Messenger text boxes, even with overriding audio to use both audio and text. If you think you know what is wrong, please reach out.
 
 ## Examples
 
@@ -32,7 +34,7 @@ Ordered by vocal appearance.
 | Ambassador Beatrice "Bea" Wankmeister | Rosella (KQ7) | Maureen McVerry | Tortoise-TTS, RVC |
 | Cadet Splock | Elmo Pug (SQ6) | Doug Boyd | F5-TTS |
 | Admiral Wil'm Pol'k | Larry Laffer (LSL7) | Jan Rabson | Tortoise-TTS, RVC |
-| Rumproast Droole | Commander Kielbasa? Doctor Beleaux? | Jarion Monroe | Tortoise-TTS, RVC pitch +6 |
+| Rumproast Droole | Commander Kielbasa? Doctor Beleaux? (SQ7) | Jarion Monroe | Tortoise-TTS, RVC pitch +6 |
 | Gowitda Florence "Flo" Qwerty | Jamie Lee Coitus (LSL7) | Mary Kay Bergman | Tortoise-TTS, RVC |
 | Clifford "Cliffy" Crawford | Desk Sergeant Frick (GK1) | Jim Cummings | Tortoise-TTS, RVC |
 | Clifford "Cliffy" Crawford | Desk Sergeant Frick (GK1) | Jim Cummings | Tortoise-TTS, RVC |
@@ -40,7 +42,7 @@ Ordered by vocal appearance.
 | "Maggot" | Fester Blats (SQ6) | Joe Paulino | E2-TTS |
 | Cocktail Waitress | Waitron (SQ6) | Lucille Bliss | E2-TTS |
 | Nelo Jones | Johnson | Kevin Michael Richardson | Tortoise-TTS, RVC |
-|  Detention Guard #1 | Franklin Mosley (GK1) | Mark Hamill | E2-TTS |
+|  Detention Guard #1 | Detective Franklin Mosley (GK1) | Mark Hamill | E2-TTS |
 |  Detention Guard #2 | Daryl (LSL6) | Ed Gilbert | E2-TTS |
 |  Angry Bar Patron | Djurkwhad (SQ6) | Joe Paulino | E2-TTS |
 | Mutant Colonist (Harry Kerry?) | Pa Conshohocken (SQ6) | Charles Martinet | E2-TTS |
@@ -106,7 +108,7 @@ Feature (950)
 
 ### Adding missing voicing acting
 
-* Changed `global90` from 1 to 3 (b0001 text, b0010 voice, bit flags). NOTE: This change doesn't seem to do anything in DOSBOX and overriding the audio settings to both audio and text in ScummVM does not show text (which is required for multiple choice selection).
+* Changed `global90` from 1 to 3 (flags `b0001` = text, `b0010` = voice). NOTE: Changing this value doesn't seem to do anything in DOSBOX. Overriding the audio settings to use both audio and text in ScummVM fails to show the text boxes, which is required for selecting branching dialog.
 * Added voice acting to death room message types. (deathRoom)
 * Added voice acting to captain's log and bridge simulator in the introduction (rm104).
 * Added voice acting to ending congratulation scene (rm1041).
