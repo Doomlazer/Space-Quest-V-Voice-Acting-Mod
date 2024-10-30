@@ -1,3 +1,5 @@
+# WIP: Attempting to reproduce SCI Companion result in DOSBOX.
+
 # Space-Quest-V-Voice-Acting-Mod
 
 I added full voice acting to Space Quest V. Fixed some bugs along the way.
@@ -9,8 +11,6 @@ To install, get a copy of Space Quest V from the Space Quest Collection, and run
 After installation, download the ~500MB [RESOURCE.AUD](https://huggingface.co/cdb13/Space-Quest-V-Voice-Acting-Mod/blob/main/RESOURCE.AUD) file, which contains the synthetized voices, and add it inside the Space Quest 5 folder.
 
 Note that the game must be played with both text and audio, as the branching dialog requires text output from the Messager.
-
-There is currently an issue with ScummVM. If you load a saved game, the Messager will no longer display text.
 
 ## Examples
 
