@@ -59,6 +59,13 @@ Ordered by vocal appearance.
 
 ## Code
 
+### Unresolved bugs
+
+* ScummVM not showing both audio and text.
+* Dialog in the "Captain's Log" introduction does not move forward automatically.
+* Dialog in the inventory does not move forward automatically.
+* Branching dialog on Genetix is missing Roger's voiced message for selection.
+
 ### Basic audio fixes
 
 * Used `AUDBLAST.DRV`, `SIERRA.EXE` and `INTERP.ERR` files found in the SCI Companion's SCI1.1 TemplateGame.
@@ -140,7 +147,7 @@ Feature (950)
 
 ### Timing bug fixes
 
-* Added `Wait(1)` to EVA pod minigame to limit fps to 60 to prevent issues at higher cycle rates. The thrust level's `doIt` loop appeared to be polled every possible cycle. (FloatObj)
+* Added `Wait(1)` to EVA pod minigame to limit FPS to 60 to prevent issues at higher cycle rates. The thrust level's `doit` method appears to be polled every possible cycle. (FloatObj)
 * Adjusted code in various places to change `cycles` to ticks (usually where cycles > 1, but sometimes where cycles = 1) and remove or correct setting `cycleSpeed` or `moveSpeed` to 0 where appropriate to allow for better default speeds for added compatibility with high cycle cpus.
   * beaClimbsOut, cliffyGoesWith, deathRoom, fuse, genetix, keyStuff_242, keyStuff, LockDevice, MyPuke, rm100, rm104, rm106, rm107, rm110, rm115, rm117, rm121, rm127, rm132, rm133, rm135, rm166, rm200, rm206, rm212, rm215, rm225, rm250, rm280, rm300, rm305, rm310, rm315, rm420, rm500, rm510, rm640, rm740, rm750, rm760, rm1050, rm1060, sInTheAsteroids, sOpenDoors, sWD40Attacks
 
