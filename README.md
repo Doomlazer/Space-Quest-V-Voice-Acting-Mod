@@ -12,7 +12,7 @@ After installation, download the [RESOURCE.AUD](https://huggingface.co/cdb13/Spa
 
 ## Examples
 
-Examples can be found in the [demo](https://github.com/cdb-boop/Space-Quest-V-Voice-Acting-Mod/tree/main/demo) folder.
+Example of synthetized voices can be found in the [demo](https://github.com/cdb-boop/Space-Quest-V-Voice-Acting-Mod/tree/main/demo) folder.
 
 ## Synthetic Voices
 
