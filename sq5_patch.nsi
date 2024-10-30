@@ -27,13 +27,13 @@ Section
   SetOutPath $INSTDIR
 
   ; Update sound effects file
-  !insertmacro Patch "RESOURCE.AUD" "RESOURCE.SFX" ".\patch\RESOURCE.AUD.PAT"
+  !insertmacro Patch "RESOURCE.AUD" "resource.sfx" ".\patch\RESOURCE.AUD.PAT"
 
   ; Update non-audio package file
-  !insertmacro Patch "RESOURCE.000" "RESOURCE.000" ".\patch\RESOURCE.000.PAT"
+  !insertmacro Patch "RESOURCE.000" "resource.000" ".\patch\RESOURCE.000.PAT"
 
   ; Update mapping files
-  !insertmacro Patch "RESOURCE.MAP" "RESOURCE.MAP" ".\patch\RESOURCE.MAP.PAT"
+  !insertmacro Patch "RESOURCE.MAP" "resource.map" ".\patch\RESOURCE.MAP.PAT"
   Delete "65535.MAP"
   Delete "MESSAGE.MAP"
   Delete "RESOURCE.MSG"
@@ -57,9 +57,6 @@ Section
   !insertmacro Patch "SIERRA.EXE" "SIERRA.EXE" ".\patch\SIERRA.EXE.PAT"
   !insertmacro Patch "INTERP.ERR" "INTERP.ERR" ".\patch\INTERP.ERR.PAT"
   !insertmacro Patch "AUDBLAST.DRV" "AUDBLAST.DRV" ".\patch\AUDBLAST.DRV.PAT"
-
-  ; Delete self
-  Delete "$INSTDIR\sq5_message_audio_patch_v1.exe"
 
   ; Remind the user to download the audio
   MessageBox MB_OK "Patch complete! Remember to download and add 'RESOURCE.AUD' to hear vocals. You may also need to set 'audioDrv' to 'AUDBLAST.DRV' in your .CFG file."
