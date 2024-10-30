@@ -6,7 +6,7 @@ I added full voice acting to Space Quest V. Fixed some bugs along the way.
 
 To install, get a copy of Space Quest V from the Space Quest Collection, and run the `exe` found in the [Releases](https://github.com/cdb-boop/Space-Quest-V-Voice-Acting-Mod/releases). Provide the `exe` with the path to your Space Quest 5 folder. The installer should remove all patch files, as they may cause issues running the game.
 
-After installation, download the ~500MB [RESOURCE.AUD](https://huggingface.co/cdb13/Space-Quest-V-Voice-Acting-Mod/blob/main/RESOURCE.AUD) file, which contains the synthetized voices, and add it inside the Space Quest 5 folder.
+After installation, download the ~500MB [resource.aud](https://huggingface.co/cdb13/Space-Quest-V-Voice-Acting-Mod/blob/main/resource.aud) file, which contains the synthetized voices, and add it inside the Space Quest 5 folder.
 
 Note that the game must be played with both text and audio, as the branching dialog requires text output from the Messager.
 
