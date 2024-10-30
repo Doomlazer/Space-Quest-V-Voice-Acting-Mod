@@ -41,7 +41,7 @@ Ordered by vocal appearance.
 | WD40 | Thunderbird (LSL6) | Iona Morris | Tortoise-TTS, RVC pitch -20 |
 | "Maggot" | Fester Blats (SQ6) | Joe Paulino | E2-TTS |
 | Cocktail Waitress | Waitron (SQ6) | Lucille Bliss | E2-TTS |
-| Nelo Jones | Johnson | Kevin Michael Richardson | Tortoise-TTS, RVC |
+| Nelo Jones | Johnson (LSL7) | Kevin Michael Richardson | Tortoise-TTS, RVC |
 |  Detention Guard #1 | Detective Franklin Mosley (GK1) | Mark Hamill | E2-TTS |
 |  Detention Guard #2 | Daryl (LSL6) | Ed Gilbert | E2-TTS |
 |  Angry Bar Patron | Djurkwhad (SQ6) | Joe Paulino | E2-TTS |
