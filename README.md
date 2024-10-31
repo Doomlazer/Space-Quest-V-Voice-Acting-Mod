@@ -42,10 +42,10 @@ Ordered by vocal appearance.
 | "Maggot" | Fester Blats (SQ6) | Joe Paulino | E2-TTS |
 | Cocktail Waitress | Waitron (SQ6) | Lucille Bliss | E2-TTS |
 | Nelo Jones | Johnson (LSL7) | Kevin Michael Richardson | Tortoise-TTS, RVC |
-|  Detention Guard #1 | Detective Franklin Mosley (GK1) | Mark Hamill | E2-TTS |
-|  Detention Guard #2 | Daryl (LSL6) | Ed Gilbert | E2-TTS |
-|  Angry Bar Patron | Djurkwhad (SQ6) | Joe Paulino | E2-TTS |
-| Mutant Colonist (Harry Kerry?) | Pa Conshohocken (SQ6) | Charles Martinet | E2-TTS |
+| Detention Guard #1 | Detective Franklin Mosley (GK1) | Mark Hamill | E2-TTS |
+| Detention Guard #2 | Daryl (LSL6) | Ed Gilbert | E2-TTS |
+| Angry Bar Patron | Djurkwhad (SQ6) | Joe Paulino | E2-TTS |
+| Harry Kerry | Pa Conshohocken (SQ6) | Charles Martinet | E2-TTS |
 | Slep | Freddy Pharkas (FP1) | Cameron Arthur Clarke | Tortoise-TTS, RVC |
 | Crumpella | Wriggley (SQ6) | Carol Bach y Rita | F5-TTS |
 
