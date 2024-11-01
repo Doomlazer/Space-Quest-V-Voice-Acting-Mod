@@ -2,7 +2,7 @@
 Name "Space Quest 5 Message Audio Patch"
 
 ; The file to write
-OutFile "sq5_message_audio_patch_v1.exe"
+OutFile "sq5_message_audio_patch.exe"
 
 ; The default installation directory
 InstallDir $INSTDIR
@@ -57,6 +57,7 @@ Section
   !insertmacro Patch "SIERRA.EXE" "SIERRA.EXE" ".\patch\SIERRA.EXE.PAT"
   !insertmacro Patch "INTERP.ERR" "INTERP.ERR" ".\patch\INTERP.ERR.PAT"
   !insertmacro Patch "AUDBLAST.DRV" "AUDBLAST.DRV" ".\patch\AUDBLAST.DRV.PAT"
+  !insertmacro Patch "AUDPRO16.DRV" "AUDPRO16.DRV" ".\patch\AUDPRO16.DRV.PAT"
 
   ; Remind the user to download the audio
   MessageBox MB_OK "Patch complete! Remember to download and add 'RESOURCE.AUD' to hear vocals. You may also need to set 'audioDrv' to 'AUDBLAST.DRV' in your .CFG file."
