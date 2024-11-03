@@ -136,11 +136,12 @@ Feature (950)
 
 ### Decompilation or general bug fixes
 
-* Fix bug where Roger holds face hugger close up forever.
-* Fix bug where Cliffy is trying to help Roger up from the splits after getting the cloaking device.
-* Fix bug where Roger walked to wrong location while exiting screen in Genetix, value reading `(gSQ5 handsOff:)` instead of `register`.
-* Fix bug (caused by decompilation?) where red glow at the start of outside view of the bridge simulator room was not showing. This was caused by an extra line palette setting `(Palette palSET_FROM_RESOURCE 600 2)`.
-* Fix bug where Roger would enter dumpster screen on Genetix `y` position on bottom edge of screen, likely caused by calling `super init:` too late and causing y value to be overwritten. (rm740)
+* Fixed bug where previous save got deleted due to bad decompiled assembly code in the `SRDialog` class's `doit` method.
+* Fixed bug where Roger holds face hugger close up forever.
+* Fixed bug where Cliffy is trying to help Roger up from the splits after getting the cloaking device.
+* Fixed bug where Roger walked to wrong location while exiting screen in Genetix, value reading `(gSQ5 handsOff:)` instead of `register`.
+* Fixed bug (caused by decompilation?) where red glow at the start of outside view of the bridge simulator room was not showing. This was caused by an extra line palette setting `(Palette palSET_FROM_RESOURCE 600 2)`.
+* Fixed bug where Roger would enter dumpster screen on Genetix `y` position on bottom edge of screen, likely caused by calling `super init:` too late and causing y value to be overwritten. (rm740)
 * Fixed bug where Roger getting on the transported pad from the left would use bad pathing. The lines' `[local20 register]; [local20 (+ (= register (* register 8)) 1)]` array position calculation `(= register (* register 8))` was put before the two array accesses, `(= register (* register 8)); [local20 register]; [local20 (+ register 1)]`.
 * Attempted bug fix for Flo's eyes in final scene. (rm1041)
 * Fixed mislabeled voice lines to render the correct talker.
