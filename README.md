@@ -16,37 +16,37 @@ Runs with DOXBox-X and DOSBox (0.74-2 or earlier). ScummVM has an issue where lo
 
 ### Roger Wilco
 
-https://github.com/user-attachments/assets/291690c2-aff4-4e13-afef-a25c18da8218
+<video src="https://github.com/user-attachments/assets/291690c2-aff4-4e13-afef-a25c18da8218" controls="controls" style="max-width: 720px;"></video>
 
 ### Narrator
 
-https://github.com/user-attachments/assets/4ac1a89a-688a-4e31-b171-0706326b0faf
+<video src="https://github.com/user-attachments/assets/4ac1a89a-688a-4e31-b171-0706326b0faf" controls="controls" style="max-width: 720px;"></video>
 
-https://github.com/user-attachments/assets/f08d408b-cec5-4b5e-9441-d6ea031d61b1
+<video src="https://github.com/user-attachments/assets/f08d408b-cec5-4b5e-9441-d6ea031d61b1" controls="controls" style="max-width: 720px;"></video>
 
 ### Beatrice Wankmeister
 
-https://github.com/user-attachments/assets/3b9db4ed-1791-41c0-9ccb-bee823850959
+<video src="https://github.com/user-attachments/assets/3b9db4ed-1791-41c0-9ccb-bee823850959" controls="controls" style="max-width: 720px;"></video>
 
 ### Droole
 
-https://github.com/user-attachments/assets/42dbf6a3-8ee6-4ea0-b62d-496f4f711dee
+<video src="https://github.com/user-attachments/assets/42dbf6a3-8ee6-4ea0-b62d-496f4f711dee" controls="controls" style="max-width: 720px;"></video>
 
 ### Flo
 
-https://github.com/user-attachments/assets/92eaecf9-7ac5-4953-b1b0-8523e4748f65
+<video src="https://github.com/user-attachments/assets/92eaecf9-7ac5-4953-b1b0-8523e4748f65" controls="controls" style="max-width: 720px;"></video>
 
 ### Quirk
 
-https://github.com/user-attachments/assets/0be4d090-e1c9-4e1e-bbb2-77986c7282a7
+<video src="https://github.com/user-attachments/assets/0be4d090-e1c9-4e1e-bbb2-77986c7282a7" controls="controls" style="max-width: 720px;"></video>
 
 ### WD40
 
-https://github.com/user-attachments/assets/d3caf5de-a5ce-45c4-9da9-1697a52372ff
+<video src="https://github.com/user-attachments/assets/d3caf5de-a5ce-45c4-9da9-1697a52372ff" controls="controls" style="max-width: 720px;"></video>
 
 ### Cliffy
 
-https://github.com/user-attachments/assets/e49f44fb-58d0-4194-a41d-e5fdc651b0b0
+<video src="https://github.com/user-attachments/assets/e49f44fb-58d0-4194-a41d-e5fdc651b0b0" controls="controls" style="max-width: 720px;"></video>
 
 ## Synthetic Voices
 
