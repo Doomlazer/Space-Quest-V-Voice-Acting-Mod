@@ -12,9 +12,41 @@ Note that the game must be played with both text and audio, as the branching dia
 
 Runs with DOXBox-X and DOSBox (0.74-2 or earlier). ScummVM has an issue where loading a saved game loads with missing text boxes.
 
-## Examples
+## Audio Examples
 
-Example of synthetized voices can be found in the [demo](https://github.com/cdb-boop/Space-Quest-V-Voice-Acting-Mod/tree/main/demo) folder.
+### Roger Wilco
+
+https://github.com/user-attachments/assets/291690c2-aff4-4e13-afef-a25c18da8218
+
+### Narrator
+
+https://github.com/user-attachments/assets/4ac1a89a-688a-4e31-b171-0706326b0faf
+
+https://github.com/user-attachments/assets/f08d408b-cec5-4b5e-9441-d6ea031d61b1
+
+### Beatrice Wankmeister
+
+https://github.com/user-attachments/assets/3b9db4ed-1791-41c0-9ccb-bee823850959
+
+### Droole
+
+https://github.com/user-attachments/assets/42dbf6a3-8ee6-4ea0-b62d-496f4f711dee
+
+### Flo
+
+https://github.com/user-attachments/assets/92eaecf9-7ac5-4953-b1b0-8523e4748f65
+
+### Quirk
+
+https://github.com/user-attachments/assets/0be4d090-e1c9-4e1e-bbb2-77986c7282a7
+
+### WD40
+
+https://github.com/user-attachments/assets/d3caf5de-a5ce-45c4-9da9-1697a52372ff
+
+### Cliffy
+
+https://github.com/user-attachments/assets/e49f44fb-58d0-4194-a41d-e5fdc651b0b0
 
 ## Synthetic Voices
 
