@@ -4,6 +4,8 @@ I added full voice acting to Space Quest V. Fixed some bugs along the way.
 
 Sample video: https://www.youtube.com/watch?v=WmxibvFMAXc
 
+(Hi, SciProgramming! I registed a week ago but haven't heard back.)
+
 ## Installation
 
 To install, get a copy of Space Quest V from the Space Quest Collection, and run the `exe` found in the [Releases](https://github.com/cdb-boop/Space-Quest-V-Voice-Acting-Mod/releases). Provide the `exe` with the path to your Space Quest 5 folder. The installer should remove all patch files, as they may cause issues running the game.
