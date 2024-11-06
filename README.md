@@ -71,7 +71,6 @@ Ordered by vocal appearance.
 | Rumproast Droole | Commander Kielbasa? Doctor Beleaux? (SQ7) | Jarion Monroe | Tortoise-TTS, RVC pitch +6 |
 | Gowitda Florence "Flo" Qwerty | Jamie Lee Coitus (LSL7) | Mary Kay Bergman | Tortoise-TTS, RVC |
 | Clifford "Cliffy" Crawford | Desk Sergeant Frick (GK1) | Jim Cummings | Tortoise-TTS, RVC |
-| Clifford "Cliffy" Crawford | Desk Sergeant Frick (GK1) | Jim Cummings | Tortoise-TTS, RVC |
 | WD40 | Thunderbird (LSL6) | Iona Morris | Tortoise-TTS, RVC pitch -20 |
 | "Maggot" | Fester Blats (SQ6) | Joe Paulino | E2-TTS |
 | Cocktail Waitress | Waitron (SQ6) | Lucille Bliss | E2-TTS |
