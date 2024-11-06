@@ -68,7 +68,7 @@ Ordered by vocal appearance.
 | Ambassador Beatrice "Bea" Wankmeister | Rosella (KQ7) | Maureen McVerry | Tortoise-TTS, RVC |
 | Cadet Splock | Elmo Pug (SQ6) | Doug Boyd | F5-TTS |
 | Admiral Wil'm Pol'k | Larry Laffer (LSL7) | Jan Rabson | Tortoise-TTS, RVC |
-| Rumproast Droole | Commander Kielbasa? Doctor Beleaux? (SQ7) | Jarion Monroe | Tortoise-TTS, RVC pitch +6 |
+| Rumproast Droole | Commander Kielbasa? Doctor Beleaux? (SQ6) | Jarion Monroe | Tortoise-TTS, RVC pitch +6 |
 | Gowitda Florence "Flo" Qwerty | Jamie Lee Coitus (LSL7) | Mary Kay Bergman | Tortoise-TTS, RVC |
 | Clifford "Cliffy" Crawford | Desk Sergeant Frick (GK1) | Jim Cummings | Tortoise-TTS, RVC |
 | WD40 | Thunderbird (LSL6) | Iona Morris | Tortoise-TTS, RVC pitch -20 |
