@@ -18,7 +18,7 @@ Runs with DOXBox-X and DOSBox (0.74-2 or earlier). ScummVM has an issue where lo
 
 If you want to try adding voices to other old games, here is my general pipeline.
 
-* **Dataset Collection**: Think about a character and what voice would be appropriate and try to find or make a dataset that matches the character. Quality > Quantity.
+* **Dataset Collection**: Quality > Quantity. Think about a character and what voice would be appropriate and try to find or make a dataset that matches the character. Consider the trade-offs of using audio denoising on low quality audio.
 * **Fine-Tuning**: Fine-tune voice models using Tortoise-TTS and RVC. If you want, you can also experiment with fine-tuning F5-TTS and E2-TTS. You can find some scattered tutorials [here](https://www.youtube.com/@Jarods_Journey).
 * **Text Extraction**: Extract text from a game and sort it by speaker if needed.
 * **Synthetic Voice Generation**: Tortoise-TTS can take hours to generate hundreds of vocal lines on a GPU. Additionally, you may try generating multiple samples at once, as the quality and delivery may vary with random seed.
