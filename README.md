@@ -5,7 +5,7 @@ I added full voice acting to Space Quest V. Fixed some bugs along the way.
 Sample videos:
 
 * https://www.youtube.com/watch?v=WmxibvFMAXc
-* https://youtu.be/LB9o2LXhkkY?si=fmMsGveW6aViSuru
+* https://www.youtube.com/watch?v=LB9o2LXhkkY
 
 ## Installation
 
