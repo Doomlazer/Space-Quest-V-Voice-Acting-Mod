@@ -28,42 +28,6 @@ If you want to try adding voices to other old games, here is my general pipeline
 * **Synthetic Voice Generation**: Tortoise-TTS can take hours to generate hundreds of vocal lines on a GPU. Additionally, you may try generating multiple samples at once, as the quality and delivery may vary with random seed.
 * **Quality Control**: Filter out bad audio samples and select the best ones. If a vocal line isn't working try generating more, correcting any issues with the text or rewriting it more phonetically. For example, rewriting "EVA" as "E.V.A." or "II" as "Two".
 
-## Audio Examples
-
-### Roger Wilco
-
-<video src="https://github.com/user-attachments/assets/291690c2-aff4-4e13-afef-a25c18da8218" controls="controls" style="max-width: 720px;"></video>
-
-### Narrator
-
-<video src="https://github.com/user-attachments/assets/4ac1a89a-688a-4e31-b171-0706326b0faf" controls="controls" style="max-width: 720px;"></video>
-
-<video src="https://github.com/user-attachments/assets/f08d408b-cec5-4b5e-9441-d6ea031d61b1" controls="controls" style="max-width: 720px;"></video>
-
-### Beatrice Wankmeister
-
-<video src="https://github.com/user-attachments/assets/3b9db4ed-1791-41c0-9ccb-bee823850959" controls="controls" style="max-width: 720px;"></video>
-
-### Droole
-
-<video src="https://github.com/user-attachments/assets/42dbf6a3-8ee6-4ea0-b62d-496f4f711dee" controls="controls" style="max-width: 720px;"></video>
-
-### Flo
-
-<video src="https://github.com/user-attachments/assets/92eaecf9-7ac5-4953-b1b0-8523e4748f65" controls="controls" style="max-width: 720px;"></video>
-
-### Quirk
-
-<video src="https://github.com/user-attachments/assets/0be4d090-e1c9-4e1e-bbb2-77986c7282a7" controls="controls" style="max-width: 720px;"></video>
-
-### WD40
-
-<video src="https://github.com/user-attachments/assets/d3caf5de-a5ce-45c4-9da9-1697a52372ff" controls="controls" style="max-width: 720px;"></video>
-
-### Cliffy
-
-<video src="https://github.com/user-attachments/assets/e49f44fb-58d0-4194-a41d-e5fdc651b0b0" controls="controls" style="max-width: 720px;"></video>
-
 ## Synthetic Voices
 
 Ordered by vocal appearance.
