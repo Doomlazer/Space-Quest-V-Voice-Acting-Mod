@@ -1,10 +1,9 @@
 # Space-Quest-V-Voice-Acting-Mod
 
-I added full voice acting to Space Quest V. Fixed some bugs along the way.
+I modified Space Quest V to support full voice acting.
 
-Sample videos:
+Sample video:
 
-* https://www.youtube.com/watch?v=WmxibvFMAXc
 * https://www.youtube.com/watch?v=LB9o2LXhkkY
 
 ## Installation
@@ -27,46 +26,6 @@ If you want to try adding voices to other old games, here is my general pipeline
 * **Text Extraction**: Extract text from a game and sort it by speaker if needed.
 * **Synthetic Voice Generation**: Tortoise-TTS can take hours to generate hundreds of vocal lines on a GPU. Additionally, you may try generating multiple samples at once, as the quality and delivery may vary with random seed.
 * **Quality Control**: Filter out bad audio samples and select the best ones. If a vocal line isn't working try generating more, correcting any issues with the text or rewriting it more phonetically. For example, rewriting "EVA" as "E.V.A." or "II" as "Two".
-
-## Synthetic Voices
-
-Ordered by vocal appearance.
-
-| Character | Training Data | Voice Actor | Method |
-| --- | --- | --- | --- |
-| Roger Wilco | Roger Wilco (SQ6) | William Hall | Tortoise-TTS, RVC |
-| Bridge Simulator #1| Blaine Rohmer (SQ6) | Jarion Monroe | Tortoise-TTS, RVC |
-| Bridge Simulator #1 | Rosella (KQ7), Thunderbird (LSL6) | Maureen McVerry, Iona Morris | Tortoise-TTS, RVC |
-| Captain Raemes Tipper Quirk | Thunderbird (LSL6), N/A | Iona Morris, Patrick Warburton | Tortoise-TTS, RVC pitch -16 |
-| Narrator | Narrator (SQ6) | Gary Owens | Tortoise-TTS, RVC |
-| Rotunta Guard (Right) | Johnson (LSL7) | Kevin Michael Richardson | Tortoise-TTS, RVC pitch -16 |
-| Rotunta Guard (Left) | Hotel Manager (SQ6) | Roger Jackson | E2-TTS |
-| Cadet A. Einstein | Dorff (SQ6) | Joe Paulino | E2-TTS |
-| Cadet Schleppo | Woof (KQ6) | Chuck McCann | E2-TTS |
-| Ambassador Beatrice "Bea" Wankmeister | Rosella (KQ7) | Maureen McVerry | Tortoise-TTS, RVC |
-| Cadet Splock | Elmo Pug (SQ6) | Doug Boyd | F5-TTS |
-| Admiral Wil'm Pol'k | Larry Laffer (LSL7) | Jan Rabson | Tortoise-TTS, RVC |
-| Rumproast Droole | Commander Kielbasa? Doctor Beleaux? (SQ6) | Jarion Monroe | Tortoise-TTS, RVC pitch +6 |
-| Gowitda Florence "Flo" Qwerty | Jamie Lee Coitus (LSL7) | Mary Kay Bergman | Tortoise-TTS, RVC |
-| Clifford "Cliffy" Crawford | Desk Sergeant Frick (GK1) | Jim Cummings | Tortoise-TTS, RVC |
-| WD40 | Thunderbird (LSL6) | Iona Morris | Tortoise-TTS, RVC pitch -20 |
-| "Maggot" | Fester Blats (SQ6) | Joe Paulino | E2-TTS |
-| Cocktail Waitress | Waitron (SQ6) | Lucille Bliss | E2-TTS |
-| Nelo Jones | Johnson (LSL7) | Kevin Michael Richardson | Tortoise-TTS, RVC |
-| Detention Guard #1 | Detective Franklin Mosley (GK1) | Mark Hamill | E2-TTS |
-| Detention Guard #2 | Daryl (LSL6) | Ed Gilbert | E2-TTS |
-| Angry Bar Patron | Djurkwhad (SQ6) | Joe Paulino | E2-TTS |
-| Harry Kerry | Pa Conshohocken (SQ6) | Charles Martinet | E2-TTS |
-| Slep | Freddy Pharkas (FP1) | Cameron Arthur Clarke | Tortoise-TTS, RVC |
-| Crumpella | Wriggley (SQ6) | Carol Bach y Rita | F5-TTS |
-
-## Speech Synthesizers
-
-* [Tortoise-TTS](https://git.ecker.tech/mrq/tortoise-tts)
-* [RVC](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI)
-* [F5-TTS & E2-TTS](https://github.com/SWivid/F5-TTS)
-* A handful of free mouth noises from the Internet, most put through RVC.
-* A handful of recordings of me delivering lines put through RVC.
 
 ## Code
 
@@ -162,6 +121,48 @@ Feature (950)
 * Added `Wait(1)` to EVA pod minigame to limit FPS to 60 to prevent issues at higher cycle rates. The thrust level's `doit` method appears to be polled every possible cycle. (FloatObj)
 * Adjusted code in various places to change `cycles` to ticks (usually where cycles > 1, but sometimes where cycles = 1) and remove or correct setting `cycleSpeed` or `moveSpeed` to 0 where appropriate to allow for better default speeds for added compatibility with high cycle cpus.
   * beaClimbsOut, cliffyGoesWith, deathRoom, fuse, genetix, keyStuff_242, keyStuff, LockDevice, MyPuke, rm100, rm104, rm106, rm107, rm110, rm115, rm117, rm121, rm127, rm132, rm133, rm135, rm166, rm200, rm206, rm212, rm215, rm225, rm250, rm280, rm300, rm305, rm310, rm315, rm420, rm500, rm510, rm640, rm740, rm750, rm760, rm1050, rm1060, sInTheAsteroids, sOpenDoors, sWD40Attacks
+
+## Synthetic Voices
+
+As of the date this was published and updated, the use of "deep fakes" legally within my state and country has yet to be made into any sort of law. While this is a relatively innocent use of AI technology (as opposed to something, for example, commercial or pornographic), I am a US citizen and I want to continue abiding by all relevant laws and will remove all synthetic voice content and cease any further work of this nature, if and when needed, to comply with any relevant changes to laws.
+
+Ordered by vocal appearance. Most are bit roles or don't sound that great because I tried limiting myself to Sierra voice actors and Sierra audio (I only made one exception).
+
+| Character | Training Data | Voice Actor | Method |
+| --- | --- | --- | --- |
+| Roger Wilco | Roger Wilco (SQ6) | William Hall | Tortoise-TTS, RVC |
+| Bridge Simulator #1| Blaine Rohmer (SQ6) | Jarion Monroe | Tortoise-TTS, RVC |
+| Bridge Simulator #1 | Rosella (KQ7), Thunderbird (LSL6) | Maureen McVerry, Iona Morris | Tortoise-TTS, RVC |
+| Captain Raemes Tipper Quirk | Thunderbird (LSL6), N/A | Iona Morris, Patrick Warburton | Tortoise-TTS, RVC pitch -16 |
+| Narrator | Narrator (SQ6) | Gary Owens | Tortoise-TTS, RVC |
+| Rotunta Guard (Right) | Johnson (LSL7) | Kevin Michael Richardson | Tortoise-TTS, RVC pitch -16 |
+| Rotunta Guard (Left) | Hotel Manager (SQ6) | Roger Jackson | E2-TTS |
+| Cadet A. Einstein | Dorff (SQ6) | Joe Paulino | E2-TTS |
+| Cadet Schleppo | Woof (KQ6) | Chuck McCann | E2-TTS |
+| Ambassador Beatrice "Bea" Wankmeister | Rosella (KQ7) | Maureen McVerry | Tortoise-TTS, RVC |
+| Cadet Splock | Elmo Pug (SQ6) | Doug Boyd | F5-TTS |
+| Admiral Wil'm Pol'k | Larry Laffer (LSL7) | Jan Rabson | Tortoise-TTS, RVC |
+| Rumproast Droole | Commander Kielbasa? Doctor Beleaux? (SQ6) | Jarion Monroe | Tortoise-TTS, RVC pitch +6 |
+| Gowitda Florence "Flo" Qwerty | Jamie Lee Coitus (LSL7) | Mary Kay Bergman | Tortoise-TTS, RVC |
+| Clifford "Cliffy" Crawford | Desk Sergeant Frick (GK1) | Jim Cummings | Tortoise-TTS, RVC |
+| WD40 | Thunderbird (LSL6) | Iona Morris | Tortoise-TTS, RVC pitch -20 |
+| "Maggot" | Fester Blats (SQ6) | Joe Paulino | E2-TTS |
+| Cocktail Waitress | Waitron (SQ6) | Lucille Bliss | E2-TTS |
+| Nelo Jones | Johnson (LSL7) | Kevin Michael Richardson | Tortoise-TTS, RVC |
+| Detention Guard #1 | Detective Franklin Mosley (GK1) | Mark Hamill | E2-TTS |
+| Detention Guard #2 | Daryl (LSL6) | Ed Gilbert | E2-TTS |
+| Angry Bar Patron | Djurkwhad (SQ6) | Joe Paulino | E2-TTS |
+| Harry Kerry | Pa Conshohocken (SQ6) | Charles Martinet | E2-TTS |
+| Slep | Freddy Pharkas (FP1) | Cameron Arthur Clarke | Tortoise-TTS, RVC |
+| Crumpella | Wriggley (SQ6) | Carol Bach y Rita | F5-TTS |
+
+## Speech Synthesizers
+
+* [Tortoise-TTS](https://git.ecker.tech/mrq/tortoise-tts)
+* [RVC](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI)
+* [F5-TTS & E2-TTS](https://github.com/SWivid/F5-TTS)
+* A handful of free mouth noises from the Internet, most put through RVC.
+* A handful of recordings of me delivering lines put through RVC.
 
 ## Labor
 
