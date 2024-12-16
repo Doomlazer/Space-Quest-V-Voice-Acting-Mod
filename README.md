@@ -84,7 +84,7 @@ Feature (950)
   * CrestPiece* (119)
   * Puke (1010)
 
-### Adding missing voicing acting
+### Adding missing voice acting
 
 * Changed `global90` from 1 to 3 (flags `b0001` = text, `b0010` = voice). NOTE: Changing this value doesn't seem to do anything in DOSBOX. Overriding the audio settings to use both audio and text in ScummVM fails to show the text boxes, which is required for selecting branching dialog.
 * Added voice acting to death room message types. (deathRoom)
