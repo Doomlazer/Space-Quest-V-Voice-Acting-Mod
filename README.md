@@ -35,6 +35,7 @@ If you want to try adding voices to other old games, here is my general pipeline
 * Dialog in the "Captain's Log" introduction does not move forward automatically.
 * Dialog in the inventory does not move forward automatically.
 * Branching dialog on Genetix is missing Roger's voiced message for selection.
+* WD-40 is missing a voice line for the close up where she says "freeze" on the Goliath's bridge.
 
 ### Basic audio fixes
 
