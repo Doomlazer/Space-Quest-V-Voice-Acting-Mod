@@ -35,7 +35,19 @@ If you want to try adding voices to other old games, here is my general pipeline
 * Dialog in the "Captain's Log" introduction does not move forward automatically.
 * Dialog in the inventory does not move forward automatically.
 * Branching dialog on Genetix is missing Roger's voiced message for selection.
-* WD-40 is missing a voice line for the close up where she says "freeze" on the Goliath's bridge.
+ 
+* 201-11-0-14-5
+  * The voice should be Flo's instead of the narrator.
+* Pic.064 (Boulder screen)
+  * WD40 close-up sprite not disapearing. (DOSBox-X)
+* Pic.100 (Thrakus, right screen)
+  * After save the program freezes? (DOSBox-X)
+* 730-13-0-3-1
+  * Talker ID should be Roger's instead of Cliffy's.
+* Pic.110 (Genetix, initial beam-down screen)
+  * "Hello?" speech bubble from the communicator is missing Flo's voice?
+* Pic.127 (Comic-like close-up with "Freeze scum!")
+  * WD-40 is missing a voice line for the close-up where she says "Freeze scum!" on the Goliath's bridge.
 
 ### Basic audio fixes
 
