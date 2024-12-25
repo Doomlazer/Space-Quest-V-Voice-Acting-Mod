@@ -35,6 +35,7 @@ If you want to try adding voices to other old games, here is my general pipeline
 * Dialog in the "Captain's Log" introduction does not move forward automatically.
 * Dialog in the inventory does not move forward automatically.
 * Branching dialog on Genetix is missing Roger's voiced message for selection.
+* Lip sync was not used.
  
 * 201-11-0-14-5
   * The voice should be Flo's instead of the narrator.
