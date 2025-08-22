@@ -1403,6 +1403,7 @@
 	(properties)
 	
 	(method (findTalker param1 &tmp temp0)
+		(= global90 3) ; force text & speech in ScummVM after restore
 		(= global122 param1)
 		(if
 			(= temp0
