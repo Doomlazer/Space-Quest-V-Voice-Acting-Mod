@@ -1,3 +1,8 @@
+## Notes on DoomLazer's fork of this project
+
+While I don't generally like the way capitalists use 'AI', from what I've played of this mod so far the results are suprisingly good in my opinion. My intent with the fork is to work on fixing some of the bugs and record the code changes from the original to CDB-Boops mod, and my bug fixes. We'll see how far I get I guess. Now back to CDB-Boops readme:
+
+
 # Space-Quest-V-Voice-Acting-Mod
 
 I modified Space Quest V to support full voice acting.
