@@ -85,44 +85,44 @@
 			(1
 				(gSq5Music2 number: 145 setLoop: -1 play:)
 				(Palette palSET_INTENSITY 1 254 50)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(2
 				(Palette palSET_INTENSITY 1 254 100)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(3
 				(Palette palSET_INTENSITY 1 254 50)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(4
 				(Palette palSET_INTENSITY 1 254 100)
-				(= cycles 5)
+				(= ticks 5)
 			)
 			(5
 				(Palette palSET_INTENSITY 1 254 50)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(6
 				(Palette palSET_INTENSITY 1 254 100)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(7
 				(Palette palSET_INTENSITY 1 254 50)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(8
 				(Palette palSET_INTENSITY 1 254 100)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(9
 				(Palette palSET_INTENSITY 1 254 50)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(10
 				(Palette palSET_INTENSITY 1 254 100)
 				(gSq5Music2 stop:)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(11
 				(= local0 0)
@@ -130,7 +130,7 @@
 			)
 			(12
 				(localproc_00cc)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(13
 				(gTestMessager say: 1 0 0 2 self)
@@ -151,7 +151,7 @@
 			(16 0)
 			(17
 				(localproc_006e)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(18
 				(gTestMessager say: 1 0 0 4 self)
@@ -169,7 +169,7 @@
 			)
 			(23
 				(localproc_00cc)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(24
 				(gTestMessager say: 1 0 0 7 self)
@@ -179,7 +179,7 @@
 			)
 			(26
 				(localproc_00a1)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(27
 				(= local0 2)
@@ -193,7 +193,7 @@
 				(beaBody setCel: 5)
 				(beaHead setCel: 0 posn: 176 97 show:)
 				(localproc_006e)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(30
 				(gTestMessager say: 1 0 0 9 self)
@@ -204,7 +204,7 @@
 			)
 			(32
 				(localproc_00a1)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(33
 				(= local0 2)
@@ -215,35 +215,35 @@
 			)
 			(35
 				(localproc_006e)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(36
 				(gTestMessager say: 1 0 0 12 self)
 			)
 			(37
 				(localproc_00cc)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(38
 				(gTestMessager say: 1 0 0 13 self)
 			)
 			(39
 				(localproc_006e)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(40
 				(gTestMessager say: 1 0 0 14 self)
 			)
 			(41
 				(localproc_00cc)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(42
 				(gTestMessager say: 1 0 0 15 self)
 			)
 			(43
 				(localproc_00a1)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(44
 				(= local0 1)
@@ -251,21 +251,21 @@
 			)
 			(45
 				(localproc_006e)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(46
 				(gTestMessager say: 1 0 0 17 self)
 			)
 			(47
 				(localproc_00cc)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(48
 				(gTestMessager say: 1 0 0 18 self)
 			)
 			(49
 				(localproc_006e)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(50
 				(gTestMessager say: 1 0 0 19 self)
@@ -298,7 +298,7 @@
 			(56
 				(= local1 1)
 				(localproc_006e)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(57
 				(gTestMessager say: 1 0 0 20 self)

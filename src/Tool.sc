@@ -14,7 +14,7 @@
 (local
 	theTool
 )
-(procedure (localproc_010c)
+(procedure (localproc_010e)
 	(return
 		(cond 
 			((proc999_4 0 163 110 200 theTool) box1)
@@ -25,7 +25,7 @@
 	)
 )
 
-(procedure (localproc_0162 &tmp [temp0 50])
+(procedure (localproc_0164 &tmp [temp0 50])
 	(Message msgGET 226 7 4 0 1 @temp0)
 	(Display
 		@temp0
@@ -106,13 +106,13 @@
 		(box1 addToPic:)
 		(box2 addToPic:)
 		(box3 addToPic:)
-		(localproc_0162)
+		(localproc_0164)
 		(gSQ5 handsOn:)
 		(gSq5IconBar disable: 0 3 4 5 6)
 	)
 	
 	(method (doit)
-		(if (GameIsRestarting) (localproc_0162))
+		(if (GameIsRestarting) (localproc_0164))
 		(super doit: &rest)
 	)
 	
@@ -120,7 +120,7 @@
 		(switch theVerb
 			(4
 				(if theTool
-					(if (= temp0 (localproc_010c))
+					(if (= temp0 (localproc_010e))
 						(temp0 doVerb: 4)
 					else
 						(theTool drop:)
@@ -141,6 +141,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -225,7 +226,7 @@
 		(switch theVerb
 			(4
 				(if theTool
-					(if (= temp0 (localproc_010c))
+					(if (= temp0 (localproc_010e))
 						(temp0 doVerb: 4)
 					else
 						(theTool drop:)

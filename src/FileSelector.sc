@@ -4,7 +4,7 @@
 (use DIcon)
 
 
-(procedure (localproc_0151 param1 param2 &tmp temp0 temp1 [temp2 13] temp15 temp16 temp17)
+(procedure (localproc_004e param1 param2 &tmp temp0 temp1 [temp2 13] temp15 temp16 temp17)
 	(= temp0 (- param2 1))
 	(while (> temp0 0)
 		(= temp15 0)
@@ -19,7 +19,7 @@
 			)
 			(++ temp1)
 		)
-		(breakif (not temp15))
+		(if (not temp15) (break))
 		(-- temp0)
 	)
 )
@@ -84,7 +84,7 @@
 			(= temp9 (FileIO fiFIND_NEXT @temp0))
 		)
 		(StrAt text (* nFiles 13) 0)
-		(if sort (localproc_0151 text nFiles))
+		(if sort (localproc_004e text nFiles))
 		(return 1)
 	)
 )

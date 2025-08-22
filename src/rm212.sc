@@ -171,7 +171,6 @@
 			setCel: 0
 			setCycle: 0
 			setStep: 25 25
-			moveSpeed: 0
 			setScale: Scaler 100 26 74 60
 		)
 	)

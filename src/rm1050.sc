@@ -254,40 +254,40 @@
 			(1
 				(cliffyHand setCel: 1)
 				(energizeLight setLoop: 5)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(2
 				(eView1 init: stopUpd:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(3
 				(eView2 init: stopUpd:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(4
 				(eView3 init: stopUpd:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(5
 				(eView4 init: stopUpd:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(6
 				(eView5 init: stopUpd:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(7
 				(eView6 init: stopUpd:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(8
 				(eView7 init: stopUpd:)
 				(eView8 init: stopUpd:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(9
 				(eView9 init: stopUpd:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(10
 				(eProp1 init: setCycle: End self)
@@ -312,11 +312,11 @@
 					(pukoidW1 setScript: sRogPuked)
 					(pukeBeamOut loop: 2 cel: 0 init:)
 				)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(12
 				(gOldCast eachElementDo: #stopUpd)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(13
 				(= theGOldCast gOldCast)

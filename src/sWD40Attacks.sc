@@ -57,7 +57,7 @@
 			)
 			(8
 				(explosionSound number: 211 loop: -1 play:)
-				(= cycles 1)
+				(= seconds 1)
 			)
 			(9
 				(= gEurekaCurLocation 16)
@@ -304,7 +304,6 @@
 			x: 164
 			y: 60
 			setStep: 20 20
-			moveSpeed: 0
 			setScale: Scaler 100 20 97 60
 		)
 		(super init: &rest)

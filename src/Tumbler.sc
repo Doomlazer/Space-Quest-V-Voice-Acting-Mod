@@ -138,6 +138,7 @@
 		z 0
 		heading 0
 		noun 1
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -238,6 +239,7 @@
 		z 0
 		heading 0
 		noun 2
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0

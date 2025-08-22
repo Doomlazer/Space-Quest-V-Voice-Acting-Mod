@@ -24,7 +24,7 @@
 	(= local12 0)
 )
 
-(procedure (localproc_0083)
+(procedure (localproc_0082)
 	(= local12 1)
 	(if (> local0 0)
 		(return [local1 (-- local0)])
@@ -34,7 +34,7 @@
 	(return (= local12 0))
 )
 
-(procedure (localproc_009d param1)
+(procedure (localproc_009c param1)
 	(if (< param1 10)
 		(d4 startUpd: setLoop: (d3 loop?))
 		(d3 startUpd: setLoop: (d2 loop?))
@@ -44,7 +44,7 @@
 	)
 )
 
-(procedure (localproc_010c param1)
+(procedure (localproc_010b param1)
 	(return
 		(cond 
 			(
@@ -108,7 +108,7 @@
 	)
 )
 
-(procedure (localproc_028e param1)
+(procedure (localproc_028b param1)
 	(switch param1
 		(0 19)
 		(10 0)
@@ -120,7 +120,7 @@
 	)
 )
 
-(procedure (localproc_02c7 param1)
+(procedure (localproc_02c4 param1)
 	(switch param1
 		(0 48)
 		(10 48)
@@ -219,8 +219,8 @@
 	(method (show param1)
 		(self
 			posn:
-				(+ (localproc_028e param1) 13 (pad x?))
-				(+ (localproc_02c7 param1) 26 (pad y?))
+				(+ (localproc_028b param1) 13 (pad x?))
+				(+ (localproc_02c4 param1) 26 (pad y?))
 			setLoop: param1
 			setCel: 1
 		)
@@ -253,7 +253,7 @@
 	(method (doit &tmp temp0)
 		(super doit: &rest)
 		(if (and (not script) local0 (not local12))
-			(= temp0 (localproc_0083))
+			(= temp0 (localproc_0082))
 			(self setScript: keyFlash 0 temp0)
 		)
 	)
@@ -275,7 +275,7 @@
 						(
 							(and
 								(== temp0 13)
-								(!= (= temp1 (localproc_010c pEvent)) -1)
+								(!= (= temp1 (localproc_010b pEvent)) -1)
 							)
 							(localproc_006c temp1)
 							(pEvent claimed: 1)
@@ -292,7 +292,7 @@
 				(
 					(and
 						(& (pEvent type?) evMOUSEBUTTON)
-						(!= (= temp1 (localproc_010c pEvent)) -1)
+						(!= (= temp1 (localproc_010b pEvent)) -1)
 						(not (pEvent modifiers?))
 					)
 					(pEvent claimed: 1)
@@ -316,7 +316,7 @@
 				(= ticks 5)
 			)
 			(1
-				(localproc_009d register)
+				(localproc_009c register)
 				(= ticks 5)
 			)
 			(2
@@ -452,7 +452,7 @@
 				(d2 startUpd: setLoop: 10)
 				(d3 startUpd: setLoop: 10)
 				(d4 startUpd: setLoop: (if (== gModNum 460) 15 else 14))
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(1 (self dispose:))
 		)

@@ -418,7 +418,7 @@
 					setPri: 12
 				)
 				(theMusic3 number: 516 loop: 1 play:)
-				(= cycles 5)
+				(= ticks 5)
 			)
 			(2
 				(gEgo view: 542 setLoop: 0 cel: 0 setCycle: End self)
@@ -426,7 +426,7 @@
 			(3
 				(proc0_6 0)
 				(gEgo x: 112 y: 160)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(4
 				(if local1

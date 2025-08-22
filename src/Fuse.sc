@@ -21,7 +21,7 @@
 	local1
 	local2
 )
-(procedure (localproc_0184 param1 &tmp temp0)
+(procedure (localproc_0188 param1 &tmp temp0)
 	(= temp0 0)
 	(switch (param1 socketNum?)
 		(1
@@ -67,6 +67,7 @@
 		z 0
 		heading 0
 		noun 2
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -313,6 +314,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -335,7 +337,7 @@
 		(switch theVerb
 			(4
 				(if (and theFuse (not occupied))
-					(if (localproc_0184 self)
+					(if (localproc_0188 self)
 						(theFuse
 							setPri: (self fusePri?)
 							socket: (self socketNum?)
@@ -609,7 +611,7 @@
 			)
 			(5
 				(if (not (socket5 occupied?)) (proc0_2 95))
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(6
 				(global2 newRoom: 225)

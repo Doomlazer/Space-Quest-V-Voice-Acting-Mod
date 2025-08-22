@@ -45,12 +45,12 @@
 	[local28 50]
 	[local78 9] = [4 5 6 7 8 9 10 11 12]
 )
-(procedure (localproc_027c)
+(procedure (localproc_01ee)
 	(gSQ5 handsOn:)
 	(gSq5IconBar disable: 0 3 4 5 6)
 )
 
-(procedure (localproc_0297)
+(procedure (localproc_0209)
 	(gSq5Music2 fade: 0 10 5 1)
 	(= local26 0)
 	(if (or local9 local10)
@@ -61,7 +61,7 @@
 	)
 )
 
-(procedure (localproc_02be param1 &tmp temp0 temp1 temp2 temp3 temp4 temp5 temp6 temp7)
+(procedure (localproc_0230 param1 &tmp temp0 temp1 temp2 temp3 temp4 temp5 temp6 temp7)
 	(if (< (= local2 (+ local2 (* param1 2))) 0)
 		(= local2 3599)
 	)
@@ -179,7 +179,7 @@
 	(if (updateThrust client?) (updateThrust cue:))
 )
 
-(procedure (localproc_05ef param1 &tmp [temp0 3])
+(procedure (localproc_0565 param1 &tmp [temp0 3])
 	(= local4
 		(+ local4 (CosMult (/ local2 10) (/ param1 4)))
 	)
@@ -209,7 +209,7 @@
 	)
 )
 
-(procedure (localproc_06b6)
+(procedure (localproc_062c)
 	(if (and (!= local8 0) (not local26))
 		(= local26 1)
 		(gSq5Music2 number: 156 loop: -1 vol: 64 play:)
@@ -225,13 +225,13 @@
 		)
 		(3
 			(if (< local9 10) (= local9 (+ local9 1)))
-			(if 10 (= local11 (- local11 2)))
+			(if local9 (= local11 (- local11 2)))
 		)
 		(4
 			(if (> local9 -10) (= local9 (- local9 1)))
-			(if 10 (= local11 (- local11 2)))
+			(if local9 (= local11 (- local11 2)))
 		)
-		(0 (localproc_0297))
+		(0 (localproc_0209))
 	)
 	(fuel setCel: (- (fuel lastCel:) (/ local11 100)))
 	(cond 
@@ -252,7 +252,7 @@
 				(global2 setScript: returnToEureka)
 			)
 		)
-		((not (global2 script?)) (localproc_05ef local9) (localproc_02be local10))
+		((not (global2 script?)) (localproc_0565 local9) (localproc_0230 local10))
 	)
 )
 
@@ -263,6 +263,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -313,6 +314,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -389,7 +391,7 @@
 	
 	(method (changeState newState &tmp [temp0 2])
 		(switch (= state newState)
-			(0 (localproc_06b6))
+			(0 (localproc_062c))
 			(1 (= cycles 2))
 			(2
 				(hand1 stopUpd:)
@@ -484,8 +486,8 @@
 		(yourShip init: stopUpd:)
 		(cliffyBlip init: setCycle: Fwd)
 		(shipBlip init: setCycle: Fwd)
-		(localproc_05ef 0)
-		(localproc_02be 0)
+		(localproc_0565 0)
+		(localproc_0230 0)
 		(gOldDH addToFront: lever1)
 		(self setScript: startItAll)
 	)
@@ -676,7 +678,7 @@
 	)
 	
 	(method (doit &tmp [temp0 3])
-		(if (!= local8 0) (localproc_06b6))
+		(if (!= local8 0) (localproc_062c) (Wait 1))
 		(super doit: &rest)
 	)
 	
@@ -1122,7 +1124,7 @@
 					(arm setCel: 7)
 				)
 				(arm stopUpd:)
-				(localproc_027c)
+				(localproc_01ee)
 				(self dispose:)
 			)
 		)
@@ -1169,7 +1171,7 @@
 			)
 			(3
 				(claw stopUpd:)
-				(localproc_027c)
+				(localproc_01ee)
 				(self dispose:)
 			)
 		)
@@ -1328,7 +1330,7 @@
 				(= cycles 3)
 			)
 			(2
-				(localproc_027c)
+				(localproc_01ee)
 				(self dispose:)
 			)
 		)
@@ -1395,7 +1397,7 @@
 				(theMusic4 stop:)
 				(gOldCast eachElementDo: #hide)
 				(PalVary pvUNINIT)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(1
 				(gOldCast eachElementDo: #dispose)

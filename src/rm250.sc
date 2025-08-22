@@ -308,7 +308,7 @@
 			)
 			(1
 				(podDoor setLoop: 1)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(2
 				(podDoor setLoop: 1 cel: 0 setCycle: End self)
@@ -480,7 +480,7 @@
 		(switch (= state newState)
 			(0
 				(gSQ5 handsOff:)
-				(= seconds 2)
+				(= cycles 2)
 			)
 			(1
 				(self setScript: sRogPushButton self)
@@ -492,7 +492,7 @@
 			(3 (= cycles 1))
 			(4
 				(gSq5Music1 number: 276 loop: -1 play:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(5
 				(rogThink loop: 5 cel: 0 posn: 246 126 setCycle: Fwd self)
@@ -505,7 +505,6 @@
 					setCel: 8
 					setPri: 6
 					setCycle: 0
-					moveSpeed: 0
 					setStep: 20
 					setScale: Scaler 134 75 164 110
 					setMotion: MoveTo 35 110 self

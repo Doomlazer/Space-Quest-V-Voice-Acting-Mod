@@ -102,7 +102,7 @@
 			(4
 				(gSq5Music1 stop:)
 				(sparkle hide:)
-				(= cycles 5)
+				(= ticks 5)
 			)
 			(5
 				(sparkle dispose:)

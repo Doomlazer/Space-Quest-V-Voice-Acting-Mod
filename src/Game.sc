@@ -12,7 +12,7 @@
 (use Obj)
 
 
-(procedure (localproc_0e32 param1 &tmp temp0 [temp1 40] [temp41 40] temp81 [temp82 40] [temp122 10] [temp132 5])
+(procedure (localproc_01d2 param1 &tmp temp0 [temp1 40] [temp41 40] temp81 [temp82 40] [temp122 10] [temp132 5])
 	(= temp81 (Memory memALLOC_CRIT 150))
 	(= temp0 1)
 	(DeviceInfo 0 global29 @temp1)
@@ -364,7 +364,7 @@
 		(ScriptID 990)
 		(= temp21 (self setCursor: global20))
 		(gSounds pause: 1)
-		(if (localproc_0e32 1)
+		(if (localproc_01d2 1)
 			(if gDialog (gDialog dispose:))
 			(if (!= (= temp20 (Restore doit: &rest)) -1)
 				(self setCursor: global21 1)
@@ -382,7 +382,7 @@
 					(self setCursor: temp21 (HaveMouse))
 				)
 			)
-			(localproc_0e32 0)
+			(localproc_01d2 0)
 		)
 		(gSounds pause: 0)
 	)
@@ -398,7 +398,7 @@
 		(ScriptID 990)
 		(= temp21 (self setCursor: global20))
 		(gSounds pause: 1)
-		(if (localproc_0e32 1)
+		(if (localproc_01d2 1)
 			(if gDialog (gDialog dispose:))
 			(if (!= (= temp20 (Save doit: @temp0)) -1)
 				(= temp21 (self setCursor: global21 1))
@@ -414,7 +414,7 @@
 				)
 				(self setCursor: temp21 (HaveMouse))
 			)
-			(localproc_0e32 0)
+			(localproc_01d2 0)
 		)
 		(gSounds pause: 0)
 	)
@@ -524,6 +524,7 @@
 		number 0
 		modNum -1
 		noun 0
+		case 0
 		timer 0
 		keep 0
 		initialized 0
@@ -602,6 +603,7 @@
 		number 0
 		modNum -1
 		noun 0
+		case 0
 		timer 0
 		keep 0
 		initialized 0

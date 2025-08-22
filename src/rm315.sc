@@ -154,13 +154,13 @@
 			pushi    150
 			lsg      gEgo
 			calle    proc999_4,  10
-			bnt      code_03c9
+			bnt      code_03ca
 			pushi    #script
 			pushi    0
 			lofsa    wd40
 			send     4
 			not     
-			bnt      code_03c9
+			bnt      code_03ca
 			pushi    1
 			pushi    14
 			callb    proc0_1,  2
@@ -169,7 +169,7 @@
 			pushi    1
 			pushi    15
 			callb    proc0_1,  2
-			bnt      code_03c9
+			bnt      code_03ca
 code_03b9:
 			pushi    #setScript
 			pushi    1
@@ -177,8 +177,8 @@ code_03b9:
 			push    
 			lofsa    wd40
 			send     6
-			jmp      code_0589
-code_03c9:
+			jmp      code_05a3
+code_03ca:
 			pushi    5
 			pushi    100
 			pushi    137
@@ -186,34 +186,34 @@ code_03c9:
 			pushi    139
 			lsg      gEgo
 			calle    proc999_4,  10
-			bnt      code_040e
+			bnt      code_0412
 			pushi    270
 			pushi    #heading
 			pushi    0
 			lag      gEgo
 			send     4
 			gt?     
-			bnt      code_03f1
+			bnt      code_03f3
 			pprev   
 			ldi      90
 			gt?     
-code_03f1:
+code_03f3:
 			not     
-			bnt      code_040e
+			bnt      code_0412
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_040e
+			bnt      code_0412
 			pushi    #setScript
 			pushi    1
 			lofsa    sExitViaTunnelB
 			push    
 			lag      global2
 			send     6
-			jmp      code_0589
-code_040e:
+			jmp      code_05a3
+code_0412:
 			pushi    5
 			pushi    275
 			pushi    67
@@ -221,7 +221,7 @@ code_040e:
 			pushi    71
 			lsg      gEgo
 			calle    proc999_4,  10
-			bnt      code_044c
+			bnt      code_0453
 			pushi    #heading
 			pushi    0
 			lag      gEgo
@@ -229,21 +229,21 @@ code_040e:
 			push    
 			ldi      180
 			lt?     
-			bnt      code_044c
+			bnt      code_0453
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_044c
+			bnt      code_0453
 			pushi    #setScript
 			pushi    1
 			lofsa    sExitViaTunnelE
 			push    
 			lag      global2
 			send     6
-			jmp      code_0589
-code_044c:
+			jmp      code_05a3
+code_0453:
 			pushi    5
 			pushi    34
 			pushi    130
@@ -251,26 +251,26 @@ code_044c:
 			pushi    139
 			lsg      gEgo
 			calle    proc999_4,  10
-			bnt      code_0493
+			bnt      code_049e
 			pushi    270
 			pushi    #heading
 			pushi    0
 			lag      gEgo
 			send     4
 			gt?     
-			bnt      code_0473
+			bnt      code_047b
 			pprev   
 			ldi      90
 			gt?     
-code_0473:
+code_047b:
 			not     
-			bnt      code_0493
+			bnt      code_049e
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_0493
+			bnt      code_049e
 			pushi    #setScript
 			pushi    3
 			lofsa    sThruTunnelC
@@ -279,8 +279,8 @@ code_0473:
 			pushi    1
 			lag      global2
 			send     10
-			jmp      code_0589
-code_0493:
+			jmp      code_05a3
+code_049e:
 			pushi    5
 			pushi    191
 			pushi    63
@@ -288,7 +288,7 @@ code_0493:
 			pushi    66
 			lsg      gEgo
 			calle    proc999_4,  10
-			bnt      code_04d4
+			bnt      code_04e3
 			pushi    #heading
 			pushi    0
 			lag      gEgo
@@ -296,13 +296,13 @@ code_0493:
 			push    
 			ldi      180
 			gt?     
-			bnt      code_04d4
+			bnt      code_04e3
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_04d4
+			bnt      code_04e3
 			pushi    #setScript
 			pushi    3
 			lofsa    sThruTunnelC
@@ -311,8 +311,8 @@ code_0493:
 			pushi    0
 			lag      global2
 			send     10
-			jmp      code_0589
-code_04d4:
+			jmp      code_05a3
+code_04e3:
 			pushi    5
 			pushi    221
 			pushi    62
@@ -320,32 +320,32 @@ code_04d4:
 			pushi    67
 			lsg      gEgo
 			calle    proc999_4,  10
-			bnt      code_0516
+			bnt      code_0528
 			pushi    0
 			pushi    #heading
 			pushi    0
 			lag      gEgo
 			send     4
 			lt?     
-			bnt      code_0516
+			bnt      code_0528
 			pprev   
 			ldi      180
 			lt?     
-			bnt      code_0516
+			bnt      code_0528
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_0516
+			bnt      code_0528
 			pushi    #setScript
 			pushi    1
 			lofsa    sJumpLeftToRight
 			push    
 			lag      global2
 			send     6
-			jmp      code_0589
-code_0516:
+			jmp      code_05a3
+code_0528:
 			pushi    5
 			pushi    254
 			pushi    67
@@ -353,7 +353,7 @@ code_0516:
 			pushi    71
 			lsg      gEgo
 			calle    proc999_4,  10
-			bnt      code_0553
+			bnt      code_0568
 			pushi    #heading
 			pushi    0
 			lag      gEgo
@@ -361,21 +361,21 @@ code_0516:
 			push    
 			ldi      180
 			gt?     
-			bnt      code_0553
+			bnt      code_0568
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_0553
+			bnt      code_0568
 			pushi    #setScript
 			pushi    1
 			lofsa    sJumpRightToLeft
 			push    
 			lag      global2
 			send     6
-			jmp      code_0589
-code_0553:
+			jmp      code_05a3
+code_0568:
 			pushi    #y
 			pushi    0
 			lag      gEgo
@@ -383,31 +383,31 @@ code_0553:
 			push    
 			ldi      45
 			eq?     
-			bnt      code_0589
+			bnt      code_05a3
 			pushi    270
 			pushi    #heading
 			pushi    0
 			lag      gEgo
 			send     4
 			ge?     
-			bnt      code_0589
+			bnt      code_05a3
 			pprev   
 			ldi      90
 			ge?     
-			bnt      code_0589
+			bnt      code_05a3
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_0589
+			bnt      code_05a3
 			pushi    #setScript
 			pushi    1
 			lofsa    sClimbDownFromRock
 			push    
 			lag      global2
 			send     6
-code_0589:
+code_05a3:
 			ret     
 		)
 	)
@@ -1180,7 +1180,6 @@ code_0589:
 						x: 236
 						y: 89
 						setStep: 15 5
-						moveSpeed: 0
 						init:
 						setScript: sFireBall self 0
 					)
@@ -1314,14 +1313,14 @@ code_0589:
 					addToPic:
 				)
 				(jetpack dispose:)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(1
 				(ext9 dispose:)
 				(ext10 dispose:)
 				(gOldATPs delete: ext9 ext10)
 				(DrawPic 64 dpOPEN_PIXELATION)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(2
 				(theMusic3 play: 50)
@@ -1541,7 +1540,6 @@ code_0589:
 					setCycle: 0
 					setLoop: -1
 					setLoop: 7
-					moveSpeed: 0
 					init:
 					setMotion: MoveTo 148 107 self
 				)
@@ -1571,7 +1569,6 @@ code_0589:
 					x: 142
 					y: 80
 					setStep: 3 8
-					moveSpeed: 0
 					init:
 					setPri: 15
 					ignoreActors:
@@ -1584,7 +1581,6 @@ code_0589:
 					x: 138
 					y: 83
 					setStep: 3 7
-					moveSpeed: 0
 					init:
 					setPri: 15
 					ignoreActors:
@@ -1597,7 +1593,6 @@ code_0589:
 					x: 129
 					y: 78
 					setStep: 3 9
-					moveSpeed: 0
 					init:
 					setPri: 15
 					ignoreActors:
@@ -1610,7 +1605,6 @@ code_0589:
 					x: 142
 					y: 80
 					setStep: 3 7
-					moveSpeed: 0
 					init:
 					setPri: 15
 					ignoreActors:
@@ -1623,7 +1617,6 @@ code_0589:
 					x: 142
 					y: 80
 					setStep: 3 8
-					moveSpeed: 0
 					init:
 					setPri: 15
 					ignoreActors:
@@ -1636,7 +1629,6 @@ code_0589:
 					x: 142
 					y: 87
 					setStep: 3 9
-					moveSpeed: 0
 					init:
 					setPri: 15
 					ignoreActors:
@@ -1649,7 +1641,6 @@ code_0589:
 					x: 148
 					y: 80
 					setStep: 3 6
-					moveSpeed: 0
 					init:
 					setPri: 15
 					ignoreActors:
@@ -1662,7 +1653,6 @@ code_0589:
 					x: 122
 					y: 76
 					setStep: 3 7
-					moveSpeed: 0
 					init:
 					setPri: 15
 					ignoreActors:
@@ -1675,7 +1665,6 @@ code_0589:
 					x: 142
 					y: 80
 					setStep: 3 8
-					moveSpeed: 0
 					init:
 					setPri: 15
 					ignoreActors:
@@ -1688,7 +1677,6 @@ code_0589:
 					x: 112
 					y: 70
 					setStep: 3 7
-					moveSpeed: 0
 					init:
 					setPri: 15
 					ignoreActors:

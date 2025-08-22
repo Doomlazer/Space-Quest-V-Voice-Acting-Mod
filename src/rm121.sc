@@ -225,9 +225,8 @@
 				(mouse
 					init:
 					setCycle: Fwd
-					setStep: 13 13
-					moveSpeed: 0
-					cycleSpeed: 0
+					setStep: 7 7
+					cycleSpeed: 8
 					setMotion: MoveTo 262 179 self
 				)
 			)

@@ -31,19 +31,53 @@
 	[local13 5]
 )
 (procedure (localproc_010c param1 param2)
-	(if
-		(and
-			(< (GetDistance param1 param2 (gEgo x?) (gEgo y?)) 120)
-			(<
-				160
-				(Abs
-					(-
-						(gEgo heading?)
-						(GetAngle param1 param2 (gEgo x?) (gEgo y?))
-					)
-				)
-			)
-		)
+	(asm
+		pushi    4
+		lsp      param1
+		lsp      param2
+		pushi    #x
+		pushi    0
+		lag      gEgo
+		send     4
+		push    
+		pushi    #y
+		pushi    0
+		lag      gEgo
+		send     4
+		push    
+		callk    GetDistance,  8
+		push    
+		ldi      120
+		lt?     
+		bnt      code_0154
+		pushi    160
+		pushi    1
+		pushi    #heading
+		pushi    0
+		lag      gEgo
+		send     4
+		push    
+		pushi    4
+		lsp      param1
+		lsp      param2
+		pushi    #x
+		pushi    0
+		lag      gEgo
+		send     4
+		push    
+		pushi    #y
+		pushi    0
+		lag      gEgo
+		send     4
+		push    
+		callk    GetAngle,  8
+		sub     
+		push    
+		callk    Abs,  2
+		lt?     
+		bnt      code_0154
+code_0154:
+		ret     
 	)
 )
 
@@ -1066,24 +1100,64 @@
 		signal $4000
 	)
 	
-	(method (doVerb theVerb)
-		(switch theVerb
-			(3
-				(cond 
-					((not (global2 script?)) (global2 setScript: sShowComm))
-					(
-						(and
-							(== (global2 script?) sFrogJump4)
-							(> (sFrogJump4 state?) 28)
-							(sFrogJump4 dispose:)
-							(global2 setScript: sShowComm)
-						)
-					)
-				)
-			)
-			(else 
-				(super doVerb: theVerb &rest)
-			)
+	(method (doVerb theVerb param2)
+		(asm
+			lsp      theVerb
+			dup     
+			ldi      3
+			eq?     
+			bnt      code_1ca4
+			pushi    #script
+			pushi    0
+			lag      global2
+			send     4
+			not     
+			bnt      code_1c6e
+			pushi    #setScript
+			pushi    1
+			lofss    sShowComm
+			lag      global2
+			send     6
+			jmp      code_1ca2
+code_1c6e:
+			pushi    #script
+			pushi    0
+			lag      global2
+			send     4
+			push    
+			lofsa    sFrogJump4
+			eq?     
+			bnt      code_1ca2
+			pushi    #state
+			pushi    0
+			lofsa    sFrogJump4
+			send     4
+			push    
+			ldi      28
+			gt?     
+			bnt      code_1ca2
+			pushi    #dispose
+			pushi    0
+			lofsa    sFrogJump4
+			send     4
+			bnt      code_1ca2
+			pushi    #setScript
+			pushi    1
+			lofss    sShowComm
+			lag      global2
+			send     6
+			bnt      code_1ca2
+code_1ca2:
+			jmp      code_1cb0
+code_1ca4:
+			pushi    #doVerb
+			pushi    1
+			lsp      theVerb
+			&rest    param2
+			super    MyProp,  6
+code_1cb0:
+			toss    
+			ret     
 		)
 	)
 )

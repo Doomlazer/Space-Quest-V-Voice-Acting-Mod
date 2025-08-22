@@ -45,14 +45,14 @@
 	(Graph grUPDATE_BOX param2 param1 param4 param3 1)
 )
 
-(procedure (localproc_01a5 param1 param2 param3 param4 param5)
+(procedure (localproc_01a6 param1 param2 param3 param4 param5)
 	(localproc_0180 param1 param2 param3 param2 param5)
 	(localproc_0180 param3 param2 param3 param4 param5)
 	(localproc_0180 param3 param4 param1 param4 param5)
 	(localproc_0180 param1 param4 param1 param2 param5)
 )
 
-(procedure (localproc_01e2 param1 param2)
+(procedure (localproc_01e3 param1 param2)
 	(proc999_4
 		(+ (param2 nsLeft?) 1)
 		(+ (param2 nsTop?) 1)
@@ -62,7 +62,7 @@
 	)
 )
 
-(procedure (localproc_021d)
+(procedure (localproc_021e)
 	(return
 		(not
 			(if
@@ -79,7 +79,7 @@
 	)
 )
 
-(procedure (localproc_0253 param1 &tmp temp0 temp1 temp2 temp3)
+(procedure (localproc_0256 param1 &tmp temp0 temp1 temp2 temp3)
 	(= temp2 0)
 	(= temp0 0)
 	(while (< temp0 12)
@@ -108,7 +108,7 @@
 	)
 )
 
-(procedure (localproc_02b6 param1 &tmp temp0 temp1 temp2 temp3 temp4)
+(procedure (localproc_02b8 param1 &tmp temp0 temp1 temp2 temp3 temp4)
 	(= temp2 0)
 	(= temp0 0)
 	(while (< temp0 14)
@@ -137,7 +137,7 @@
 	)
 )
 
-(procedure (localproc_031e param1 &tmp temp0 temp1 temp2 [temp3 2])
+(procedure (localproc_031f param1 &tmp temp0 temp1 temp2 [temp3 2])
 	(= temp2 0)
 	(= temp0 0)
 	(while (< temp0 12)
@@ -478,7 +478,7 @@
 				)
 				(= cycles 1)
 			)
-			(2 (= cycles 4))
+			(2 (= ticks 4))
 			(3 (self dispose:))
 		)
 	)
@@ -772,11 +772,11 @@
 		(switch (= state newState)
 			(0
 				(backToMain init:)
-				(localproc_01a5 44 20 308 34 15)
-				(localproc_01a5 44 36 308 146 15)
-				(localproc_01a5 42 18 310 148 15)
+				(localproc_01a6 44 20 308 34 15)
+				(localproc_01a6 44 36 308 146 15)
+				(localproc_01a6 42 18 310 148 15)
 				(localproc_034f 57 24 752 2 0 0 local3 15 200)
-				(localproc_031e local3)
+				(localproc_031f local3)
 				(if (!= local3 1) (prefIcon init:))
 				(if (== local3 9)
 					(proc0_2 82)
@@ -798,14 +798,14 @@
 		(switch (= state newState)
 			(0
 				(backToMain init:)
-				(localproc_01a5 44 20 308 34 15)
-				(localproc_01a5 44 36 171 146 15)
-				(localproc_01a5 171 36 222 146 15)
-				(localproc_01a5 222 36 308 146 15)
-				(localproc_01a5 42 18 310 148 15)
+				(localproc_01a6 44 20 308 34 15)
+				(localproc_01a6 44 36 171 146 15)
+				(localproc_01a6 171 36 222 146 15)
+				(localproc_01a6 222 36 308 146 15)
+				(localproc_01a6 42 18 310 148 15)
 				(localproc_034f 100 24 751 1 0 0 2 15 200)
 				(proc0_10 232 15)
-				(localproc_0253 local3)
+				(localproc_0256 local3)
 				(if (!= local3 1) (prefIcon init:))
 				(if (!= local3 3) (nextIcon init:))
 				(= cycles 2)
@@ -822,13 +822,13 @@
 		(switch (= state newState)
 			(0
 				(backToMain init:)
-				(localproc_01a5 44 36 81 176 15)
-				(localproc_01a5 81 36 308 176 15)
-				(localproc_01a5 42 18 310 178 15)
-				(localproc_01a5 44 20 308 34 15)
+				(localproc_01a6 44 36 81 176 15)
+				(localproc_01a6 81 36 308 176 15)
+				(localproc_01a6 42 18 310 178 15)
+				(localproc_01a6 44 20 308 34 15)
 				(localproc_034f 57 24 750 3 0 0 1 15 100)
 				(localproc_034f 157 24 750 3 0 0 2 15 100)
-				(localproc_02b6 local3)
+				(localproc_02b8 local3)
 				(if (!= local3 1) (prefIcon init:))
 				(if (!= local3 4) (nextIcon init:))
 				(self dispose:)
@@ -903,7 +903,7 @@
 			(and
 				(proc0_1 22)
 				(not local2)
-				(localproc_01e2 gEgo self 1)
+				(localproc_01e3 gEgo self 1)
 			)
 			(self setScript: sSelectButton 0 4)
 		)
@@ -1000,7 +1000,7 @@
 			(and
 				(proc0_1 22)
 				(not local2)
-				(localproc_01e2 gEgo self 1)
+				(localproc_01e3 gEgo self 1)
 			)
 			(self setScript: sSelectButton 0 1)
 		)
@@ -1039,16 +1039,16 @@
 	
 	(method (doit)
 		(if (and (proc0_1 22) (not local2))
-			(if (localproc_01e2 gEgo but1 1)
+			(if (localproc_01e3 gEgo but1 1)
 				(but1 setScript: sSelectButton 0 5)
 			)
-			(if (localproc_01e2 gEgo but2 1)
+			(if (localproc_01e3 gEgo but2 1)
 				(but2 setScript: sSelectButton 0 6)
 			)
-			(if (localproc_01e2 gEgo but3 1)
+			(if (localproc_01e3 gEgo but3 1)
 				(but3 setScript: sSelectButton 0 7)
 			)
-			(if (localproc_01e2 gEgo but4 1)
+			(if (localproc_01e3 gEgo but4 1)
 				(but4 setScript: sSelectButton 0 8)
 			)
 		)
@@ -1169,9 +1169,9 @@
 		(if
 			(and
 				(proc0_1 22)
-				(localproc_021d)
+				(localproc_021e)
 				(not local2)
-				(localproc_01e2 gEgo self 1)
+				(localproc_01e3 gEgo self 1)
 			)
 			(self setScript: sSelectButton 0 1)
 		)
@@ -1203,9 +1203,9 @@
 		(if
 			(and
 				(proc0_1 22)
-				(localproc_021d)
+				(localproc_021e)
 				(not local2)
-				(localproc_01e2 gEgo self 1)
+				(localproc_01e3 gEgo self 1)
 			)
 			(self setScript: sSelectButton 0 2)
 		)
@@ -1237,9 +1237,9 @@
 		(if
 			(and
 				(proc0_1 22)
-				(localproc_021d)
+				(localproc_021e)
 				(not local2)
-				(localproc_01e2 gEgo self 1)
+				(localproc_01e3 gEgo self 1)
 			)
 			(self setScript: sSelectButton 0 3)
 		)
@@ -1271,9 +1271,9 @@
 		(if
 			(and
 				(proc0_1 22)
-				(localproc_021d)
+				(localproc_021e)
 				(not local2)
-				(localproc_01e2 gEgo self 1)
+				(localproc_01e3 gEgo self 1)
 			)
 			(self setScript: sSelectButton 0 4)
 		)
@@ -1366,7 +1366,7 @@
 		(if
 			(and
 				(proc0_1 22)
-				(localproc_01e2 gEgo self 1)
+				(localproc_01e3 gEgo self 1)
 				(< 1 local1)
 				(not (global2 script?))
 				(not local2)
@@ -1402,7 +1402,7 @@
 		(if
 			(and
 				(proc0_1 22)
-				(localproc_01e2 gEgo self 1)
+				(localproc_01e3 gEgo self 1)
 				(< 1 local1)
 				(not (global2 script?))
 				(not local2)
@@ -1436,7 +1436,7 @@
 			(and
 				(proc0_1 22)
 				(not local2)
-				(localproc_01e2 gEgo self 1)
+				(localproc_01e3 gEgo self 1)
 			)
 			(self setScript: sSelectButton 0 4)
 		)

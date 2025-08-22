@@ -47,6 +47,10 @@
 				(= cycles 1)
 			)
 			(2
+				(gSQ5 handsOff:)
+				(gTestMessager say: 1 0 0 (+ register 24) self 205)
+			)
+			(3
 				(switch register
 					(0
 						(self setScript: sScanPlanet self)
@@ -66,7 +70,7 @@
 					(else  (= cycles 1))
 				)
 			)
-			(3
+			(4
 				(if (!= register 4)
 					(gTestMessager say: 43 0 0 2 self)
 					(= state 0)
@@ -74,7 +78,7 @@
 					(= cycles 1)
 				)
 			)
-			(4
+			(5
 				(gSQ5 handsOn:)
 				(gSq5IconBar select: (gSq5IconBar at: 2))
 				(gSQ5 setCursor: 982 1)

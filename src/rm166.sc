@@ -55,11 +55,9 @@
 				(eyess init: setCycle: ForwardCounter 4 self)
 			)
 			(3
-				(gSQ5 handsOn:)
 				(= local201 1)
-				(gSq5IconBar disable: 0 3 4 5 6)
 				(DrawPic 38 dpOPEN_PIXELATION)
-				(Message msgGET 166 1 0 0 1 @local1)
+				(Message msgGET 166 1 2 0 1 @local1)
 				(Display
 					@local1
 					dsCOORD
@@ -72,7 +70,7 @@
 					dsWIDTH
 					240
 				)
-				(Message msgGET 166 1 0 0 2 @local1)
+				(Message msgGET 166 1 2 0 2 @local1)
 				(Display
 					@local1
 					dsCOORD
@@ -85,9 +83,27 @@
 					dsWIDTH
 					240
 				)
-				(testResults init:)
+				(= cycles 1)
 			)
 			(4
+				(if (& global90 $0002)
+					(= register (gSq5Music1 vol?))
+					(gSq5Music1 fade: 40 15 5 0)
+					(gTestMessager say: 1 2 0 0 self)
+				else
+					(= cycles 1)
+				)
+			)
+			(5
+				(if (& global90 $0002)
+					(DoAudio 3)
+					(gSq5Music1 fade: register 15 5 0)
+				)
+				(gSQ5 handsOn:)
+				(gSq5IconBar disable: 0 4 5 6)
+				(testResults init:)
+			)
+			(6
 				(gSQ5 handsOff:)
 				(= local201 0)
 				(DrawPic 36 dpOPEN_PIXELATION)
@@ -97,38 +113,38 @@
 					setMotion: MoveTo 114 148 self
 				)
 			)
-			(5
+			(7
 				(eyess dispose:)
 				(hands dispose:)
 				(head setLoop: 2)
 				(= seconds 5)
 			)
-			(6
+			(8
 				(head setLoop: 3)
 				(= seconds 1)
 			)
-			(7
+			(9
 				(proc0_10 162 100)
 				(PalVary pvUNINIT)
 				(PalVary pvINIT 1602 1)
 				(= seconds 1)
 			)
-			(8
+			(10
 				(shirt setCel: 1)
 				(PalVary pvUNINIT)
 				(PalVary pvINIT 1603 1)
 				(= seconds 1)
 			)
-			(9 (hall init:) (= seconds 1))
-			(10
+			(11 (hall init:) (= seconds 1))
+			(12
 				(PalVary pvUNINIT)
 				(PalVary pvINIT 1604 3)
 				(= seconds 4)
 			)
-			(11
+			(13
 				(gSq5Music1 fade: 80 10 5 0 self)
 			)
-			(12
+			(14
 				(PalVary pvUNINIT)
 				(global2 newRoom: 165)
 			)
@@ -203,7 +219,11 @@
 		(switch theVerb
 			(4 (if local201 (sDoAll cue:)))
 			(else 
-				(super doVerb: theVerb &rest)
+				(if (and (& global90 $0002) (== theVerb 2))
+					(gTestMessager say: 1 2 0 0)
+				else
+					(super doVerb: theVerb &rest)
+				)
 			)
 		)
 	)

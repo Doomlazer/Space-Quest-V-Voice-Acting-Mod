@@ -137,14 +137,18 @@
 				(if (self check: pEvent)
 					(pEvent claimed: 1)
 					(cond 
-						((< (pEvent y?) (+ nsTop 10)) (repeat
-							(self retreat: 1)
-							(breakif (not (proc255_0)))
-						))
-						((> (pEvent y?) (- nsBottom 10)) (repeat
-							(self advance: 1)
-							(breakif (not (proc255_0)))
-						))
+						((< (pEvent y?) (+ nsTop 10))
+							(repeat
+								(self retreat: 1)
+								(if (not (proc255_0)) (break))
+							)
+						)
+						((> (pEvent y?) (- nsBottom 10))
+							(repeat
+								(self advance: 1)
+								(if (not (proc255_0)) (break))
+							)
+						)
 						(else
 							(TextSize @[temp5 0] {M} font 0 0)
 							(if

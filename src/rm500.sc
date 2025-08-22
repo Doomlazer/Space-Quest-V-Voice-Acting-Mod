@@ -452,7 +452,7 @@
 				(theMusic3 fade:)
 				(theMusic4 fade:)
 				(proc0_10 176 200)
-				(= cycles 5)
+				(= ticks 5)
 			)
 			(10 (global2 newRoom: 550))
 		)
@@ -1181,7 +1181,7 @@
 					setCycle: StopWalk -1
 					setLoop: Grooper
 				)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(2
 				(UnLoad 128 519)

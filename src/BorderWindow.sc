@@ -4,7 +4,7 @@
 (use SysWindow)
 
 
-(procedure (localproc_0203 param1 param2 param3 param4 param5 param6 param7 param8 param9 param10 param11 param12 param13 &tmp temp0 temp1)
+(procedure (localproc_00ba param1 param2 param3 param4 param5 param6 param7 param8 param9 param10 param11 param12 param13 &tmp temp0 temp1)
 	(= temp0 (GetPort))
 	(SetPort 0)
 	(Graph
@@ -134,7 +134,7 @@
 		(= lsBottom (+ bottom bevelWid shadowWid))
 		(= type 128)
 		(super open:)
-		(localproc_0203
+		(localproc_00ba
 			top
 			left
 			bottom
@@ -212,7 +212,7 @@
 		(= xOffset (+ bevelWid sideBordWid))
 		(= yOffset (+ bevelWid topBordHgt))
 		(super open:)
-		(localproc_0203
+		(localproc_00ba
 			theTop
 			theLeft
 			theBottom

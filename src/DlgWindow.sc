@@ -23,7 +23,7 @@
 	[local181 19] = [{EDITING} 0 0 {Width} 0 0 {Length} 0 0 {Position} 0 0 {Help} 0 0 {Menu}]
 	[local200 22] = [{WINDOW} 0 0 {Create} 0 0 {Position} 0 0 {Delete} 0 0 {Title} 0 0 {Help} 0 0 {Menu}]
 )
-(procedure (localproc_229e param1 param2)
+(procedure (localproc_027c param1 param2)
 	(if (> (StrLen param1) param2)
 		(StrAt param1 param2 0)
 		(StrAt param1 (-- param2) 46)
@@ -33,7 +33,7 @@
 	(return param1)
 )
 
-(procedure (localproc_22dc param1 &tmp temp0 temp1 temp2 temp3 temp4 [temp5 10] [temp15 10] [temp25 10] [temp35 10] [temp45 12])
+(procedure (localproc_02b6 param1 &tmp temp0 temp1 temp2 temp3 temp4 [temp5 10] [temp15 10] [temp25 10] [temp35 10] [temp45 12])
 	(= temp0 (param1 noun?))
 	(= temp1 (param1 verb?))
 	(= temp2 (param1 case?))
@@ -91,7 +91,7 @@
 	)
 )
 
-(procedure (localproc_24db param1)
+(procedure (localproc_04a3 param1)
 	(Print
 		addTitle: @local42
 		font: 0
@@ -242,7 +242,7 @@
 	)
 	
 	(method (editMsg)
-		(if (localproc_22dc self)
+		(if (localproc_02b6 self)
 			(if title (Memory memFREE title))
 			(= title
 				(Memory
@@ -279,7 +279,7 @@
 	)
 	
 	(method (editTitle)
-		(switch (localproc_24db self)
+		(switch (localproc_04a3 self)
 			(0 (return))
 			(2 (self editMsg:) (return))
 		)
@@ -350,7 +350,7 @@
 				)
 				(self moveTo: temp0 temp1)
 				(param1 dispose:)
-				(breakif (not (proc255_0)))
+				(if (not (proc255_0)) (break))
 			)
 			(DrawStatus {_} 0 0)
 			(DrawStatus 0)
@@ -515,7 +515,7 @@
 	)
 	
 	(method (editMsg)
-		(if (localproc_22dc self)
+		(if (localproc_02b6 self)
 			(Memory memFREE text)
 			(= text
 				(Memory
@@ -529,7 +529,7 @@
 	)
 	
 	(method (editText)
-		(switch (localproc_24db self)
+		(switch (localproc_04a3 self)
 			(0 (return))
 			(2 (self editMsg:) (return))
 		)
@@ -712,7 +712,7 @@
 	)
 	
 	(method (editMsg)
-		(if (localproc_22dc self)
+		(if (localproc_02b6 self)
 			(Memory memFREE text)
 			(= text
 				(Memory
@@ -726,7 +726,7 @@
 	)
 	
 	(method (editText)
-		(switch (localproc_24db self)
+		(switch (localproc_04a3 self)
 			(0 (return))
 			(2 (self editMsg:) (return))
 		)
@@ -935,7 +935,7 @@
 			(= newEvent (Event new:))
 			(if (not (curMenu handleEvent: newEvent))
 				(GlobalToLocal newEvent)
-				(breakif (self handleEvent: newEvent))
+				(if (self handleEvent: newEvent) (break))
 			)
 			(newEvent dispose:)
 		)
@@ -1150,7 +1150,7 @@
 											(Format
 												@temp568
 												{__text:___%s}
-												(localproc_229e @temp2 15)
+												(localproc_027c @temp2 15)
 											)
 											(Format @temp598 {__font:___%d} (curItem font?))
 											(Format @temp628 {__width:__%d} (curItem width?))
@@ -1166,7 +1166,7 @@
 											(Format
 												@temp568
 												{__text:___%s}
-												(localproc_229e @temp2 15)
+												(localproc_027c @temp2 15)
 											)
 											(Format @temp598 {__font:___%d} (curItem font?))
 											(Format @temp628 {__value:__%d} (curItem value?))
@@ -1191,7 +1191,7 @@
 											(Format
 												@temp568
 												{__text:___%s}
-												(localproc_229e @temp2 15)
+												(localproc_027c @temp2 15)
 											)
 											(Format @temp598 {__font:___%d} (curItem font?))
 											(Format @temp628 {__max:____%d} (curItem max?))

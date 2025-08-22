@@ -500,7 +500,7 @@
 					x: 130
 					y: 172
 				)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(4
 				(gSQ5 handsOn:)
@@ -611,7 +611,7 @@
 			(8
 				(drip2f cel: 0)
 				(= state -1)
-				(= cycles 2)
+				(= ticks 2)
 			)
 		)
 	)

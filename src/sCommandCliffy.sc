@@ -51,6 +51,10 @@
 				(= cycles 1)
 			)
 			(2
+				(gSQ5 handsOff:)
+				(gTestMessager say: 1 0 0 (+ register 19) self 205)
+			)
+			(3
 				(switch register
 					(0
 						(self setScript: sStatusReport self)
@@ -70,7 +74,7 @@
 					(else  (= cycles 1))
 				)
 			)
-			(3
+			(4
 				(if
 				(and (== gEurekaCurLocation 14) (not (proc0_1 39)))
 					(eureka setScript: (ScriptID 210 1) 0 1)
@@ -82,7 +86,7 @@
 					(= cycles 1)
 				)
 			)
-			(4
+			(5
 				(gSQ5 handsOn:)
 				(gSq5IconBar select: (gSq5IconBar at: 2))
 				(gSQ5 setCursor: 982 1)

@@ -116,11 +116,11 @@
 			(0
 				(Palette palANIMATE 251 253 1)
 				(Palette palANIMATE 253 255 1)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(1
 				(= state (- state 2))
-				(= cycles 1)
+				(= ticks 1)
 			)
 		)
 	)
@@ -133,11 +133,11 @@
 		(switch (= state newState)
 			(0
 				(Palette palANIMATE 250 255 10)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(1
 				(= state (- state 2))
-				(= cycles 1)
+				(= ticks 1)
 			)
 		)
 	)
@@ -192,17 +192,17 @@
 				(ship init: addToPic:)
 				(DrawPic 35 dpOPEN_PIXELATION)
 				(gSq5Music1 number: 35 loop: -1 play:)
-				(= cycles 1)
+				(= seconds 1)
 			)
 			(13
 				(ship3 init: addToPic:)
 				(DrawPic 35 dpOPEN_PIXELATION)
-				(= cycles 1)
+				(= seconds 1)
 			)
 			(14
 				(ship5 init: addToPic:)
 				(DrawPic 35 dpOPEN_PIXELATION)
-				(= cycles 1)
+				(= seconds 1)
 			)
 			(15 (= seconds 3))
 			(16

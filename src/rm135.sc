@@ -723,7 +723,7 @@
 		loop 3
 		priority 6
 		signal $0010
-		cycleSpeed 0
+		cycleSpeed 2
 	)
 )
 

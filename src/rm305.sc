@@ -191,26 +191,26 @@
 			push    
 			ldi      128
 			eq?     
-			bnt      code_04ad
+			bnt      code_04ae
 			pushi    90
 			pushi    #heading
 			pushi    0
 			lag      gEgo
 			send     4
 			lt?     
-			bnt      code_048d
+			bnt      code_048b
 			pprev   
 			ldi      270
 			lt?     
-code_048d:
+code_048b:
 			not     
-			bnt      code_04ad
+			bnt      code_04ae
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_04ad
+			bnt      code_04ae
 			pushi    #setScript
 			pushi    3
 			lofsa    sExitRight
@@ -219,31 +219,31 @@ code_048d:
 			pushi    1
 			lag      global2
 			send     10
-			jmp      code_05c6
-code_04ad:
+			jmp      code_05d9
+code_04ae:
 			lst      temp0
 			ldi      512
 			eq?     
-			bnt      code_04e6
+			bnt      code_04eb
 			pushi    90
 			pushi    #heading
 			pushi    0
 			lag      gEgo
 			send     4
 			lt?     
-			bnt      code_04c6
+			bnt      code_04c8
 			pprev   
 			ldi      270
 			lt?     
-code_04c6:
+code_04c8:
 			not     
-			bnt      code_04e6
+			bnt      code_04eb
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_04e6
+			bnt      code_04eb
 			pushi    #setScript
 			pushi    3
 			lofsa    sExitRight
@@ -252,12 +252,12 @@ code_04c6:
 			pushi    0
 			lag      global2
 			send     10
-			jmp      code_05c6
-code_04e6:
+			jmp      code_05d9
+code_04eb:
 			lst      temp0
 			ldi      1024
 			eq?     
-			bnt      code_050d
+			bnt      code_0514
 			pushi    #script
 			pushi    0
 			lag      global2
@@ -266,25 +266,25 @@ code_04e6:
 			lofsa    sRogSlip
 			eq?     
 			not     
-			bnt      code_050d
+			bnt      code_0514
 			pushi    #setScript
 			pushi    1
 			lofsa    sRogSlip
 			push    
 			lag      global2
 			send     6
-			jmp      code_05c6
-code_050d:
+			jmp      code_05d9
+code_0514:
 			lst      temp0
 			ldi      2048
 			eq?     
-			bnt      code_053d
+			bnt      code_0547
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_053d
+			bnt      code_0547
 			pushi    #heading
 			pushi    0
 			lag      gEgo
@@ -292,25 +292,25 @@ code_050d:
 			push    
 			ldi      180
 			lt?     
-			bnt      code_053d
+			bnt      code_0547
 			pushi    #setScript
 			pushi    1
 			lofsa    sRogInTrunk
 			push    
 			lag      global2
 			send     6
-			jmp      code_05c6
-code_053d:
+			jmp      code_05d9
+code_0547:
 			lst      temp0
 			ldi      4096
 			eq?     
-			bnt      code_056c
+			bnt      code_0579
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_056c
+			bnt      code_0579
 			pushi    #heading
 			pushi    0
 			lag      gEgo
@@ -318,64 +318,64 @@ code_053d:
 			push    
 			ldi      180
 			gt?     
-			bnt      code_056c
+			bnt      code_0579
 			pushi    #setScript
 			pushi    1
 			lofsa    sRogInTrunk
 			push    
 			lag      global2
 			send     6
-			jmp      code_05c6
-code_056c:
+			jmp      code_05d9
+code_0579:
 			lst      temp0
 			ldi      16384
 			eq?     
-			bnt      code_05a8
+			bnt      code_05b9
 			pushi    #script
 			pushi    0
 			lofsa    wd40
 			send     4
 			not     
-			bnt      code_05a8
+			bnt      code_05b9
 			lsg      gGModNum
 			ldi      320
 			ne?     
-			bnt      code_05a8
+			bnt      code_05b9
 			pushi    1
 			pushi    14
 			callb    proc0_1,  2
 			not     
-			bt       code_0599
+			bt       code_05a9
 			pushi    1
 			pushi    15
 			callb    proc0_1,  2
-			bnt      code_05a8
-code_0599:
+			bnt      code_05b9
+code_05a9:
 			pushi    #setScript
 			pushi    1
 			lofsa    sWD40LandAndAttack
 			push    
 			lofsa    wd40
 			send     6
-			jmp      code_05c6
-code_05a8:
+			jmp      code_05d9
+code_05b9:
 			lst      temp0
 			ldi      4
 			eq?     
-			bnt      code_05c6
+			bnt      code_05d9
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_05c6
+			bnt      code_05d9
 			pushi    #setScript
 			pushi    1
 			lofsa    sExitViaScroll
 			push    
 			lag      global2
 			send     6
-code_05c6:
+code_05d9:
 			pushi    5
 			pushi    132
 			pushi    125
@@ -383,31 +383,31 @@ code_05c6:
 			pushi    145
 			lsg      gEgo
 			calle    proc999_4,  10
-			bnt      code_060a
+			bnt      code_0621
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_060a
+			bnt      code_0621
 			pushi    #script
 			pushi    0
 			lofsa    wd40
 			send     4
 			not     
-			bnt      code_060a
+			bnt      code_0621
 			pushi    1
 			pushi    14
 			callb    proc0_1,  2
 			not     
-			bnt      code_060a
+			bnt      code_0621
 			pushi    #setScript
 			pushi    1
 			lofsa    sKnockRogOffTrunk
 			push    
 			lofsa    wd40
 			send     6
-code_060a:
+code_0621:
 			ret     
 		)
 	)
@@ -556,7 +556,6 @@ code_060a:
 					x: 175
 					y: 89
 					setStep: 15 5
-					moveSpeed: 0
 					init:
 					setMotion: MoveTo (+ (gEgo x?) 7) (- (gEgo y?) 10) self
 				)
@@ -575,7 +574,6 @@ code_060a:
 					x: 175
 					y: 89
 					setStep: 15 5
-					moveSpeed: 0
 					setMotion: MoveTo (+ (gEgo x?) 2) (- (gEgo y?) 18) self
 				)
 			)
@@ -647,7 +645,7 @@ code_060a:
 					(= ticks 1)
 				else
 					(-- state)
-					(= ticks 10)
+					(= ticks 8)
 				)
 			)
 			(3
@@ -679,7 +677,6 @@ code_060a:
 				(wd40
 					view: 400
 					setStep: 5 10
-					moveSpeed: 0
 					signal: (| (wd40 signal?) $6000)
 					setMotion: MoveTo 250 -40 self
 				)
@@ -1036,7 +1033,6 @@ code_060a:
 					scaleY: 128
 					setScale: 0
 					setStep: 2 6
-					moveSpeed: 0
 					setMotion: MoveTo 118 150 self
 				)
 				(treeBranch
@@ -1045,7 +1041,6 @@ code_060a:
 					setCel: 0
 					setCycle: 0
 					setStep: 2 6
-					moveSpeed: 0
 					setMotion: MoveTo 127 150
 				)
 			)

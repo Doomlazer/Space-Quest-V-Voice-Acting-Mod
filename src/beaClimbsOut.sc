@@ -91,7 +91,7 @@
 			(10
 				(((ScriptID 240 2) looper?) dispose:)
 				((ScriptID 240 2) looper: 0 setCycle: 0)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(11
 				((ScriptID 240 2)

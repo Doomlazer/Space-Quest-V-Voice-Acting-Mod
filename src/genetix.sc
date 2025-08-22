@@ -110,6 +110,7 @@
 		number 0
 		modNum -1
 		noun 0
+		case 0
 		timer 0
 		keep 0
 		initialized 0
@@ -136,8 +137,9 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gSQ5 handsOff:)
 				(gEgo
-					setMotion: MoveTo [local0 register] [local11 (gSQ5 handsOff:)] self
+					setMotion: MoveTo [local0 register] [local11 register] self
 				)
 			)
 			(1
@@ -148,7 +150,7 @@
 					)
 					(= seconds 2)
 				else
-					(= cycles 2)
+					(= ticks 2)
 				)
 			)
 			(2
@@ -171,6 +173,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -220,6 +223,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -288,6 +292,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0

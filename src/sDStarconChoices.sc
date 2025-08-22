@@ -60,13 +60,38 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 4 0 5 1 self 202)
+			)
+			(1
 				(localproc_00ee 4 0 5)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gTestMessager say: 4 0 5 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 12) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 12) whichSelect?)
+					(switch ((ScriptID 201 12) whichSelect?)
+						(1
+							(gTestMessager say: 4 0 5 2 self 202)
+						)
+						(2
+							(gTestMessager say: 4 0 5 3 self 202)
+						)
+						(3
+							(gTestMessager say: 4 0 5 4 self 202)
+						)
+						(4
+							(gTestMessager say: 4 0 5 5 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 12) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 12) whichSelect?)
 					(gSQ5 handsOff:)
@@ -86,7 +111,7 @@
 					(= cycles 1)
 				)
 			)
-			(3 (self dispose:))
+			(5 (self dispose:))
 		)
 	)
 )
@@ -97,13 +122,38 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 12 0 8 1 self 202)
+			)
+			(1
 				(localproc_00a2 12 0 8)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gTestMessager say: 12 0 8 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 13) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 13) whichSelect?)
+					(switch ((ScriptID 201 13) whichSelect?)
+						(1
+							(gTestMessager say: 12 0 8 2 self 202)
+						)
+						(2
+							(gTestMessager say: 12 0 8 3 self 202)
+						)
+						(3
+							(gTestMessager say: 12 0 8 4 self 202)
+						)
+						(4
+							(gTestMessager say: 12 0 8 5 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 13) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 13) whichSelect?)
 					(gSQ5 handsOff:)
@@ -124,14 +174,14 @@
 					(= cycles 1)
 				)
 			)
-			(3
+			(5
 				(if local0
 					(self setScript: sDrooleComments self)
 				else
 					(= cycles 1)
 				)
 			)
-			(4 (self dispose:))
+			(6 (self dispose:))
 		)
 	)
 )
@@ -142,13 +192,39 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				((ScriptID 201 12) normal: 1)
+				(gTestMessager say: 26 0 36 1 self 202)
+			)
+			(1
 				(= cycles 1)
 				(localproc_00ee 26 0 36)
 			)
-			(1
+			(2
 				(gTestMessager say: 26 0 36 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 12) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 12) whichSelect?)
+					(switch ((ScriptID 201 12) whichSelect?)
+						(1
+							(gTestMessager say: 26 0 36 2 self 202)
+						)
+						(2
+							(gTestMessager say: 26 0 36 3 self 202)
+						)
+						(3
+							(gTestMessager say: 26 0 36 4 self 202)
+						)
+						(4
+							(gTestMessager say: 26 0 36 5 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 12) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 12) whichSelect?)
 					(gSQ5 handsOff:)
@@ -169,7 +245,7 @@
 					(= cycles 1)
 				)
 			)
-			(3
+			(5
 				((ScriptID 201 15) talkWidth: 0)
 				(self dispose:)
 			)
@@ -183,13 +259,38 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 26 0 47 1 self 202)
+			)
+			(1
 				(= cycles 1)
 				(localproc_00ee 26 0 47)
 			)
-			(1
+			(2
 				(gTestMessager say: 26 0 47 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 12) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 12) whichSelect?)
+					(switch ((ScriptID 201 12) whichSelect?)
+						(1
+							(gTestMessager say: 26 0 47 2 self 202)
+						)
+						(2
+							(gTestMessager say: 26 0 47 3 self 202)
+						)
+						(3
+							(gTestMessager say: 26 0 47 4 self 202)
+						)
+						(4
+							(gTestMessager say: 26 0 47 5 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 12) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 12) whichSelect?)
 					(gSQ5 handsOff:)
@@ -210,7 +311,7 @@
 					(= cycles 1)
 				)
 			)
-			(3
+			(5
 				((ScriptID 201 12) talkWidth: 120)
 				(self dispose:)
 			)
@@ -244,13 +345,38 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 12 0 32 1 self 202)
+			)
+			(1
 				(localproc_00a2 12 0 32)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gTestMessager say: 12 0 32 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 13) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 13) whichSelect?)
+					(switch ((ScriptID 201 13) whichSelect?)
+						(1
+							(gTestMessager say: 12 0 32 2 self 202)
+						)
+						(2
+							(gTestMessager say: 12 0 32 3 self 202)
+						)
+						(3
+							(gTestMessager say: 12 0 32 4 self 202)
+						)
+						(4
+							(gTestMessager say: 12 0 32 5 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 13) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 13) whichSelect?)
 					(gSQ5 handsOff:)
@@ -274,7 +400,7 @@
 					(= cycles 1)
 				)
 			)
-			(3 (self dispose:))
+			(5 (self dispose:))
 		)
 	)
 )
@@ -285,13 +411,38 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 12 0 27 1 self 202)
+			)
+			(1
 				(localproc_00a2 12 0 27)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gTestMessager say: 12 0 27 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 13) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 13) whichSelect?)
+					(switch ((ScriptID 201 13) whichSelect?)
+						(1
+							(gTestMessager say: 12 0 27 2 self 202)
+						)
+						(2
+							(gTestMessager say: 12 0 27 3 self 202)
+						)
+						(3
+							(gTestMessager say: 12 0 27 4 self 202)
+						)
+						(4
+							(gTestMessager say: 12 0 27 5 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 13) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 13) whichSelect?)
 					(gSQ5 handsOff:)
@@ -315,7 +466,7 @@
 					(= cycles 1)
 				)
 			)
-			(3 (self dispose:))
+			(5 (self dispose:))
 		)
 	)
 )
@@ -326,13 +477,35 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 12 0 41 1 self 202)
+			)
+			(1
 				(localproc_00a2 12 0 41)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gTestMessager say: 12 0 41 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 13) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 13) whichSelect?)
+					(switch ((ScriptID 201 13) whichSelect?)
+						(1
+							(gTestMessager say: 12 0 41 2 self 202)
+						)
+						(2
+							(gTestMessager say: 12 0 41 3 self 202)
+						)
+						(3
+							(gTestMessager say: 12 0 41 4 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 13) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 13) whichSelect?)
 					(gSQ5 handsOff:)
@@ -369,7 +542,7 @@
 					(= cycles 1)
 				)
 			)
-			(3 (self dispose:))
+			(5 (self dispose:))
 		)
 	)
 )
@@ -380,13 +553,38 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 12 0 42 1 self 202)
+			)
+			(1
 				(localproc_00a2 12 0 42)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gTestMessager say: 12 0 42 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 13) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 13) whichSelect?)
+					(switch ((ScriptID 201 13) whichSelect?)
+						(1
+							(gTestMessager say: 12 0 42 2 self 202)
+						)
+						(2
+							(gTestMessager say: 12 0 42 3 self 202)
+						)
+						(3
+							(gTestMessager say: 12 0 42 4 self 202)
+						)
+						(4
+							(gTestMessager say: 12 0 42 5 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 13) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 13) whichSelect?)
 					(gSQ5 handsOff:)
@@ -410,7 +608,7 @@
 					(= cycles 1)
 				)
 			)
-			(3 (self dispose:))
+			(5 (self dispose:))
 		)
 	)
 )
@@ -421,15 +619,39 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 26 0 55 1 self 202)
+			)
+			(1
 				(localproc_00ee 26 0 55)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gTestMessager say: 26 0 55 1 self 202)
 			)
-			(2
+			(3
 				((ScriptID 201 12) normal: 1 keepWindow: 0)
-				(gSQ5 handsOff:)
+				(if ((ScriptID 201 12) whichSelect?)
+					(switch ((ScriptID 201 12) whichSelect?)
+						(1
+							(gTestMessager say: 26 0 55 2 self 202)
+						)
+						(2
+							(gTestMessager say: 26 0 55 3 self 202)
+						)
+						(3
+							(gTestMessager say: 26 0 55 4 self 202)
+						)
+						(4
+							(gTestMessager say: 26 0 55 5 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
+				((ScriptID 201 12) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 12) whichSelect?)
 					(gSQ5 handsOff:)
 					(switch ((ScriptID 201 12) whichSelect?)
@@ -448,7 +670,7 @@
 					(= cycles 1)
 				)
 			)
-			(3 (self dispose:))
+			(5 (self dispose:))
 		)
 	)
 )
@@ -459,15 +681,39 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 12 0 51 1 self 202)
+			)
+			(1
 				(localproc_00a2 12 0 51)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gTestMessager say: 12 0 51 1 self 202)
 			)
-			(2
+			(3
 				((ScriptID 201 13) normal: 1 keepWindow: 0)
-				(gSQ5 handsOff:)
+				(if ((ScriptID 201 13) whichSelect?)
+					(switch ((ScriptID 201 13) whichSelect?)
+						(1
+							(gTestMessager say: 12 0 51 2 self 202)
+						)
+						(2
+							(gTestMessager say: 12 0 51 3 self 202)
+						)
+						(3
+							(gTestMessager say: 12 0 51 4 self 202)
+						)
+						(4
+							(gTestMessager say: 12 0 51 5 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
+				((ScriptID 201 13) normal: 1 keepWindow: 0)
 				(proc201_27 0)
 				(if ((ScriptID 201 13) whichSelect?)
 					(gSQ5 handsOff:)
@@ -487,7 +733,7 @@
 					(= cycles 1)
 				)
 			)
-			(3
+			(5
 				(proc201_27 1)
 				(self dispose:)
 			)
@@ -553,13 +799,38 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 26 0 74 1 self 202)
+			)
+			(1
 				(= cycles 1)
 				(localproc_00ee 26 0 74)
 			)
-			(1
+			(2
 				(gTestMessager say: 26 0 74 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 12) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 12) whichSelect?)
+					(switch ((ScriptID 201 12) whichSelect?)
+						(1
+							(gTestMessager say: 26 0 74 2 self 202)
+						)
+						(2
+							(gTestMessager say: 26 0 74 3 self 202)
+						)
+						(3
+							(gTestMessager say: 26 0 74 4 self 202)
+						)
+						(4
+							(gTestMessager say: 26 0 74 5 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 12) normal: 1 keepWindow: 0)
 				(proc201_5 0)
 				(if ((ScriptID 201 12) whichSelect?)
@@ -580,7 +851,7 @@
 					(= cycles 1)
 				)
 			)
-			(3
+			(5
 				(proc201_5 1)
 				(self dispose:)
 			)
@@ -594,13 +865,38 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 12 0 79 1 self 202)
+			)
+			(1
 				(localproc_00a2 12 0 79)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gTestMessager say: 12 0 79 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 13) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 13) whichSelect?)
+					(switch ((ScriptID 201 13) whichSelect?)
+						(1
+							(gTestMessager say: 12 0 79 2 self 202)
+						)
+						(2
+							(gTestMessager say: 12 0 79 3 self 202)
+						)
+						(3
+							(gTestMessager say: 12 0 79 4 self 202)
+						)
+						(4
+							(gTestMessager say: 12 0 79 5 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 13) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 13) whichSelect?)
 					(gSQ5 handsOff:)
@@ -620,7 +916,7 @@
 					(= cycles 1)
 				)
 			)
-			(3 (self dispose:))
+			(5 (self dispose:))
 		)
 	)
 )
@@ -631,13 +927,35 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 12 0 64 1 self 202)
+			)
+			(1
 				(localproc_00a2 12 0 64)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gTestMessager say: 12 0 64 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 13) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 13) whichSelect?)
+					(switch ((ScriptID 201 13) whichSelect?)
+						(1
+							(gTestMessager say: 12 0 64 2 self 202)
+						)
+						(2
+							(gTestMessager say: 12 0 64 3 self 202)
+						)
+						(3
+							(gTestMessager say: 12 0 64 4 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 13) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 13) whichSelect?)
 					(gSQ5 handsOff:)
@@ -654,7 +972,7 @@
 					(= cycles 1)
 				)
 			)
-			(3 (self dispose:))
+			(5 (self dispose:))
 		)
 	)
 )
@@ -665,13 +983,38 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 12 0 83 1 self 202)
+			)
+			(1
 				(localproc_00a2 12 0 83)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gTestMessager say: 12 0 83 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 13) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 13) whichSelect?)
+					(switch ((ScriptID 201 13) whichSelect?)
+						(1
+							(gTestMessager say: 12 0 83 2 self 202)
+						)
+						(2
+							(gTestMessager say: 12 0 83 3 self 202)
+						)
+						(3
+							(gTestMessager say: 12 0 83 4 self 202)
+						)
+						(4
+							(gTestMessager say: 12 0 83 5 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 13) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 13) whichSelect?)
 					(gSQ5 handsOff:)
@@ -691,7 +1034,7 @@
 					(= cycles 1)
 				)
 			)
-			(3 (self dispose:))
+			(5 (self dispose:))
 		)
 	)
 )
@@ -702,13 +1045,35 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 26 0 70 1 self 202)
+			)
+			(1
 				(localproc_00ee 26 0 70)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gTestMessager say: 26 0 70 1 self 202)
 			)
-			(2
+			(3
+				((ScriptID 201 12) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 12) whichSelect?)
+					(switch ((ScriptID 201 12) whichSelect?)
+						(1
+							(gTestMessager say: 26 0 70 2 self 202)
+						)
+						(2
+							(gTestMessager say: 26 0 70 3 self 202)
+						)
+						(3
+							(gTestMessager say: 26 0 70 4 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(4
 				((ScriptID 201 12) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 12) whichSelect?)
 					(gSQ5 handsOff:)
@@ -725,7 +1090,7 @@
 					(= cycles 1)
 				)
 			)
-			(3 (self dispose:))
+			(5 (self dispose:))
 		)
 	)
 )
@@ -739,13 +1104,35 @@
 				(gTestMessager say: 13 0 20 1 self 201)
 			)
 			(1
+				(gTestMessager say: 22 0 8 1 self 202)
+			)
+			(2
 				(= cycles 1)
 				(localproc_00ee 22 0 8)
 			)
-			(2
+			(3
 				(gTestMessager say: 22 0 8 1 self 202)
 			)
-			(3
+			(4
+				((ScriptID 201 12) normal: 1 keepWindow: 0)
+				(if ((ScriptID 201 12) whichSelect?)
+					(switch ((ScriptID 201 12) whichSelect?)
+						(1
+							(gTestMessager say: 22 0 8 2 self 202)
+						)
+						(2
+							(gTestMessager say: 22 0 8 3 self 202)
+						)
+						(3
+							(gTestMessager say: 22 0 8 4 self 202)
+						)
+						(else  (= cycles 1))
+					)
+				else
+					(= cycles 1)
+				)
+			)
+			(5
 				((ScriptID 201 12) normal: 1 keepWindow: 0)
 				(if ((ScriptID 201 12) whichSelect?)
 					(gSQ5 handsOff:)
@@ -765,7 +1152,7 @@
 				)
 				(= cycles 1)
 			)
-			(4
+			(6
 				(gSQ5 handsOff:)
 				(self dispose:)
 			)

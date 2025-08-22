@@ -82,21 +82,21 @@
 			callk    StrLen,  2
 			eq?     
 			sat      temp4
-			bnt      code_01c2
-code_017b:
+			bnt      code_01cc
+code_017f:
 			pushi    0
 			pushi    1
 			lea      @temp78
 			push    
 			callk    StrLen,  2
 			lt?     
-			bnt      code_018b
+			bnt      code_0191
 			pprev   
 			ldi      19
 			lt?     
-code_018b:
+code_0191:
 			not     
-			bnt      code_01b3
+			bnt      code_01bd
 			pushi    #font
 			pushi    1
 			pushi    999
@@ -115,8 +115,8 @@ code_018b:
 			pushi    0
 			class    Print
 			send     28
-			jmp      code_017b
-code_01b3:
+			jmp      code_017f
+code_01bd:
 			pushi    3
 			lea      @global42
 			push    
@@ -124,7 +124,7 @@ code_01b3:
 			push    
 			pushi    40
 			callk    StrCpy,  6
-code_01c2:
+code_01cc:
 			pushi    4
 			lea      @temp78
 			push    
@@ -142,7 +142,7 @@ code_01c2:
 			callk    FileIO,  6
 			sal      local0
 			ne?     
-			bnt      code_020d
+			bnt      code_021d
 			pushi    4
 			pushi    5
 			lea      @temp138
@@ -161,8 +161,8 @@ code_01c2:
 			pushi    1
 			lsl      local0
 			callk    FileIO,  4
-			jmp      code_021d
-code_020d:
+			jmp      code_022f
+code_021d:
 			ldi      0
 			sat      temp138
 			pushi    2
@@ -171,9 +171,9 @@ code_020d:
 			lofsa    {resource.cfg}
 			push    
 			callk    StrCpy,  4
-code_021d:
+code_022f:
 			lat      temp4
-			bnt      code_0250
+			bnt      code_026b
 			pushi    #font
 			pushi    1
 			pushi    999
@@ -198,10 +198,10 @@ code_021d:
 			pushi    8
 			pushi    0
 			callk    StrAt,  6
-code_0250:
+code_026b:
 			lat      temp4
 			not     
-			bt       code_027a
+			bt       code_0299
 			pushi    #font
 			pushi    1
 			pushi    999
@@ -220,8 +220,8 @@ code_0250:
 			pushi    0
 			class    Print
 			send     28
-			bnt      code_02a4
-code_027a:
+			bnt      code_02c9
+code_0299:
 			pushi    65535
 			pushi    3
 			pushi    0
@@ -231,26 +231,26 @@ code_027a:
 			callk    FileIO,  6
 			sal      local0
 			eq?     
-			bnt      code_02a4
+			bnt      code_02c9
 			pushi    2
 			lea      @temp48
 			push    
 			pushi    0
 			callk    StrAt,  4
-			bnt      code_02a4
+			bnt      code_02c9
 			pushi    3
 			lea      @temp48
 			push    
 			pushi    0
 			pushi    0
 			callk    StrAt,  6
-			jmp      code_0250
-code_02a4:
+			jmp      code_026b
+code_02c9:
 			pushi    65535
 			lal      local0
 			ne?     
-			bnt      code_043e
-code_02ac:
+			bnt      code_047b
+code_02d1:
 			pushi    4
 			pushi    5
 			lea      @temp8
@@ -258,28 +258,9 @@ code_02ac:
 			pushi    80
 			lsl      local0
 			callk    FileIO,  8
-			bnt      code_0437
+			bnt      code_0472
 			ldi      0
 			sat      temp0
-code_02c2:
-			pushi    2
-			lea      @temp8
-			push    
-			lst      temp0
-			callk    StrAt,  4
-			sat      temp3
-			bnt      code_02e3
-			pushi    3
-			push    
-			pushi    9
-			pushi    32
-			calle    proc999_5,  6
-			bnt      code_02e3
-			+at      temp0
-			jmp      code_02c2
-code_02e3:
-			ldi      0
-			sat      temp1
 code_02e7:
 			pushi    2
 			lea      @temp8
@@ -287,7 +268,26 @@ code_02e7:
 			lst      temp0
 			callk    StrAt,  4
 			sat      temp3
-			bnt      code_031c
+			bnt      code_0309
+			pushi    3
+			push    
+			pushi    9
+			pushi    32
+			calle    proc999_5,  6
+			bnt      code_0309
+			+at      temp0
+			jmp      code_02e7
+code_0309:
+			ldi      0
+			sat      temp1
+code_030d:
+			pushi    2
+			lea      @temp8
+			push    
+			lst      temp0
+			callk    StrAt,  4
+			sat      temp3
+			bnt      code_0343
 			pushi    5
 			push    
 			pushi    61
@@ -296,7 +296,7 @@ code_02e7:
 			pushi    32
 			calle    proc999_5,  10
 			not     
-			bnt      code_031c
+			bnt      code_0343
 			pushi    3
 			lea      @temp108
 			push    
@@ -305,8 +305,8 @@ code_02e7:
 			callk    StrAt,  6
 			+at      temp0
 			+at      temp1
-			jmp      code_02e7
-code_031c:
+			jmp      code_030d
+code_0343:
 			pushi    3
 			lea      @temp108
 			push    
@@ -321,10 +321,10 @@ code_031c:
 			push    
 			callk    StrCmp,  4
 			eq?     
-			bnt      code_033e
+			bnt      code_0369
 			lea      @temp158
-			jmp      code_03ab
-code_033e:
+			jmp      code_03e4
+code_0369:
 			pushi    0
 			pushi    2
 			lea      @temp108
@@ -333,10 +333,10 @@ code_033e:
 			push    
 			callk    StrCmp,  4
 			eq?     
-			bnt      code_0353
+			bnt      code_0382
 			lea      @temp198
-			jmp      code_03ab
-code_0353:
+			jmp      code_03e4
+code_0382:
 			pushi    0
 			pushi    2
 			lea      @temp108
@@ -345,10 +345,10 @@ code_0353:
 			push    
 			callk    StrCmp,  4
 			eq?     
-			bnt      code_0368
+			bnt      code_039b
 			lea      @temp238
-			jmp      code_03ab
-code_0368:
+			jmp      code_03e4
+code_039b:
 			pushi    0
 			pushi    2
 			lea      @temp108
@@ -357,10 +357,10 @@ code_0368:
 			push    
 			callk    StrCmp,  4
 			eq?     
-			bnt      code_037f
+			bnt      code_03b4
 			lea      @temp278
-			jmp      code_03ab
-code_037f:
+			jmp      code_03e4
+code_03b4:
 			pushi    0
 			pushi    2
 			lea      @temp108
@@ -369,10 +369,10 @@ code_037f:
 			push    
 			callk    StrCmp,  4
 			eq?     
-			bnt      code_0396
+			bnt      code_03cd
 			lea      @temp318
-			jmp      code_03ab
-code_0396:
+			jmp      code_03e4
+code_03cd:
 			pushi    0
 			pushi    2
 			lea      @temp108
@@ -381,19 +381,19 @@ code_0396:
 			push    
 			callk    StrCmp,  4
 			eq?     
-			bnt      code_03ab
+			bnt      code_03e4
 			lea      @temp358
-code_03ab:
+code_03e4:
 			sat      temp5
-			bnt      code_02ac
-code_03b0:
+			bnt      code_02d1
+code_03e9:
 			pushi    2
 			lea      @temp8
 			push    
 			lst      temp0
 			callk    StrAt,  4
 			sat      temp3
-			bnt      code_03d5
+			bnt      code_040f
 			pushi    5
 			push    
 			pushi    61
@@ -401,55 +401,55 @@ code_03b0:
 			pushi    9
 			pushi    32
 			calle    proc999_5,  10
-			bnt      code_03d5
+			bnt      code_040f
 			+at      temp0
-			jmp      code_03b0
-code_03d5:
+			jmp      code_03e9
+code_040f:
 			lat      temp0
 			sat      temp1
 			ldi      0
 			sat      temp2
-code_03dd:
+code_0417:
 			pushi    2
 			lea      @temp8
 			push    
 			lst      temp1
 			callk    StrAt,  4
 			sat      temp3
-			bnt      code_0415
+			bnt      code_0450
 			pushi    4
 			push    
 			pushi    58
 			pushi    92
 			pushi    47
 			calle    proc999_5,  8
-			bnt      code_0403
+			bnt      code_043e
 			lst      temp1
 			ldi      1
 			add     
 			sat      temp0
-code_0403:
+code_043e:
 			lst      temp3
 			ldi      46
 			eq?     
-			bnt      code_0411
+			bnt      code_044c
 			lst      temp1
 			lat      temp0
 			sub     
 			sat      temp2
-code_0411:
+code_044c:
 			+at      temp1
-			jmp      code_03dd
-code_0415:
+			jmp      code_0417
+code_0450:
 			lst      temp2
 			ldi      0
 			eq?     
-			bnt      code_0423
+			bnt      code_045e
 			lst      temp1
 			lat      temp0
 			sub     
 			sat      temp2
-code_0423:
+code_045e:
 			pushi    3
 			lst      temp5
 			lea      @temp8
@@ -459,13 +459,13 @@ code_0423:
 			push    
 			lst      temp2
 			callk    StrCpy,  6
-			jmp      code_02ac
-code_0437:
+			jmp      code_02d1
+code_0472:
 			pushi    2
 			pushi    1
 			lsl      local0
 			callk    FileIO,  4
-code_043e:
+code_047b:
 			pushi    4
 			lea      @temp78
 			push    
@@ -475,7 +475,7 @@ code_043e:
 			push    
 			callk    Format,  8
 			lat      temp4
-			bnt      code_04cc
+			bnt      code_0517
 			pushi    65535
 			pushi    3
 			pushi    0
@@ -485,7 +485,7 @@ code_043e:
 			callk    FileIO,  6
 			sal      local0
 			eq?     
-			bt       code_04b6
+			bt       code_04fd
 			pushi    4
 			lea      @temp8
 			push    
@@ -494,10 +494,10 @@ code_043e:
 			lea      @temp78
 			push    
 			callk    Format,  8
-			bnt      code_047f
+			bnt      code_04be
 			ldi      0
-			bt       code_04b6
-code_047f:
+			bt       code_04fd
+code_04be:
 			pushi    #font
 			pushi    1
 			pushi    999
@@ -526,8 +526,8 @@ code_047f:
 			pushi    0
 			class    Print
 			send     46
-			bnt      code_04cc
-code_04b6:
+			bnt      code_0517
+code_04fd:
 			pushi    2
 			pushi    1
 			lsl      local0
@@ -539,8 +539,8 @@ code_04b6:
 			pushi    2
 			callk    FileIO,  6
 			sal      local0
-			jmp      code_04d9
-code_04cc:
+			jmp      code_0526
+code_0517:
 			pushi    3
 			pushi    0
 			lea      @temp78
@@ -548,11 +548,11 @@ code_04cc:
 			pushi    0
 			callk    FileIO,  6
 			sal      local0
-code_04d9:
+code_0526:
 			pushi    65535
 			lal      local0
 			eq?     
-			bnt      code_04fc
+			bnt      code_054c
 			pushi    #font
 			pushi    1
 			pushi    999
@@ -566,8 +566,8 @@ code_04d9:
 			pushi    0
 			class    Print
 			send     18
-			jmp      code_0962
-code_04fc:
+			jmp      code_0a1c
+code_054c:
 			pushi    3
 			pushi    1
 			lofsa    {GAME}
@@ -644,11 +644,11 @@ code_04fc:
 			sat      temp0
 			ldi      1
 			sat      temp6
-code_0596:
+code_05f4:
 			lst      temp0
 			ldi      10
 			le?     
-			bnt      code_05e7
+			bnt      code_0647
 			pushi    4
 			lea      @temp108
 			push    
@@ -665,7 +665,7 @@ code_0596:
 			pushi    10
 			callk    Format,  10
 			lat      temp6
-			bnt      code_05d7
+			bnt      code_0635
 			pushi    3
 			pushi    5
 			lea      @temp108
@@ -674,18 +674,18 @@ code_0596:
 			push    
 			call     localproc_0010,  6
 			sat      temp6
-			jmp      code_05e3
-code_05d7:
+			jmp      code_0643
+code_0635:
 			pushi    3
 			pushi    1
 			lea      @temp108
 			push    
 			pushi    0
 			call     localproc_0010,  6
-code_05e3:
+code_0643:
 			+at      temp0
-			jmp      code_0596
-code_05e7:
+			jmp      code_05f4
+code_0647:
 			pushi    3
 			pushi    1
 			lofsa    {DEPARTMENT}
@@ -746,11 +746,11 @@ code_05e7:
 			lofsa    {ROOM-SCRIPT}
 			push    
 			lat      temp0
-			bnt      code_0666
+			bnt      code_06d1
 			pushi    #name
 			pushi    0
 			send     4
-code_0666:
+code_06d1:
 			push    
 			call     localproc_0010,  6
 			pushi    3
@@ -758,11 +758,11 @@ code_0666:
 			lofsa    {ROOM-STATE}
 			push    
 			lat      temp0
-			bnt      code_067b
+			bnt      code_06e8
 			pushi    #state
 			pushi    0
 			send     4
-code_067b:
+code_06e8:
 			push    
 			call     localproc_0010,  6
 			pushi    3
@@ -805,11 +805,11 @@ code_067b:
 			lofsa    {EGO-SCRIPT}
 			push    
 			lat      temp0
-			bnt      code_06d1
+			bnt      code_0749
 			pushi    #name
 			pushi    0
 			send     4
-code_06d1:
+code_0749:
 			push    
 			call     localproc_0010,  6
 			pushi    3
@@ -817,11 +817,11 @@ code_06d1:
 			lofsa    {EGO-STATE}
 			push    
 			lat      temp0
-			bnt      code_06e6
+			bnt      code_0760
 			pushi    #state
 			pushi    0
 			send     4
-code_06e6:
+code_0760:
 			push    
 			call     localproc_0010,  6
 			pushi    3
@@ -882,7 +882,7 @@ code_06e6:
 			pushi    0
 			lag      gEgo
 			send     4
-			bnt      code_0767
+			bnt      code_07f0
 			pushi    #name
 			pushi    0
 			pushi    #cycler
@@ -890,7 +890,7 @@ code_06e6:
 			lag      gEgo
 			send     4
 			send     4
-code_0767:
+code_07f0:
 			push    
 			call     localproc_0010,  6
 			pushi    #mover
@@ -903,11 +903,11 @@ code_0767:
 			lofsa    {EGO-MOVER}
 			push    
 			lat      temp0
-			bnt      code_0785
+			bnt      code_0811
 			pushi    #name
 			pushi    0
 			send     4
-code_0785:
+code_0811:
 			push    
 			call     localproc_0010,  6
 			pushi    3
@@ -916,28 +916,28 @@ code_0785:
 			push    
 			lat      temp0
 			not     
-			bnt      code_079a
+			bnt      code_0827
 			ldi      0
-			jmp      code_07b6
-code_079a:
+			jmp      code_0847
+code_0827:
 			pushi    #isMemberOf
 			pushi    1
 			class    PolyPath
 			push    
 			lat      temp0
 			send     6
-			bnt      code_07b0
+			bnt      code_083f
 			pushi    #finalX
 			pushi    0
 			lat      temp0
 			send     4
-			jmp      code_07b6
-code_07b0:
+			jmp      code_0847
+code_083f:
 			pushi    #x
 			pushi    0
 			lat      temp0
 			send     4
-code_07b6:
+code_0847:
 			push    
 			call     localproc_0010,  6
 			pushi    3
@@ -946,28 +946,28 @@ code_07b6:
 			push    
 			lat      temp0
 			not     
-			bnt      code_07cb
+			bnt      code_085d
 			ldi      0
-			jmp      code_07e7
-code_07cb:
+			jmp      code_087d
+code_085d:
 			pushi    #isMemberOf
 			pushi    1
 			class    PolyPath
 			push    
 			lat      temp0
 			send     6
-			bnt      code_07e1
+			bnt      code_0875
 			pushi    #finalY
 			pushi    0
 			lat      temp0
 			send     4
-			jmp      code_07e7
-code_07e1:
+			jmp      code_087d
+code_0875:
 			pushi    #y
 			pushi    0
 			lat      temp0
 			send     4
-code_07e7:
+code_087d:
 			push    
 			call     localproc_0010,  6
 			pushi    3
@@ -1011,11 +1011,11 @@ code_07e7:
 			lofsa    {ICONBAR}
 			push    
 			lag      gSq5IconBar
-			bnt      code_0844
+			bnt      code_08e1
 			pushi    #name
 			pushi    0
 			send     4
-code_0844:
+code_08e1:
 			push    
 			call     localproc_0010,  6
 			pushi    3
@@ -1023,11 +1023,11 @@ code_0844:
 			lofsa    {CUR-ICON}
 			push    
 			lag      gSq5IconBar
-			bnt      code_0869
+			bnt      code_090a
 			pushi    #curIcon
 			pushi    0
 			send     4
-			bnt      code_0869
+			bnt      code_090a
 			pushi    #name
 			pushi    0
 			pushi    #curIcon
@@ -1035,7 +1035,7 @@ code_0844:
 			lag      gSq5IconBar
 			send     4
 			send     4
-code_0869:
+code_090a:
 			push    
 			call     localproc_0010,  6
 			pushi    3
@@ -1157,7 +1157,7 @@ code_0869:
 			pushi    1
 			lsl      local0
 			callk    FileIO,  4
-code_0962:
+code_0a1c:
 			pushi    4
 			lea      @temp78
 			push    
@@ -1175,7 +1175,7 @@ code_0962:
 			callk    FileIO,  6
 			sal      local0
 			eq?     
-			bnt      code_09b4
+			bnt      code_0a74
 			pushi    65535
 			pushi    3
 			pushi    0
@@ -1185,7 +1185,7 @@ code_0962:
 			callk    FileIO,  6
 			sal      local0
 			eq?     
-			bnt      code_09b4
+			bnt      code_0a74
 			pushi    #font
 			pushi    1
 			pushi    999
@@ -1199,8 +1199,8 @@ code_0962:
 			pushi    0
 			class    Print
 			send     18
-			jmp      code_09ef
-code_09b4:
+			jmp      code_0ab3
+code_0a74:
 			pushi    3
 			pushi    6
 			lsl      local0
@@ -1229,7 +1229,7 @@ code_09b4:
 			pushi    1
 			lsl      local0
 			callk    FileIO,  4
-code_09ef:
+code_0ab3:
 			lat      temp7
 			sag      gFont_2
 			pushi    1

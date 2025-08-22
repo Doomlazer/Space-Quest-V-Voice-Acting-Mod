@@ -124,7 +124,7 @@
 						(= temp1 temp0)
 					)
 					(param1 dispose:)
-					(breakif (not (proc255_0)))
+					(if (not (proc255_0)) (break))
 				)
 				(if temp0 (HiliteControl self))
 				(return temp0)
@@ -196,9 +196,9 @@
 	(method (handleEvent pEvent &tmp temp0 temp1 temp2 temp3 temp4)
 		(asm
 			lag      global17
-			bnt      code_0455
+			bnt      code_0454
 			pToa     rects
-			bnt      code_0455
+			bnt      code_0454
 			pushi    3
 			pushi    #type
 			pushi    0
@@ -208,7 +208,7 @@
 			pushi    1
 			pushi    256
 			calle    proc999_5,  6
-			bt       code_03b6
+			bt       code_03a4
 			pushi    #type
 			pushi    0
 			lap      pEvent
@@ -216,7 +216,7 @@
 			push    
 			ldi      4
 			eq?     
-			bnt      code_0455
+			bnt      code_0454
 			pushi    #message
 			pushi    0
 			lap      pEvent
@@ -224,8 +224,8 @@
 			push    
 			ldi      13
 			eq?     
-			bnt      code_0455
-code_03b6:
+			bnt      code_0454
+code_03a4:
 			ldi      65535
 			sat      temp0
 			pushi    #globalize
@@ -235,7 +235,7 @@ code_03b6:
 			pushi    1
 			lap      pEvent
 			send     10
-code_03c6:
+code_03b7:
 			pushi    2
 			pTos     rects
 			lst      temp0
@@ -246,7 +246,7 @@ code_03c6:
 			push    
 			ldi      30583
 			ne?     
-			bnt      code_0455
+			bnt      code_0454
 			pushi    2
 			pTos     rects
 			+at      temp0
@@ -277,22 +277,22 @@ code_03c6:
 			lap      pEvent
 			send     4
 			le?     
-			bnt      code_03c6
+			bnt      code_03b7
 			pprev   
 			lat      temp4
 			le?     
-			bnt      code_03c6
+			bnt      code_03b7
 			lst      temp1
 			pushi    #y
 			pushi    0
 			lap      pEvent
 			send     4
 			le?     
-			bnt      code_03c6
+			bnt      code_03b7
 			pprev   
 			lat      temp3
 			le?     
-			bnt      code_03c6
+			bnt      code_03b7
 			pushi    57
 			pushi    #x
 			lst      temp0
@@ -309,9 +309,9 @@ code_03c6:
 			pushi    0
 			lap      pEvent
 			send     12
-			jmp      code_0455
-			jmp      code_03c6
-code_0455:
+			jmp      code_0454
+			jmp      code_03b7
+code_0454:
 			pushi    #handleEvent
 			pushi    1
 			lsp      pEvent

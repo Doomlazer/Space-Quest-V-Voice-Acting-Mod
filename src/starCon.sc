@@ -30,6 +30,7 @@
 		number 0
 		modNum -1
 		noun 0
+		case 0
 		timer 0
 		keep 0
 		initialized 0

@@ -118,13 +118,10 @@
 			(3
 				(gEgo setCycle: CT 5 -1 self)
 			)
-			(4
-				(gEgo setCycle: End self)
-				(if (-- register) (= state (- state 2)))
-			)
+			(4 (gEgo setCycle: End self))
 			(5
 				(gSq5Music2 number: 2471 loop: -1 play:)
-				(gEgo y: 1 cel: 0)
+				(gEgo loop: 1 cel: 0)
 				(= cycles 1)
 			)
 			(6 (gEgo setCycle: CT 4 1 self))
@@ -850,6 +847,9 @@
 				(gTestMessager say: 15 0 0 9 self)
 			)
 			(4
+				(gTestMessager say: 15 0 20 1 self)
+			)
+			(5
 				(gSQ5 handsOn:)
 				(gSQ5 setCursor: 999 1)
 				((ScriptID 240 15)
@@ -860,7 +860,7 @@
 				)
 				(gTestMessager say: 15 0 20 1 self)
 			)
-			(5
+			(6
 				(gSQ5 handsOff:)
 				((ScriptID 240 15) normal: 1)
 				(cond 
@@ -872,9 +872,24 @@
 					(else (self setScript: spikeSayNo self))
 				)
 			)
-			(6
+			(7
 				(gSq5Music2 stop:)
 				((ScriptID 240 15) normal: 1)
+				(gTestMessager
+					say:
+						15
+						0
+						20
+						(switch ((ScriptID 240 15) whichSelect?)
+							(1 2)
+							(2 3)
+							(3 4)
+							(4 5)
+						)
+						self
+				)
+			)
+			(8
 				(gTestMessager
 					say:
 						15
@@ -889,7 +904,7 @@
 						self
 				)
 			)
-			(7
+			(9
 				(if (< ((ScriptID 240 15) whichSelect?) 4)
 					(gSQ5 handsOn:)
 					(= next 0)
@@ -905,20 +920,20 @@
 					(gSq5Music2 number: 246 loop: 1 play:)
 				)
 			)
-			(8
+			(10
 				(spikeNailsEgo start: 2)
 				(self setScript: spikeNailsEgo self)
 			)
-			(9
+			(11
 				(self setScript: putSpikeInTank self)
 			)
-			(10
+			(12
 				(= global130 12)
 				(gEgo setSpeed: gGEgoMoveSpeed)
 				(gSq5Music1 fade: 0 10 5 1)
 				(self setScript: (ScriptID 240 9) self)
 			)
-			(11
+			(13
 				(proc240_30)
 				(gSQ5 handsOn:)
 				(self dispose:)
@@ -1947,15 +1962,12 @@
 			)
 			(2
 				((ScriptID 240 21) hide:)
-				(gEgo y: 7 cel: 0 setCycle: End self)
+				(gEgo loop: 7 cel: 0 setCycle: End self)
 			)
 			(3
 				(gEgo setCycle: CT 2 -1 self)
 			)
-			(4
-				(if (-- register) (= state (- state 2)))
-				(gEgo setCycle: End self)
-			)
+			(4 (gEgo setCycle: End self))
 			(5
 				(gSq5Music2 number: 136 loop: 1 play:)
 				(gEgo loop: 8 cel: 0 setCycle: End self)

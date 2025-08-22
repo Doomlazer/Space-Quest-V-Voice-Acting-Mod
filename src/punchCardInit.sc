@@ -40,7 +40,7 @@
 	(return (+ 5 (punchCard y?) (* (/ param1 3) 15)))
 )
 
-(procedure (localproc_00ff &tmp temp0)
+(procedure (localproc_00d1 &tmp temp0)
 	(= temp0 0)
 	(while (< temp0 9)
 		(if (& global129 (<< $0001 temp0))
@@ -65,9 +65,9 @@
 	)
 )
 
-(procedure (localproc_0171 param1)
+(procedure (localproc_0143 param1)
 	(= global129 (| global129 (<< $0001 param1)))
-	(localproc_00ff)
+	(localproc_00d1)
 )
 
 (instance punchCardInit of Code
@@ -98,7 +98,7 @@
 	
 	(method (doit)
 		(if (GameIsRestarting)
-			(localproc_00ff)
+			(localproc_00d1)
 			(if oldCast (oldCast eachElementDo: #forceUpd))
 		)
 		(super doit: &rest)
@@ -113,7 +113,7 @@
 		(switch theVerb
 			(33
 				(if (!= (= temp0 (localproc_0036)) -1)
-					(localproc_0171 temp0)
+					(localproc_0143 temp0)
 				)
 			)
 		)
@@ -138,7 +138,7 @@
 		(if (< local2 1)
 			(if (not local2)
 				(= local2 -1)
-				(localproc_00ff)
+				(localproc_00d1)
 				(gUser canControl: 1 canInput: 1)
 				(gSQ5 setCursor: ((gSq5IconBar curIcon?) cursor?))
 			)

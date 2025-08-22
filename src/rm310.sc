@@ -288,7 +288,6 @@
 						x: 245
 						y: 19
 						setStep: 15 5
-						moveSpeed: 0
 						init:
 						setMotion: MoveTo (+ (gEgo x?) 7) (- (gEgo y?) 10) self
 					)
@@ -314,7 +313,6 @@
 						x: 245
 						y: 19
 						setStep: 15 5
-						moveSpeed: 0
 						init:
 						setMotion: MoveTo (+ (gEgo x?) 2) (- (gEgo y?) 18) self
 					)

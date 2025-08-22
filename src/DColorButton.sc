@@ -61,7 +61,7 @@
 						(= temp1 temp0)
 					)
 					(param1 dispose:)
-					(breakif (not (proc255_0)))
+					(if (not (proc255_0)) (break))
 				)
 				(if temp0
 					(if (& state $0008)

@@ -42,7 +42,6 @@
 						setCycle: 0
 						setLoop: -1
 						setLoop: 6
-						moveSpeed: 0
 						setStep: 3 13
 						init:
 						setScript: sStickFalling
@@ -458,6 +457,7 @@
 			(if (== state 0) (self dispose:))
 			(if (fireBall mover?)
 				(= state 20)
+				(= seconds 3)
 			else
 				(= seconds 0)
 				(= ticks 1)
@@ -594,7 +594,6 @@
 					x: 207
 					y: 114
 					setStep: 15 5
-					moveSpeed: 0
 					init:
 					setMotion: MoveTo (+ (gEgo x?) 7) (- (gEgo y?) 10) self
 				)
@@ -698,7 +697,7 @@
 					x: 116
 					y: 128
 					setStep: 2 10
-					moveSpeed: 0
+					moveSpeed: 3
 					show:
 				)
 				(gSq5Music1 number: 35 loop: -1 play:)
@@ -720,7 +719,7 @@
 					y: 86
 					setMotion: MoveTo 159 -55 self
 				)
-				(= cycles 1)
+				(= seconds 1)
 			)
 			(6 (splash dispose:))
 			(7

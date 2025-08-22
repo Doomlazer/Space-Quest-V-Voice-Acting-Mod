@@ -292,7 +292,7 @@
 				(goliath setScale: 0 setCycle: End self)
 			)
 			(3
-				(goliath moveSpeed: 0 setMotion: MoveTo 110 40 self)
+				(goliath setMotion: MoveTo 110 40 self)
 			)
 			(4
 				(goliath dispose:)
@@ -521,7 +521,6 @@
 			y: 67
 			scaleSignal: 1
 			setStep: 20 20
-			moveSpeed: 0
 			ignoreActors: 1
 			setScale: Scaler 20 100 67 37
 		)

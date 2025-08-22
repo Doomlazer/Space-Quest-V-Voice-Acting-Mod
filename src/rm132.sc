@@ -37,78 +37,66 @@
 			(0
 				(gSQ5 handsOff:)
 				(gSq5Music2 number: 142 setLoop: 1 play:)
-				(= cycles 6)
+				(= ticks 6)
 			)
-			(1 (rat init:) (= cycles 6))
+			(1 (rat init:) (= ticks 6))
 			(2
 				(rat posn: 174 25)
-				(= cycles 6)
+				(= ticks 6)
 			)
 			(3
 				(rat posn: 164 39)
-				(= cycles 6)
+				(= ticks 6)
 			)
 			(4
 				(rat setLoop: 1 posn: 160 46)
 				(ratHead init:)
-				(= cycles 6)
+				(= ticks 6)
 			)
-			(5
-				(ratEyes init:)
-				(= cycles 6)
-			)
-			(6
-				(ratEyes hide:)
-				(= cycles 6)
-			)
-			(7
-				(ratEyes show:)
-				(= cycles 6)
-			)
-			(8
-				(ratEyes hide:)
-				(= cycles 6)
-			)
+			(5 (ratEyes init:) (= ticks 6))
+			(6 (ratEyes hide:) (= ticks 6))
+			(7 (ratEyes show:) (= ticks 6))
+			(8 (ratEyes hide:) (= ticks 6))
 			(9
 				(ratHead setLoop: 1 setCel: 2 posn: 156 50)
-				(= cycles 6)
+				(= ticks 6)
 			)
-			(10 (= cycles 6))
+			(10 (= ticks 6))
 			(11
 				(ratEyes show: setLoop: 6 setCel: 0 posn: 160 66)
-				(= cycles 6)
+				(= ticks 6)
 			)
 			(12
 				(ratEyes hide:)
-				(= cycles 6)
+				(= ticks 6)
 			)
-			(13 (= cycles 6))
+			(13 (= ticks 6))
 			(14
 				(ratHead setCel: 3 posn: 151 52)
-				(= cycles 6)
+				(= ticks 6)
 			)
 			(15
 				(ratHead posn: 151 49)
-				(= cycles 6)
+				(= ticks 6)
 			)
-			(16 (= cycles 6))
+			(16 (= ticks 6))
 			(17
 				(ratEyes show: setLoop: 8 posn: 161 52)
-				(= cycles 6)
+				(= ticks 6)
 			)
 			(18
 				(ratEyes hide:)
-				(= cycles 6)
+				(= ticks 6)
 			)
 			(19
 				(ratEyes show:)
-				(= cycles 6)
+				(= ticks 6)
 			)
 			(20
 				(ratEyes hide:)
-				(= cycles 6)
+				(= ticks 6)
 			)
-			(21 (= cycles 1))
+			(21 (= ticks 1))
 			(22
 				(ratEyes dispose:)
 				(ratHead dispose:)
@@ -120,33 +108,33 @@
 					setCel: 0
 					posn: 149 21
 				)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(23
 				(rat scaleSignal: 1 scaleX: 128 scaleY: 128 posn: 139 14)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(24
 				(rat posn: 118 17)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(25
 				(rat scaleSignal: 1 scaleX: 115 scaleY: 115 posn: 106 27)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(26
 				(rat scaleSignal: 1 scaleX: 107 scaleY: 107 posn: 93 40)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(27
 				(rat scaleSignal: 1 scaleX: 101 scaleY: 101 posn: 75 55)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(28
 				(rat dispose:)
 				(gSq5Music2 number: 145 setLoop: 1 play:)
 				(sparks init: setCycle: Fwd)
-				(= cycles 6)
+				(= ticks 6)
 			)
 			(29
 				(sparks dispose:)
@@ -154,7 +142,7 @@
 				(shine2 init:)
 				(shine3 init:)
 				(Palette palSET_FROM_RESOURCE 322 2)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(30
 				(gSq5Music2 number: 146 setLoop: 1 play:)
@@ -179,7 +167,7 @@
 				(shine3 dispose:)
 				(gSq5Music2 stop:)
 				(proc0_2 7)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(33 (global2 newRoom: 127))
 		)

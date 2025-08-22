@@ -16,6 +16,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -262,6 +263,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -409,6 +411,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0

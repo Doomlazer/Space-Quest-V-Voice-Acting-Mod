@@ -30,7 +30,7 @@
 	(global2 setScript: sExitSubfloor 0 0)
 )
 
-(procedure (localproc_0080)
+(procedure (localproc_0081)
 	(= global144 (= global143 (* 2 (Random 0 1))))
 	(doorbtm setCel: (doorbtm lastCel:))
 	(global2 setScript: sExitSubfloor 0 1)
@@ -93,23 +93,23 @@
 			(1020
 				(switch global133
 					(3 (localproc_0052))
-					(4 (localproc_0080))
+					(4 (localproc_0081))
 					(6 (localproc_0052))
 					(7
 						(if (== global134 3)
 							(localproc_0052)
 						else
-							(localproc_0080)
+							(localproc_0081)
 						)
 					)
 					(8
 						(if (== global134 3)
-							(localproc_0080)
+							(localproc_0081)
 						else
 							(localproc_0052)
 						)
 					)
-					(9 (localproc_0080))
+					(9 (localproc_0081))
 				)
 			)
 			(else 

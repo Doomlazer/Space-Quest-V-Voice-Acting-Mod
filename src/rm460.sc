@@ -22,7 +22,7 @@
 	local514
 	local515
 )
-(procedure (localproc_00b9 &tmp temp0 temp1 [temp2 6])
+(procedure (localproc_0046 &tmp temp0 temp1 [temp2 6])
 	(= temp1 1)
 	(= temp0 0)
 	(while (< temp0 5)
@@ -75,7 +75,7 @@
 		(if (== param1 -1)
 			(= local11 -1)
 		else
-			(= local11 (localproc_00b9))
+			(= local11 (localproc_0046))
 		)
 	)
 )

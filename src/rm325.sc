@@ -137,7 +137,7 @@
 			lsg      gEgo
 			pushi    2
 			callb    proc0_5,  4
-			bnt      code_02e2
+			bnt      code_02e4
 			pushi    90
 			pushi    #heading
 			pushi    0
@@ -150,69 +150,69 @@
 			lt?     
 code_02c6:
 			not     
-			bnt      code_02e2
+			bnt      code_02e4
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_02e2
+			bnt      code_02e4
 			pushi    #setScript
 			pushi    1
 			lofsa    sRogJumpToBack
 			push    
 			lag      global2
 			send     6
-			jmp      code_033a
-code_02e2:
+			jmp      code_0343
+code_02e4:
 			pushi    2
 			lsg      gEgo
 			pushi    16384
 			callb    proc0_5,  4
-			bnt      code_0319
+			bnt      code_031f
 			pushi    90
 			pushi    #heading
 			pushi    0
 			lag      gEgo
 			send     4
 			lt?     
-			bnt      code_0319
+			bnt      code_031f
 			pprev   
 			ldi      270
 			lt?     
-			bnt      code_0319
+			bnt      code_031f
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_0319
+			bnt      code_031f
 			pushi    #setScript
 			pushi    1
 			lofsa    sRogJumpToFront
 			push    
 			lag      global2
 			send     6
-			jmp      code_033a
-code_0319:
+			jmp      code_0343
+code_031f:
 			pushi    2
 			lsg      gEgo
 			pushi    64
 			callb    proc0_5,  4
-			bnt      code_033a
+			bnt      code_0343
 			pushi    #script
 			pushi    0
 			lag      global2
 			send     4
 			not     
-			bnt      code_033a
+			bnt      code_0343
 			pushi    #setScript
 			pushi    1
 			lofsa    sTriedToLeave
 			push    
 			lag      global2
 			send     6
-code_033a:
+code_0343:
 			ret     
 		)
 	)
@@ -370,6 +370,8 @@ code_033a:
 								setCycle: 0
 								init:
 							)
+						else
+							0
 						)]
 				)
 				(gEgo posn: (gEgo x?) [local48 local118])

@@ -28,11 +28,11 @@
 	theGSq5Win
 	newFile
 )
-(procedure (localproc_0286 param1)
+(procedure (localproc_0054 param1)
 	(param1 sightAngle: (proc255_1 {sight angle?} 40))
 )
 
-(procedure (localproc_029b param1 &tmp newEvent temp1 temp2 newEventY newEventX newEventY_2 newEventX_2)
+(procedure (localproc_006a param1 &tmp newEvent temp1 temp2 newEventY newEventX newEventY_2 newEventX_2)
 	(proc921_0 {Click left mouse button on top left corner})
 	(while (!= ((= newEvent (Event new:)) type?) 1)
 		(newEvent dispose:)
@@ -109,7 +109,7 @@
 	)
 )
 
-(procedure (localproc_03c6 param1 &tmp newEvent)
+(procedure (localproc_0194 param1 &tmp newEvent)
 	(param1
 		view: (proc255_1 {View?} (global2 curPic?))
 		loop: (proc255_1 {Loop?} 0)
@@ -130,7 +130,7 @@
 	(newEvent dispose:)
 )
 
-(procedure (localproc_046c param1 &tmp newEvent newEventX newEventY [temp3 10] temp13)
+(procedure (localproc_023d param1 &tmp newEvent newEventX newEventY [temp3 10] temp13)
 	(if
 		(Print
 			addText: {Where should the approach point be?}
@@ -264,7 +264,7 @@
 	)
 )
 
-(procedure (localproc_06e6)
+(procedure (localproc_04b0)
 	(= local391
 		(Print
 			addText: {doVerb method?}
@@ -275,7 +275,7 @@
 	)
 )
 
-(procedure (localproc_0714 param1)
+(procedure (localproc_04db param1)
 	(newFile name: @global42 writeString: param1 close:)
 )
 
@@ -336,13 +336,13 @@
 		(proc921_2 @local0 30 {Name?})
 		(= local50 0)
 		(proc921_2 @local50 16 {Noun?})
-		(localproc_0286 temp15)
+		(localproc_0054 temp15)
 		(if (== local390 Feature)
-			(localproc_029b temp15)
+			(localproc_006a temp15)
 		else
-			(localproc_03c6 temp15)
+			(localproc_0194 temp15)
 		)
-		(localproc_046c temp15)
+		(localproc_023d temp15)
 		(if
 			(Print
 				addText: {Z property}
@@ -364,7 +364,7 @@
 			(temp15 y: (newEvent y?))
 			(newEvent dispose:)
 		)
-		(localproc_06e6)
+		(localproc_04b0)
 		(Class_948_1 doit: temp15)
 		(= gSq5Win theGSq5Win)
 	)
@@ -513,33 +513,33 @@
 				init:
 			)
 		)
-		(localproc_0714 @temp0)
+		(localproc_04db @temp0)
 		(if local391
 			(Format
 				@temp0
 				{ \t(method (doVerb theVerb)\0D\n\t\t(switch theVerb\0D\n}
 			)
-			(localproc_0714 @temp0)
+			(localproc_04db @temp0)
 			(if [local180 0]
 				(Format @temp0 { \t\t\t(LOOK\0D\n\t\t\t)\0D\n} @local180)
-				(localproc_0714 @temp0)
+				(localproc_04db @temp0)
 			)
 			(if [local80 0]
 				(Format @temp0 { \t\t\t(DO\0D\n\t\t\t)\0D\n} @local80)
-				(localproc_0714 @temp0)
+				(localproc_04db @temp0)
 			)
 			(if [local280 0]
 				(Format @temp0 { \t\t\t(TALK\0D\n\t\t\t)\0D\n} @local280)
-				(localproc_0714 @temp0)
+				(localproc_04db @temp0)
 			)
 			(Format
 				@temp0
 				{ \t\t\t(else\0D\n\t\t\t\t(super doVerb: theVerb)\0D\n\t\t\t)\0D\n\t\t)\0D\n\t)\0D\n}
 			)
-			(localproc_0714 @temp0)
+			(localproc_04db @temp0)
 		)
 		(StrCpy @temp0 {)\0D\n})
-		(localproc_0714 @temp0)
+		(localproc_04db @temp0)
 		(if (param1 isMemberOf: Feature)
 			(param1 dispose:)
 		else

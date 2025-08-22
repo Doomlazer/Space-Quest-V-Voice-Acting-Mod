@@ -62,7 +62,7 @@
 	(= [local131 39] param1)
 )
 
-(procedure (localproc_0112 &tmp laserBeamX laserBeamY laserBeamX_2 laserBeamY_2 temp4)
+(procedure (localproc_0125 &tmp laserBeamX laserBeamY laserBeamX_2 laserBeamY_2 temp4)
 	(switch [local0 (+ (* local171 4) 3)]
 		(0
 			(= laserBeamX (- (LaserBeam x?) 3))
@@ -115,7 +115,7 @@
 	)
 )
 
-(procedure (localproc_024d)
+(procedure (localproc_0262)
 	(= local173 [local0 (* local171 4)])
 	(= local172 [local0 (+ (* local171 4) 1)])
 	(= local175 (if (< local173 0) -1 else 1))
@@ -125,10 +125,10 @@
 	(return (== (++ local171) 32))
 )
 
-(procedure (localproc_0298)
+(procedure (localproc_02b9)
 	(return
 		(if (and (not local172) (not local173))
-			(return (localproc_024d))
+			(return (localproc_0262))
 		else
 			(if local172
 				(-- local172)
@@ -144,7 +144,7 @@
 	)
 )
 
-(procedure (localproc_02f4)
+(procedure (localproc_031d)
 	(gSQ5 handsOn:)
 	(gSq5IconBar disable: 0 3 4)
 )
@@ -170,7 +170,7 @@
 			(gTestMessager say: 6 0 0 0)
 			(proc0_9 51)
 		else
-			(localproc_02f4)
+			(localproc_031d)
 		)
 	)
 	
@@ -199,7 +199,7 @@
 				(gSQ5 handsOff:)
 				(= local176 1)
 				(proc0_10 197 100)
-				(localproc_024d)
+				(localproc_0262)
 				(GunInHand
 					init:
 					setStep: 10 10
@@ -214,8 +214,8 @@
 				(= cycles 1)
 			)
 			(2
-				(if (not (localproc_0298))
-					(localproc_0112)
+				(if (not (localproc_02b9))
+					(localproc_0125)
 					(-- state)
 				)
 				(= ticks 1)
@@ -304,7 +304,7 @@
 				(light stopUpd:)
 				(tDoor dispose:)
 				(bDoor dispose:)
-				(localproc_02f4)
+				(localproc_031d)
 				(self dispose:)
 			)
 		)

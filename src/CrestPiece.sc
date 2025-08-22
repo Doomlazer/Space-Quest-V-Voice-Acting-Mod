@@ -48,7 +48,7 @@
 	theSeconds =  30
 	[local43 104] = [-22 175 330 175 -22 1 330 1 29 143 0 -22 320 -22 175 330 175 -22 1 330 1 29 143 0 -22 320 29 -10 29 200 287 -10 287 200 81 231 0 -10 200 29 200 29 -10 287 200 287 -10 81 231 0 200 -10 0 100 79 189 228 0 319 62 27 130 100 -10 190 51 1 0 64 319 59 234 189 170 270 -170 -10 220 170 189 319 50 0 66 74 -1 0 120 140 200 -10 102 189 0 107 319 66 237 -10 200 300 -220 200 -10]
 )
-(procedure (localproc_020a)
+(procedure (localproc_020c)
 	(proc0_6 129 &rest)
 	(gEgo
 		baseSetter: myBaseSetter
@@ -60,7 +60,7 @@
 	)
 )
 
-(procedure (localproc_023f param1 param2 param3 param4 param5 param6 param7)
+(procedure (localproc_0240 param1 param2 param3 param4 param5 param6 param7)
 	(param1
 		view: param2
 		loop: param3
@@ -72,7 +72,7 @@
 	)
 )
 
-(procedure (localproc_0264 &tmp temp0 temp1 temp2 [temp3 10])
+(procedure (localproc_0265 &tmp temp0 temp1 temp2 [temp3 10])
 	(= temp0 19)
 	(while (< temp0 155)
 		(= temp1 72)
@@ -91,7 +91,7 @@
 	(return 1)
 )
 
-(procedure (localproc_02bb &tmp temp0 temp1 temp2 temp3 temp4)
+(procedure (localproc_02bc &tmp temp0 temp1 temp2 temp3 temp4)
 	(p1 case: 9)
 	(p2 case: 9)
 	(p3 case: 9)
@@ -158,7 +158,7 @@
 	)
 )
 
-(procedure (localproc_03e7 param1 &tmp temp0 [temp1 30])
+(procedure (localproc_03e9 param1 &tmp temp0 [temp1 30])
 	(switch param1
 		(0
 			(if (< (= temp0 (- (gEgo heading?) 90)) 0)
@@ -183,7 +183,7 @@
 	(gEgo setMotion: GravMover temp0)
 )
 
-(procedure (localproc_047b &tmp temp0 temp1 temp2 temp3 temp4 temp5)
+(procedure (localproc_047e &tmp temp0 temp1 temp2 temp3 temp4 temp5)
 	(cond 
 		(
 			(and
@@ -289,7 +289,7 @@
 		(proc958_0 132 9 11 133 10 136 137 18)
 		(proc0_6 129)
 		(gEgo init:)
-		(localproc_020a)
+		(localproc_020c)
 		(switch gGModNum
 			(117 (gEgo posn: -10 10))
 			(else  (gEgo posn: 330 170))
@@ -336,15 +336,15 @@
 			)
 			(
 				(and
-					(!= (= temp0 (localproc_047b)) -1)
+					(!= (= temp0 (localproc_047e)) -1)
 					(== local26 2)
 				)
 				(if (!= theTheCone1 theCone1)
 					(= theTheCone1 theCone1)
 					(if (< temp0 -1)
 						(switch theCone1
-							(2 (localproc_03e7 1 0))
-							(3 (localproc_03e7 0 0))
+							(2 (localproc_03e9 1 0))
+							(3 (localproc_03e9 0 0))
 						)
 					else
 						(gEgo setMotion: GravMover temp0)
@@ -611,7 +611,7 @@
 			)
 			(1 (gEgo setHeading: 0 self))
 			(2
-				(localproc_023f gEgo 130 6 5 83 114 14)
+				(localproc_0240 gEgo 130 6 5 83 114 14)
 				(gEgo setCycle: Beg self)
 			)
 			(3
@@ -621,7 +621,7 @@
 				(gEgo setCycle: End self)
 			)
 			(4
-				(localproc_020a)
+				(localproc_020c)
 				(proc0_2 122)
 				(if (not (IsObject newPolygon))
 					(global2
@@ -652,7 +652,7 @@
 			)
 			(1 (gEgo setHeading: 0 self))
 			(2
-				(localproc_023f gEgo 130 6 5 83 114 14)
+				(localproc_0240 gEgo 130 6 5 83 114 14)
 				(gEgo setCycle: Beg self)
 			)
 			(3
@@ -662,7 +662,7 @@
 			(4
 				(gSq5Music2 number: 127 loop: 1 play:)
 				(disk setCycle: End self)
-				(localproc_020a)
+				(localproc_020c)
 				(gEgo posn: 87 108)
 			)
 			(5
@@ -688,7 +688,7 @@
 			(1 (gEgo setHeading: 270 self))
 			(2
 				(disk ignoreActors: 1 setPri: 2)
-				(localproc_023f gEgo 136 3 0 109 108 14)
+				(localproc_0240 gEgo 136 3 0 109 108 14)
 				(gEgo setCycle: End self)
 			)
 			(3
@@ -771,19 +771,19 @@
 				(gSq5Music2 stop:)
 				(= local26 3)
 				(disk setCycle: 0)
-				(localproc_023f disk 136 2 10 100 100 2)
-				(localproc_023f gEgo 136 3 6 109 108 14)
+				(localproc_0240 disk 136 2 10 100 100 2)
+				(localproc_0240 gEgo 136 3 6 109 108 14)
 				(gEgo setCycle: Beg self)
 			)
 			(2
 				(if (gEgo looper?) ((gEgo looper?) dispose:))
 				(gEgo setCycle: 0)
-				(localproc_020a)
+				(localproc_020c)
 				(gEgo posn: 115 101 setMotion: PolyPath 87 108 self)
 			)
 			(3 (gEgo setHeading: 0 self))
 			(4
-				(localproc_023f gEgo 130 6 5 83 114 14)
+				(localproc_0240 gEgo 130 6 5 83 114 14)
 				(gEgo setCycle: Beg self)
 			)
 			(5
@@ -801,7 +801,7 @@
 				(gEgo get: 1 setCycle: End self)
 			)
 			(9
-				(localproc_020a)
+				(localproc_020c)
 				(gEgo posn: 87 108)
 				(if (== client global2) (gSQ5 handsOn:))
 				(self dispose:)
@@ -823,12 +823,12 @@
 				(= cycles 2)
 			)
 			(1
-				(localproc_02bb)
+				(localproc_02bc)
 				(= cycles 2)
 			)
 			(2
 				(p1 stopUpd:)
-				(if (localproc_0264)
+				(if (localproc_0265)
 					(proc0_2 6)
 					(global2 setScript: itsClean)
 				)
@@ -974,7 +974,7 @@
 				(gEgo loop: 6 cel: 0 setCycle: End self)
 			)
 			(5
-				(localproc_020a)
+				(localproc_020c)
 				(gEgo posn: (- (register x?) 11) (+ (register y?) 6))
 				(switch register
 					(cone1
@@ -1053,17 +1053,17 @@
 				(gSq5Music1 number: 10 loop: -1 play:)
 				(gOldCast eachElementDo: #hide)
 				(global2 drawPic: 26 -32759)
-				(localproc_023f quirk 133 0 0 39 81 14)
+				(localproc_0240 quirk 133 0 0 39 81 14)
 				(quirk show: addToPic:)
-				(localproc_023f bea 133 8 0 200 99 14)
+				(localproc_0240 bea 133 8 0 200 99 14)
 				(bea show: addToPic:)
-				(localproc_023f quirkHead 133 1 0 94 38 2)
+				(localproc_0240 quirkHead 133 1 0 94 38 2)
 				(quirkHead init:)
-				(localproc_023f extra1 133 6 1 148 87 -1)
+				(localproc_0240 extra1 133 6 1 148 87 -1)
 				(extra1 init:)
-				(localproc_023f extra2 133 7 0 170 125 -1)
+				(localproc_0240 extra2 133 7 0 170 125 -1)
 				(extra2 init:)
-				(localproc_023f beaHead 133 9 1 220 60 -1)
+				(localproc_0240 beaHead 133 9 1 220 60 -1)
 				(beaHead init:)
 				(= cycles 10)
 			)
@@ -1074,7 +1074,7 @@
 				(gTestMessager say: 6 0 0 2 self)
 			)
 			(7
-				(localproc_023f extra1 133 6 0 148 87 -1)
+				(localproc_0240 extra1 133 6 0 148 87 -1)
 				(extra1 init:)
 				(extra2 dispose:)
 				(quirkTalker cel: 1)
@@ -1086,12 +1086,12 @@
 				(gTestMessager say: 6 0 0 3 self)
 			)
 			(9
-				(localproc_023f quirkHead 133 1 1 94 38 2)
+				(localproc_0240 quirkHead 133 1 1 94 38 2)
 				(quirkHead init:)
 				(gTestMessager say: 6 0 0 4 self)
 			)
 			(10
-				(localproc_023f beaHead 133 9 0 220 60 -1)
+				(localproc_0240 beaHead 133 9 0 220 60 -1)
 				(beaHead init:)
 				(= seconds 2)
 			)
@@ -1112,7 +1112,7 @@
 			(14
 				(gSq5Music1 number: 11 loop: -1 play: 0 fade: 127 5 5 0)
 				(global2 drawPic: 27 3)
-				(localproc_023f bea 134 0 0 82 34 1)
+				(localproc_0240 bea 134 0 0 82 34 1)
 				(bea addToPic:)
 				(quirk dispose:)
 				(quirkHead dispose:)
@@ -1122,7 +1122,7 @@
 				(= seconds 3)
 			)
 			(15
-				(localproc_023f extra1 134 1 0 128 90 14)
+				(localproc_0240 extra1 134 1 0 128 90 14)
 				(extra1 init:)
 				(extra1 show:)
 				(= temp0 0)
@@ -1148,7 +1148,7 @@
 			)
 			(16
 				(extra1 hide:)
-				(localproc_023f extra2 134 2 0 144 98 15)
+				(localproc_0240 extra2 134 2 0 144 98 15)
 				(extra2 init: setCycle: End self)
 			)
 			(17 (extra2 setCycle: Beg self))
@@ -1228,17 +1228,17 @@
 			(27
 				(gSq5Music1 number: 10 loop: -1 play:)
 				(global2 drawPic: 26 9)
-				(localproc_023f quirk 133 0 0 39 81 -1)
+				(localproc_0240 quirk 133 0 0 39 81 -1)
 				(quirk addToPic:)
-				(localproc_023f bea 133 8 0 200 99 -1)
+				(localproc_0240 bea 133 8 0 200 99 -1)
 				(bea addToPic:)
-				(localproc_023f quirkHead 133 1 0 94 38 2)
+				(localproc_0240 quirkHead 133 1 0 94 38 2)
 				(quirkHead init:)
-				(localproc_023f extra1 133 6 1 148 87 -1)
+				(localproc_0240 extra1 133 6 1 148 87 -1)
 				(extra1 init:)
-				(localproc_023f extra2 133 7 0 170 125 -1)
+				(localproc_0240 extra2 133 7 0 170 125 -1)
 				(extra2 init:)
-				(localproc_023f beaHead 133 9 1 220 60 -1)
+				(localproc_0240 beaHead 133 9 1 220 60 -1)
 				(beaHead init:)
 				(= seconds 2)
 			)
@@ -1261,7 +1261,7 @@
 				(extra1 dispose:)
 				(extra2 dispose:)
 				(global2 drawPic: 27 3)
-				(localproc_023f quirk 134 4 0 97 62 -1)
+				(localproc_0240 quirk 134 4 0 97 62 -1)
 				(quirk addToPic:)
 				(= local28 1)
 				(quirkTalker loop: 14 x: 146 y: 119)
@@ -1286,9 +1286,9 @@
 				(cone3 show:)
 				(gEgo show:)
 				(disk show:)
-				(localproc_023f quirk 132 2 0 209 109 15)
+				(localproc_0240 quirk 132 2 0 209 109 15)
 				(quirk signal: 16400 init:)
-				(localproc_023f bea 131 0 6 248 116 15)
+				(localproc_0240 bea 131 0 6 248 116 15)
 				(bea signal: 16400 init:)
 				(= seconds 2)
 			)
@@ -1304,15 +1304,15 @@
 				(gSq5Music1 number: 12 loop: -1 play:)
 				(gOldCast eachElementDo: #hide)
 				(global2 drawPic: 26 -32761)
-				(localproc_023f quirk 135 1 0 263 88 -1)
+				(localproc_0240 quirk 135 1 0 263 88 -1)
 				(quirk addToPic:)
-				(localproc_023f bea 135 0 0 67 159 -1)
+				(localproc_0240 bea 135 0 0 67 159 -1)
 				(bea addToPic:)
-				(localproc_023f extra1 135 4 0 228 142 -1)
+				(localproc_0240 extra1 135 4 0 228 142 -1)
 				(extra1 init: ignoreActors: 1 setLoop: 4)
-				(localproc_023f extra2 135 2 0 263 88 -1)
+				(localproc_0240 extra2 135 2 0 263 88 -1)
 				(extra2 init: ignoreActors: 1 setLoop: 2)
-				(localproc_023f extra3 135 3 0 262 94 -1)
+				(localproc_0240 extra3 135 3 0 262 94 -1)
 				(extra3 init: ignoreActors: 1 setLoop: 3)
 				(beaHead dispose:)
 				(quirkHead dispose:)
@@ -1353,9 +1353,9 @@
 			(48
 				(gSq5Music1 number: 10 loop: -1 play:)
 				(global2 drawPic: 25 -32761)
-				(localproc_023f bea 131 1 0 246 110 15)
+				(localproc_0240 bea 131 1 0 246 110 15)
 				(bea show: signal: 16400 init:)
-				(localproc_023f quirk 132 3 0 207 91 15)
+				(localproc_0240 quirk 132 3 0 207 91 15)
 				(quirk show: signal: 16400 init:)
 				(extra1 dispose:)
 				(extra2 dispose:)
@@ -1493,6 +1493,7 @@
 		z 0
 		heading 0
 		noun 5
+		case 8
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -1525,7 +1526,6 @@
 		scaleX 128
 		scaleY 128
 		maxScale 128
-		case 8
 	)
 	
 	(method (init)
@@ -1626,6 +1626,7 @@
 		z 0
 		heading 0
 		noun 3
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0

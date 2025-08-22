@@ -59,19 +59,74 @@
 )
 
 (procedure (proc999_4 param1 param2 param3 param4 param5 param6)
-	(return
-		(if
-			(and
-				(<= param1 (if (< argc 6) (param5 x?) else param5))
-				(<= (if (< argc 6) (param5 x?) else param5) param3)
-			)
-			(if
-			(<= param2 (if (< argc 6) (param5 y?) else param6))
-				(<= (if (< argc 6) (param5 y?) else param6) param4)
-			)
-		else
-			0
-		)
+	(asm
+		lsp      param1
+		lsp      argc
+		ldi      6
+		lt?     
+		bnt      code_0265
+		pushi    #x
+		pushi    0
+		lap      param5
+		send     4
+		jmp      code_0267
+code_0265:
+		lap      param5
+code_0267:
+		le?     
+		bnt      code_02ae
+		lsp      argc
+		ldi      6
+		lt?     
+		bnt      code_0279
+		pushi    #x
+		pushi    0
+		lap      param5
+		send     4
+		jmp      code_027b
+code_0279:
+		lap      param5
+code_027b:
+		push    
+		lap      param3
+		le?     
+		bnt      code_02ae
+		lsp      param2
+		lsp      argc
+		ldi      6
+		lt?     
+		bnt      code_0292
+		pushi    #y
+		pushi    0
+		lap      param5
+		send     4
+		jmp      code_0294
+code_0292:
+		lap      param6
+code_0294:
+		le?     
+		bnt      code_02ac
+		lsp      argc
+		ldi      6
+		lt?     
+		bnt      code_02a6
+		pushi    #y
+		pushi    0
+		lap      param5
+		send     4
+		jmp      code_02a8
+code_02a6:
+		lap      param6
+code_02a8:
+		push    
+		lap      param4
+		le?     
+code_02ac:
+		jmp      code_02b0
+code_02ae:
+		ldi      0
+code_02b0:
+		ret     
 	)
 )
 
@@ -132,7 +187,13 @@
 					(== -classScript- (param1 -classScript-?))
 				)
 			)
-			((= obj_super_ (self -super-?)) (if (IsObject obj_super_) (obj_super_ isKindOf: param1)))
+			(
+				(and
+					(= obj_super_ (self -super-?))
+					(IsObject obj_super_)
+				)
+				(obj_super_ isKindOf: param1)
+			)
 		)
 	)
 	
@@ -140,10 +201,12 @@
 		(return
 			(cond 
 				((== param1 self))
-				((& (param1 -info-?) $8000)
-					(if (not (& -info- $8000))
-						(== -propDict- (param1 -propDict-?))
+				(
+					(and
+						(& (param1 -info-?) $8000)
+						(not (& -info- $8000))
 					)
+					(== -propDict- (param1 -propDict-?))
 				)
 			)
 		)
@@ -400,7 +463,9 @@
 		(= temp0 (FirstNode elements))
 		(while (and temp0 (not (temp3 claimed?)))
 			(= temp1 (NextNode temp0))
-			(breakif (not (IsObject (= temp2 (NodeValue temp0)))))
+			(if (not (IsObject (= temp2 (NodeValue temp0))))
+				(break)
+			)
 			(temp2 handleEvent: temp3)
 			(= temp0 temp1)
 		)

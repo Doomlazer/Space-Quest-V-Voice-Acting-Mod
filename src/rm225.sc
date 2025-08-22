@@ -39,7 +39,7 @@
 	)
 )
 
-(procedure (localproc_01fb)
+(procedure (localproc_01fc)
 	(cond 
 		((proc0_1 61)
 			(if (!= (gSq5Music1 number?) 20)
@@ -345,7 +345,7 @@
 			)
 			(1
 				(spike init:)
-				(localproc_01fb)
+				(localproc_01fc)
 				(= cycles 1)
 			)
 			(2 (self dispose:))
@@ -580,30 +580,107 @@
 	(properties)
 	
 	(method (changeState newState)
-		(switch (= state newState)
-			(0
-				(gSQ5 handsOff:)
-				(= seconds 2)
-			)
-			(1
-				(gEgo setCycle: Beg self)
-				(if (and (== global126 1) (== global130 1)))
-			)
-			(2
-				(proc0_6 0 0)
-				(gEgo posn: 135 115 setScale: Scaler 153 42 168 107)
-				(= seconds 1)
-			)
-			(3
-				(if (and (proc0_1 73) (== (eureka puke?) 6))
-					(= next sPukeAttacks)
-				)
-				(= cycles 1)
-			)
-			(4
-				(gSQ5 handsOn:)
-				(self dispose:)
-			)
+		(asm
+			lap      newState
+			aTop     state
+			push    
+			dup     
+			ldi      0
+			eq?     
+			bnt      code_0ddd
+			pushi    #handsOff
+			pushi    0
+			lag      gSQ5
+			send     4
+			ldi      2
+			aTop     seconds
+			jmp      code_0e6c
+code_0ddd:
+			dup     
+			ldi      1
+			eq?     
+			bnt      code_0e00
+			pushi    #setCycle
+			pushi    2
+			class    Beg
+			push    
+			pushSelf
+			lag      gEgo
+			send     8
+			lsg      global126
+			ldi      1
+			eq?     
+			bnt      code_0dfe
+			lsg      global130
+			ldi      1
+			eq?     
+			bnt      code_0dfe
+code_0dfe:
+			jmp      code_0e6c
+code_0e00:
+			dup     
+			ldi      2
+			eq?     
+			bnt      code_0e31
+			pushi    2
+			pushi    0
+			pushi    0
+			callb    proc0_6,  4
+			pushi    #posn
+			pushi    2
+			pushi    135
+			pushi    115
+			pushi    305
+			pushi    5
+			class    Scaler
+			push    
+			pushi    153
+			pushi    42
+			pushi    168
+			pushi    107
+			lag      gEgo
+			send     22
+			ldi      1
+			aTop     seconds
+			jmp      code_0e6c
+code_0e31:
+			dup     
+			ldi      3
+			eq?     
+			bnt      code_0e59
+			pushi    1
+			pushi    73
+			callb    proc0_1,  2
+			bnt      code_0e53
+			pushi    #puke
+			pushi    0
+			class    eureka
+			send     4
+			push    
+			ldi      6
+			eq?     
+			bnt      code_0e53
+			lofsa    sPukeAttacks
+			aTop     next
+code_0e53:
+			ldi      1
+			aTop     cycles
+			jmp      code_0e6c
+code_0e59:
+			dup     
+			ldi      4
+			eq?     
+			bnt      code_0e6c
+			pushi    #handsOn
+			pushi    0
+			lag      gSQ5
+			send     4
+			pushi    #dispose
+			pushi    0
+			self     4
+code_0e6c:
+			toss    
+			ret     
 		)
 	)
 )
@@ -1107,10 +1184,12 @@
 				(gEgo setHeading: 180)
 				(eureka puke: 7)
 			)
-			(3 0)
-			(4
+			(3
 				(gTestMessager say: 2 0 12 0 self)
+			)
+			(4
 				(gSq5Music2 number: 249 setLoop: -1 play:)
+				(= seconds 1)
 			)
 			(5
 				(pukeDrip setCel: 9)
@@ -1585,12 +1664,7 @@
 	)
 	
 	(method (init)
-		(self
-			setLoop: 3
-			setPri: 10
-			moveSpeed: 0
-			setScript: sGreenLights
-		)
+		(self setLoop: 3 setPri: 10 setScript: sGreenLights)
 		(super init:)
 	)
 )
@@ -1602,7 +1676,6 @@
 		view 230
 		loop 1
 		signal $4000
-		moveSpeed 0
 	)
 	
 	(method (init)

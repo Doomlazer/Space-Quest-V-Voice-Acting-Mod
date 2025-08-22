@@ -43,6 +43,7 @@
 		(switch (= state newState)
 			(0
 				(theMusic3 number: 248 loop: -1 play: 0 fade:)
+				(= seconds 3)
 			)
 			(1
 				(rogGrim dispose:)

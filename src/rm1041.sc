@@ -67,7 +67,7 @@
 				(lights4 dispose:)
 				(lights5 dispose:)
 				(lights6 dispose:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(6
 				(DrawPic 136 dpOPEN_NO_TRANSITION)
@@ -98,6 +98,10 @@
 				(PalVary pvUNINIT)
 				(DrawPic 1 dpANIMATION_BLACKOUT)
 				(proc0_11)
+				(if (& global90 $0002)
+					(= register (gSq5Music1 vol?))
+					(gSq5Music1 fade: 40 15 5 0)
+				)
 				(= seconds 3)
 			)
 			(1
@@ -116,8 +120,12 @@
 					dsWIDTH
 					240
 				)
+				(if (& global90 $0002)
+					(= ticks (DoAudio 2 1041 3 0 0 1))
+				)
 			)
 			(2
+				(if (& global90 $0002) (DoAudio 3))
 				(= seconds 0)
 				(DrawPic 1 dpOPEN_RIGHT)
 				(= seconds 2)
@@ -138,8 +146,15 @@
 					dsWIDTH
 					240
 				)
+				(if (& global90 $0002)
+					(= ticks (DoAudio 2 1041 3 0 0 2))
+				)
 			)
 			(4
+				(if (& global90 $0002)
+					(DoAudio 3)
+					(gSq5Music1 fade: register 15 5 0)
+				)
 				(= seconds 0)
 				(DrawPic 1 dpOPEN_RIGHT)
 				(= seconds 2)
@@ -420,7 +435,7 @@
 			tailY: 100
 			xOffset: -50
 		)
-		(super init: &rest)
+		(super init: 0 floEyes 0 &rest)
 	)
 	
 	(method (dispose)

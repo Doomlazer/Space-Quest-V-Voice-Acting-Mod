@@ -47,7 +47,7 @@
 	(gOldCast eachElementDo: #startUpd)
 )
 
-(procedure (localproc_00fa)
+(procedure (localproc_00f9)
 	(d3 startUpd:)
 	(d2 startUpd:)
 	(d1 startUpd:)
@@ -86,7 +86,7 @@
 	)
 )
 
-(procedure (localproc_0265 param1 &tmp temp0 temp1)
+(procedure (localproc_0284 param1 &tmp temp0 temp1)
 	(d0 cel: 10)
 	(d1 cel: 10)
 	(d2 cel: 10)
@@ -166,7 +166,7 @@
 				(d1 init:)
 				(d2 init:)
 				(d3 init:)
-				(localproc_0265 global136)
+				(localproc_0284 global136)
 				(theButton dispose:)
 				(= cycles 1)
 			)
@@ -186,7 +186,7 @@
 					y: [local1 (+ (* temp0 2) 1)]
 					setLoop: (+ temp0 1)
 				)
-				(localproc_00fa)
+				(localproc_00f9)
 				(gSq5Music2 number: 220 loop: 1 play:)
 				(= ticks 50)
 			)

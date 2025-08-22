@@ -84,12 +84,12 @@
 	(method (retreat param1 &tmp temp0 temp1 temp2 temp3)
 		(asm
 			lap      argc
-			bnt      code_00f4
+			bnt      code_0133
 			lap      param1
-			jmp      code_00f6
-code_00f4:
+			jmp      code_0135
+code_0133:
 			ldi      1
-code_00f6:
+code_0135:
 			sat      temp1
 			pushi    #indexOf
 			pushi    1
@@ -103,12 +103,12 @@ code_00f6:
 			push    
 			ldi      0
 			lt?     
-			bnt      code_0115
+			bnt      code_0155
 			pTos     size
 			ldi      1
 			sub     
 			sat      temp3
-code_0115:
+code_0155:
 			pushi    #at
 			pushi    1
 			lst      temp3
@@ -117,7 +117,7 @@ code_0115:
 			pushi    1
 			push    
 			callk    IsObject,  2
-			bnt      code_0151
+			bnt      code_0196
 			pushi    #signal
 			pushi    0
 			lat      temp0
@@ -126,7 +126,7 @@ code_0115:
 			ldi      4
 			and     
 			not     
-			bnt      code_0151
+			bnt      code_0196
 			pushi    #nsLeft
 			pushi    0
 			lat      temp0
@@ -134,7 +134,7 @@ code_0115:
 			push    
 			ldi      65535
 			gt?     
-			bt       code_014d
+			bt       code_0192
 			pushi    #isKindOf
 			pushi    1
 			class    InvI
@@ -142,22 +142,22 @@ code_0115:
 			lat      temp0
 			send     6
 			not     
-			bnt      code_0151
-code_014d:
-			jmp      code_0162
-			jmp      code_0115
-code_0151:
+			bnt      code_0196
+code_0192:
+			jmp      code_01a7
+			jmp      code_0155
+code_0196:
 			-at      temp3
 			push    
 			ldi      0
 			lt?     
-			bnt      code_0115
+			bnt      code_0155
 			pTos     size
 			ldi      1
 			sub     
 			sat      temp3
-			jmp      code_0115
-code_0162:
+			jmp      code_0155
+code_01a7:
 			pushi    #highlight
 			pushi    2
 			lst      temp0

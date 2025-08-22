@@ -12,7 +12,7 @@
 (local
 	local0
 )
-(procedure (localproc_0814 param1 param2 param3 &tmp temp0 temp1 temp2)
+(procedure (localproc_00cc param1 param2 param3 &tmp temp0 temp1 temp2)
 	(= temp2
 		(+
 			(/ (- (param1 nsRight?) (param1 nsLeft?)) 2)
@@ -163,7 +163,7 @@
 	
 	(method (doit &tmp temp0 temp1 temp2 temp3 temp4 [temp5 2] temp7 temp8 temp9 [temp10 50] temp60)
 		(asm
-code_088d:
+code_02c9:
 			pushi    #type
 			pushi    0
 			pushi    #new
@@ -175,13 +175,13 @@ code_088d:
 			send     4
 			sat      temp1
 			send     4
-			bnt      code_08a5
-			jmp      code_088d
-code_08a5:
+			bnt      code_02e4
+			jmp      code_02c9
+code_02e4:
 			pTos     state
 			ldi      32
 			and     
-			bnt      code_0d0f
+			bnt      code_0799
 			pushi    #new
 			pushi    0
 			pushi    #curEvent
@@ -221,42 +221,42 @@ code_08a5:
 			lat      temp1
 			send     4
 			pToa     curIcon
-			bnt      code_0956
+			bnt      code_03a0
 			lat      temp4
 			not     
-			bnt      code_0956
+			bnt      code_03a0
 			pTos     curIcon
 			pToa     selectIcon
 			ne?     
-			bnt      code_0956
+			bnt      code_03a0
 			lst      temp2
 			ldi      1
 			eq?     
-			bt       code_092d
+			bt       code_0373
 			lst      temp2
 			ldi      4
 			eq?     
-			bnt      code_091f
+			bnt      code_0365
 			lst      temp3
 			ldi      13
 			eq?     
-			bnt      code_091f
+			bnt      code_0365
 			ldi      1
 			sat      temp9
-			bt       code_092d
-code_091f:
+			bt       code_0373
+code_0365:
 			lst      temp2
 			ldi      256
 			eq?     
-			bnt      code_0956
+			bnt      code_03a0
 			ldi      1
 			sat      temp9
-			bnt      code_0956
-code_092d:
+			bnt      code_03a0
+code_0373:
 			pTos     curIcon
 			pToa     helpIconItem
 			ne?     
-			bt       code_0941
+			bt       code_0388
 			pushi    #signal
 			pushi    0
 			pToa     helpIconItem
@@ -264,8 +264,8 @@ code_092d:
 			push    
 			ldi      16
 			and     
-			bnt      code_0956
-code_0941:
+			bnt      code_03a0
+code_0388:
 			pushi    #type
 			pushi    1
 			pushi    16384
@@ -278,7 +278,7 @@ code_0941:
 			push    
 			lat      temp1
 			send     12
-code_0956:
+code_03a0:
 			pushi    1
 			lst      temp1
 			callk    MapKeyToDir,  2
@@ -293,44 +293,44 @@ code_0956:
 			send     4
 			sat      temp3
 			lag      gNewSet
-			bnt      code_0979
+			bnt      code_03c7
 			pushi    #eachElementDo
 			pushi    1
 			pushi    57
 			send     6
-code_0979:
+code_03c7:
 			pushi    #script
 			pushi    0
 			lag      gSQ5
 			send     4
 			sat      temp60
-			bnt      code_0998
+			bnt      code_03ea
 			pushi    #isKindOf
 			pushi    1
 			class    Tutorial
 			push    
 			lat      temp60
 			send     6
-			bnt      code_0998
+			bnt      code_03ea
 			pushi    #doit
 			pushi    0
 			lat      temp60
 			send     4
-code_0998:
+code_03ea:
 			lag      gNewEventHandler
-			bnt      code_09a7
+			bnt      code_03fa
 			pushi    #handleEvent
 			pushi    1
 			lst      temp1
 			send     6
-			jmp      code_08a5
-code_09a7:
+			jmp      code_02e4
+code_03fa:
 			lst      temp2
 			ldi      1
 			eq?     
-			bnt      code_09c3
+			bnt      code_0419
 			lat      temp4
-			bnt      code_09c3
+			bnt      code_0419
 			pushi    #advanceCurIcon
 			pushi    0
 			self     4
@@ -339,51 +339,51 @@ code_09a7:
 			pushi    1
 			lat      temp1
 			send     6
-			jmp      code_08a5
-code_09c3:
+			jmp      code_02e4
+code_0419:
 			lst      temp2
 			ldi      0
 			eq?     
-			bnt      code_09e9
+			bnt      code_0441
 			pushi    #firstTrue
 			pushi    2
 			pushi    226
 			lst      temp1
 			self     8
 			sat      temp0
-			bnt      code_09e9
+			bnt      code_0441
 			push    
 			pToa     highlightedIcon
 			ne?     
-			bnt      code_09e9
+			bnt      code_0441
 			pushi    #highlight
 			pushi    1
 			lst      temp0
 			self     6
-			jmp      code_08a5
-code_09e9:
+			jmp      code_02e4
+code_0441:
 			lst      temp2
 			ldi      1
 			eq?     
-			bt       code_0a07
+			bt       code_045f
 			lst      temp2
 			ldi      4
 			eq?     
-			bnt      code_09fe
+			bnt      code_0456
 			lst      temp3
 			ldi      13
 			eq?     
-			bt       code_0a07
-code_09fe:
+			bt       code_045f
+code_0456:
 			lst      temp2
 			ldi      256
 			eq?     
-			bnt      code_0a94
-code_0a07:
+			bnt      code_04f5
+code_045f:
 			pushi    1
 			pTos     highlightedIcon
 			callk    IsObject,  2
-			bnt      code_08a5
+			bnt      code_02e4
 			pushi    184
 			pushi    #view
 			pTos     highlightedIcon
@@ -392,18 +392,18 @@ code_0a07:
 			eq?     
 			push    
 			self     8
-			bnt      code_08a5
+			bnt      code_02e4
 			pTos     highlightedIcon
 			pToa     okButton
 			eq?     
-			bnt      code_0a2e
-			jmp      code_0d0f
-			jmp      code_08a5
-code_0a2e:
+			bnt      code_0488
+			jmp      code_0799
+			jmp      code_02e4
+code_0488:
 			pTos     highlightedIcon
 			pToa     helpIconItem
 			eq?     
-			bnt      code_0a7d
+			bnt      code_04dc
 			pushi    #cursor
 			pushi    0
 			pToa     highlightedIcon
@@ -411,7 +411,7 @@ code_0a2e:
 			push    
 			ldi      65535
 			ne?     
-			bnt      code_0a53
+			bnt      code_04af
 			pushi    #setCursor
 			pushi    1
 			pushi    #cursor
@@ -421,18 +421,18 @@ code_0a2e:
 			push    
 			lag      gSQ5
 			send     6
-code_0a53:
+code_04af:
 			pTos     state
 			ldi      2048
 			and     
-			bnt      code_0a64
+			bnt      code_04c1
 			pushi    #noClickHelp
 			pushi    0
 			self     4
-			jmp      code_08a5
-code_0a64:
+			jmp      code_02e4
+code_04c1:
 			pToa     helpIconItem
-			bnt      code_08a5
+			bnt      code_02e4
 			pushi    14
 			pushi    #x
 			pushi    #signal
@@ -444,8 +444,8 @@ code_0a64:
 			push    
 			pToa     helpIconItem
 			send     6
-			jmp      code_08a5
-code_0a7d:
+			jmp      code_02e4
+code_04dc:
 			pToa     highlightedIcon
 			aTop     curIcon
 			pushi    #setCursor
@@ -457,37 +457,37 @@ code_0a7d:
 			push    
 			lag      gSQ5
 			send     6
-			jmp      code_08a5
-code_0a94:
+			jmp      code_02e4
+code_04f5:
 			lst      temp2
 			ldi      64
 			and     
-			bnt      code_0b46
+			bnt      code_05af
 			lst      temp3
 			dup     
 			ldi      3
 			eq?     
-			bnt      code_0aad
+			bnt      code_050f
 			pushi    #advance
 			pushi    0
 			self     4
-			jmp      code_0b42
-code_0aad:
+			jmp      code_05ab
+code_050f:
 			dup     
 			ldi      7
 			eq?     
-			bnt      code_0abc
+			bnt      code_051f
 			pushi    #retreat
 			pushi    0
 			self     4
-			jmp      code_0b42
-code_0abc:
+			jmp      code_05ab
+code_051f:
 			dup     
 			ldi      1
 			eq?     
-			bnt      code_0af2
+			bnt      code_0557
 			pToa     highlightedIcon
-			bnt      code_0ae9
+			bnt      code_054e
 			pushi    3
 			push    
 			pushi    #nsTop
@@ -498,27 +498,27 @@ code_0abc:
 			sub     
 			push    
 			pushi    0
-			call     localproc_0814,  6
+			call     localproc_00cc,  6
 			sat      temp0
-			bnt      code_0ae9
+			bnt      code_054e
 			pushi    #highlight
 			pushi    2
 			lst      temp0
 			pushi    1
 			self     8
-			jmp      code_0b42
-code_0ae9:
+			jmp      code_05ab
+code_054e:
 			pushi    #retreat
 			pushi    0
 			self     4
-			jmp      code_0b42
-code_0af2:
+			jmp      code_05ab
+code_0557:
 			dup     
 			ldi      5
 			eq?     
-			bnt      code_0b2f
+			bnt      code_0597
 			pToa     highlightedIcon
-			bnt      code_0b27
+			bnt      code_058e
 			pushi    3
 			push    
 			pushi    #nsBottom
@@ -533,89 +533,89 @@ code_0af2:
 			pToa     window
 			send     4
 			push    
-			call     localproc_0814,  6
+			call     localproc_00cc,  6
 			sat      temp0
-			bnt      code_0b27
+			bnt      code_058e
 			pushi    #highlight
 			pushi    2
 			lst      temp0
 			pushi    1
 			self     8
-			jmp      code_0b42
-code_0b27:
+			jmp      code_05ab
+code_058e:
 			pushi    #advance
 			pushi    0
 			self     4
-			jmp      code_0b42
-code_0b2f:
+			jmp      code_05ab
+code_0597:
 			dup     
 			ldi      0
 			eq?     
-			bnt      code_0b42
+			bnt      code_05ab
 			lst      temp2
 			ldi      4
 			and     
-			bnt      code_0b42
+			bnt      code_05ab
 			pushi    #advanceCurIcon
 			pushi    0
 			self     4
-code_0b42:
+code_05ab:
 			toss    
-			jmp      code_08a5
-code_0b46:
+			jmp      code_02e4
+code_05af:
 			lst      temp2
 			ldi      4
 			eq?     
-			bnt      code_0b7a
+			bnt      code_05e4
 			lst      temp3
 			dup     
 			ldi      9
 			eq?     
-			bnt      code_0b5e
+			bnt      code_05c7
 			pushi    #advance
 			pushi    0
 			self     4
-			jmp      code_0b76
-code_0b5e:
+			jmp      code_05e0
+code_05c7:
 			dup     
 			ldi      3840
 			eq?     
-			bnt      code_0b6d
+			bnt      code_05d7
 			pushi    #retreat
 			pushi    0
 			self     4
-			jmp      code_0b76
-code_0b6d:
+			jmp      code_05e0
+code_05d7:
 			dup     
 			ldi      27
 			eq?     
-			bnt      code_0b76
-			jmp      code_0d0f
-code_0b76:
+			bnt      code_05e0
+			jmp      code_0799
+code_05e0:
 			toss    
-			jmp      code_08a5
-code_0b7a:
+			jmp      code_02e4
+code_05e4:
 			lst      temp2
 			ldi      16384
 			and     
-			bnt      code_08a5
+			bnt      code_02e4
 			pushi    #firstTrue
 			pushi    2
 			pushi    226
 			lst      temp1
 			self     8
 			sat      temp0
-			bnt      code_08a5
+			bnt      code_02e4
 			lst      temp2
 			ldi      8192
 			and     
-			bnt      code_0c36
+			bnt      code_06af
 			lat      temp0
-			bnt      code_0c15
+			bnt      code_068b
 			pushi    #noun
 			pushi    0
 			send     4
-			bnt      code_0c15
+			bnt      code_068b
 			pushi    7
 			pushi    0
 			pushi    #modNum
@@ -638,13 +638,13 @@ code_0b7a:
 			lea      @temp10
 			push    
 			callk    Message,  14
-			bnt      code_0c15
+			bnt      code_068b
 			pushi    #respondsTo
 			pushi    1
 			pushi    244
 			lag      gSq5Win
 			send     6
-			bnt      code_0c0a
+			bnt      code_067f
 			pushi    #eraseOnly
 			pushi    0
 			lag      gSq5Win
@@ -664,13 +664,13 @@ code_0b7a:
 			lst      temp7
 			lag      gSq5Win
 			send     6
-			jmp      code_0c15
-code_0c0a:
+			jmp      code_068b
+code_067f:
 			pushi    1
 			lea      @temp10
 			push    
 			calle    proc921_0,  2
-code_0c15:
+code_068b:
 			pushi    14
 			pushi    #x
 			pushi    #signal
@@ -688,15 +688,15 @@ code_0c15:
 			pushi    999
 			lag      gSQ5
 			send     6
-			jmp      code_08a5
-code_0c36:
+			jmp      code_02e4
+code_06af:
 			lst      temp0
 			pToa     okButton
 			eq?     
-			bnt      code_0c43
-			jmp      code_0d0f
-			jmp      code_08a5
-code_0c43:
+			bnt      code_06bc
+			jmp      code_0799
+			jmp      code_02e4
+code_06bc:
 			pushi    #isKindOf
 			pushi    1
 			class    InvI
@@ -704,7 +704,7 @@ code_0c43:
 			lat      temp0
 			send     6
 			not     
-			bnt      code_0ca3
+			bnt      code_0722
 			pushi    #select
 			pushi    2
 			lst      temp0
@@ -712,7 +712,7 @@ code_0c43:
 			not     
 			push    
 			self     8
-			bnt      code_08a5
+			bnt      code_02e4
 			lat      temp0
 			aTop     curIcon
 			pushi    #setCursor
@@ -727,16 +727,16 @@ code_0c43:
 			lst      temp0
 			pToa     helpIconItem
 			eq?     
-			bnt      code_08a5
+			bnt      code_02e4
 			pTos     state
 			ldi      2048
 			and     
-			bnt      code_0c8d
+			bnt      code_070a
 			pushi    #noClickHelp
 			pushi    0
 			self     4
-			jmp      code_08a5
-code_0c8d:
+			jmp      code_02e4
+code_070a:
 			pushi    14
 			pushi    #x
 			pushi    #signal
@@ -749,16 +749,16 @@ code_0c8d:
 			push    
 			pToa     helpIconItem
 			send     6
-			jmp      code_08a5
-code_0ca3:
+			jmp      code_02e4
+code_0722:
 			pToa     curIcon
-			bnt      code_08a5
+			bnt      code_02e4
 			pushi    #respondsTo
 			pushi    1
 			pushi    244
 			lag      gSq5Win
 			send     6
-			bnt      code_0cc7
+			bnt      code_074a
 			pushi    #eraseOnly
 			pushi    0
 			lag      gSq5Win
@@ -769,14 +769,14 @@ code_0ca3:
 			pushi    1
 			lag      gSq5Win
 			send     6
-code_0cc7:
+code_074a:
 			pushi    #isKindOf
 			pushi    1
 			class    InvI
 			push    
 			pToa     curIcon
 			send     6
-			bnt      code_0ce5
+			bnt      code_076b
 			pushi    #doVerb
 			pushi    1
 			pushi    #message
@@ -786,8 +786,8 @@ code_0cc7:
 			push    
 			lat      temp0
 			send     6
-			jmp      code_0cf5
-code_0ce5:
+			jmp      code_077d
+code_076b:
 			pushi    #doVerb
 			pushi    1
 			pushi    #message
@@ -797,20 +797,20 @@ code_0ce5:
 			push    
 			lat      temp0
 			send     6
-code_0cf5:
+code_077d:
 			pushi    #respondsTo
 			pushi    1
 			pushi    244
 			lag      gSq5Win
 			send     6
-			bnt      code_08a5
+			bnt      code_02e4
 			pushi    #eraseOnly
 			pushi    1
 			lst      temp7
 			lag      gSq5Win
 			send     6
-			jmp      code_08a5
-code_0d0f:
+			jmp      code_02e4
+code_0799:
 			pushi    #hide
 			pushi    0
 			self     4

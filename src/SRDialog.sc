@@ -25,7 +25,7 @@
 )
 (procedure (proc990_0 param1 &tmp temp0 [temp1 33] [temp34 100] [temp134 50])
 	(asm
-code_0949:
+code_0105:
 		pushi    #font
 		pushi    1
 		pushi    0
@@ -76,26 +76,26 @@ code_0949:
 		send     82
 		sat      temp0
 		not     
-		bnt      code_09a4
+		bnt      code_0174
 		ldi      0
 		ret     
-code_09a4:
+code_0174:
 		pushi    1
 		lea      @temp1
 		push    
 		callk    StrLen,  2
 		not     
-		bnt      code_09b7
+		bnt      code_0189
 		pushi    1
 		lea      @temp1
 		push    
 		callk    GetCWD,  2
-code_09b7:
+code_0189:
 		pushi    1
 		lea      @temp1
 		push    
 		callk    ValidPath,  2
-		bnt      code_09d1
+		bnt      code_01a5
 		pushi    2
 		lsp      param1
 		lea      @temp1
@@ -103,8 +103,8 @@ code_09b7:
 		callk    StrCpy,  4
 		ldi      1
 		ret     
-		jmp      code_0949
-code_09d1:
+		jmp      code_0105
+code_01a5:
 		pushi    7
 		pushi    0
 		pushi    990
@@ -134,27 +134,27 @@ code_09d1:
 		pushi    0
 		class    Print
 		send     16
-		jmp      code_0949
+		jmp      code_0105
 		ret     
 	)
 )
 
-(procedure (localproc_0744)
+(procedure (localproc_01eb)
 	(return
 		(cond 
 			((== self Restore) 0)
-			((localproc_0a0b) 1)
+			((localproc_020a) 1)
 			(local2 2)
 			(else 3)
 		)
 	)
 )
 
-(procedure (localproc_0a0b)
+(procedure (localproc_020a)
 	(if (< local2 20) (CheckFreeSpace global29))
 )
 
-(procedure (localproc_0a19)
+(procedure (localproc_0218)
 	(Print font: 0 addText: 3 0 0 1 0 0 990 init:)
 )
 
@@ -188,7 +188,7 @@ code_09d1:
 			)
 			(return 0)
 		)
-		(if (== (= local4 (localproc_0744)) 1)
+		(if (== (= local4 (localproc_01eb)) 1)
 			(editI
 				text: (StrCpy param1 param2)
 				font: global23
@@ -278,20 +278,19 @@ code_09d1:
 	(method (doit param1 &tmp temp0 temp1 temp2 [temp3 361] [temp364 21] [temp385 140])
 		(asm
 			pushSelf
-			lofsa    Restore
+			class    Restore
 			eq?     
-			bnt      code_03ec
+			bnt      code_050e
 			lap      argc
-			bnt      code_03ec
+			bnt      code_050e
 			lap      param1
-			bnt      code_03ec
+			bnt      code_050e
 			pushi    2
 			pushi    0
 			pushi    3
 			lea      @temp385
 			push    
-			lofsa    {%ssg.dir}
-			push    
+			lofss    {%ssg.dir}
 			pushi    #name
 			pushi    0
 			lag      gSQ5
@@ -304,14 +303,14 @@ code_09d1:
 			push    
 			ldi      65535
 			eq?     
-			bnt      code_03e5
+			bnt      code_0507
 			ret     
-code_03e5:
+code_0507:
 			pushi    2
 			pushi    1
 			lst      temp0
 			callk    FileIO,  4
-code_03ec:
+code_050e:
 			pushi    #init
 			pushi    3
 			lsp      param1
@@ -321,44 +320,47 @@ code_03ec:
 			push    
 			self     10
 			not     
-			bnt      code_0404
+			bnt      code_0526
 			ldi      65535
 			ret     
-code_0404:
+code_0526:
+			ldi      1
+			bnt      code_0851
 			lsl      local4
 			dup     
 			ldi      0
 			eq?     
-			bnt      code_041a
+			bnt      code_0541
 			lal      local2
-			bnt      code_0415
+			bnt      code_053c
 			lofsa    okI
-			jmp      code_0433
-code_0415:
+			jmp      code_053f
+code_053c:
 			lofsa    changeDirI
-			jmp      code_0433
-code_041a:
+code_053f:
+			jmp      code_055a
+code_0541:
 			dup     
 			ldi      1
 			eq?     
-			bnt      code_0425
+			bnt      code_054c
 			lofsa    editI
-			jmp      code_0433
-code_0425:
+			jmp      code_055a
+code_054c:
 			dup     
 			ldi      2
 			eq?     
-			bnt      code_0430
+			bnt      code_0557
 			lofsa    okI
-			jmp      code_0433
-code_0430:
+			jmp      code_055a
+code_0557:
 			lofsa    changeDirI
-code_0433:
+code_055a:
 			toss    
 			sal      local0
 			pushi    #doit
 			pushi    1
-			push    
+			lsl      local0
 			super    Dialog,  6
 			sal      local1
 			pushi    #indexOf
@@ -378,14 +380,14 @@ code_0433:
 			lsl      local1
 			lofsa    changeDirI
 			eq?     
-			bnt      code_04aa
+			bnt      code_05d2
 			pushi    #dispose
 			pushi    0
 			self     4
 			pushi    1
 			lsg      global29
 			call     proc990_0,  2
-			bnt      code_0495
+			bnt      code_05bd
 			pushi    3
 			pushi    #name
 			pushi    0
@@ -401,11 +403,11 @@ code_0433:
 			push    
 			ldi      65535
 			eq?     
-			bnt      code_0495
+			bnt      code_05bd
 			ldi      65535
 			sat      temp1
-			jmp      code_072e
-code_0495:
+			jmp      code_0851
+code_05bd:
 			pushi    #init
 			pushi    3
 			lsp      param1
@@ -414,16 +416,16 @@ code_0495:
 			lea      @temp364
 			push    
 			self     10
-			jmp      code_0404
-code_04aa:
+			jmp      code_084e
+code_05d2:
 			lsl      local4
 			ldi      2
 			eq?     
-			bnt      code_04f4
+			bnt      code_061c
 			lsl      local1
 			lofsa    okI
 			eq?     
-			bnt      code_04f4
+			bnt      code_061c
 			pushi    #dispose
 			pushi    0
 			self     4
@@ -438,12 +440,12 @@ code_04aa:
 			push    
 			lofsa    GetReplaceName
 			send     6
-			bnt      code_04df
+			bnt      code_0607
 			lal      local3
 			lati     temp364
 			sat      temp1
-			jmp      code_072e
-code_04df:
+			jmp      code_0851
+code_0607:
 			pushi    #init
 			pushi    3
 			lsp      param1
@@ -452,33 +454,33 @@ code_04df:
 			lea      @temp364
 			push    
 			self     10
-			jmp      code_0404
-code_04f4:
+			jmp      code_0526
+code_061c:
 			lsl      local4
 			ldi      1
 			eq?     
-			bnt      code_05b5
+			bnt      code_06dc
 			lsl      local1
 			lofsa    okI
 			eq?     
-			bt       code_050d
+			bt       code_0635
 			lsl      local1
 			lofsa    editI
 			eq?     
-			bnt      code_05b5
-code_050d:
+			bnt      code_06dc
+code_0635:
 			pushi    1
 			lsp      param1
 			callk    StrLen,  2
 			push    
 			ldi      0
 			eq?     
-			bnt      code_0538
+			bnt      code_0660
 			pushi    #dispose
 			pushi    0
 			self     4
 			pushi    0
-			call     localproc_0a19,  0
+			call     localproc_0218,  0
 			pushi    #init
 			pushi    3
 			lsp      param1
@@ -487,17 +489,17 @@ code_050d:
 			lea      @temp364
 			push    
 			self     10
-			jmp      code_0404
-code_0538:
+			jmp      code_0526
+code_0660:
 			ldi      65535
 			sat      temp1
 			ldi      0
 			sal      local1
-code_0540:
+code_0668:
 			lsl      local1
 			lal      local2
 			lt?     
-			bnt      code_055f
+			bnt      code_0689
 			pushi    2
 			lsp      param1
 			lsl      local1
@@ -508,64 +510,66 @@ code_0540:
 			callk    StrCmp,  4
 			sat      temp1
 			not     
-			bnt      code_055b
-code_055b:
+			bnt      code_0685
+			jmp      code_0689
+code_0685:
 			+al      local1
-			jmp      code_0540
-code_055f:
+			jmp      code_0668
+code_0689:
 			lat      temp1
 			not     
-			bnt      code_056e
+			bnt      code_0698
 			lal      local1
 			lati     temp364
 			sat      temp1
-			jmp      code_072e
-code_056e:
+			jmp      code_0851
+code_0698:
 			lsl      local2
 			ldi      20
 			eq?     
-			bnt      code_057f
+			bnt      code_06a9
 			lal      local3
 			lati     temp364
 			sat      temp1
-			jmp      code_072e
-code_057f:
+			jmp      code_0851
+code_06a9:
 			ldi      0
 			sat      temp1
-code_0583:
+code_06ad:
 			ldi      1
-			bnt      code_072e
+			bnt      code_06d9
 			ldi      0
 			sal      local1
-code_058c:
+code_06b5:
 			lsl      local1
 			lal      local2
 			lt?     
-			bnt      code_05a1
+			bnt      code_06cc
 			lst      temp1
 			lal      local1
 			lati     temp364
 			eq?     
-			bnt      code_059d
-code_059d:
+			bnt      code_06c8
+			jmp      code_06cc
+code_06c8:
 			+al      local1
-			jmp      code_058c
-code_05a1:
+			jmp      code_06b5
+code_06cc:
 			lsl      local1
 			lal      local2
 			eq?     
-			bnt      code_05ab
-			jmp      code_072e
-code_05ab:
+			bnt      code_06d5
+			jmp      code_06d9
+code_06d5:
 			+at      temp1
-			jmp      code_0583
-			jmp      code_072e
-			jmp      code_0404
-code_05b5:
+			jmp      code_06ad
+code_06d9:
+			jmp      code_0851
+code_06dc:
 			lsl      local1
 			lofsa    deleteI
 			eq?     
-			bnt      code_06da
+			bnt      code_0800
 			pushi    #dispose
 			pushi    0
 			self     4
@@ -603,7 +607,7 @@ code_05b5:
 			class    Print
 			send     62
 			not     
-			bnt      code_0614
+			bnt      code_073b
 			pushi    #init
 			pushi    3
 			lsp      param1
@@ -612,8 +616,8 @@ code_05b5:
 			lea      @temp364
 			push    
 			self     10
-			jmp      code_0404
-code_0614:
+			jmp      code_07fe
+code_073b:
 			pushi    #name
 			pushi    1
 			pushi    3
@@ -640,15 +644,15 @@ code_0614:
 			sat      temp1
 			ldi      0
 			sal      local1
-code_0646:
+code_076d:
 			lsl      local1
 			lal      local2
 			lt?     
-			bnt      code_0687
+			bnt      code_07ae
 			lsl      local1
 			lal      local3
 			ne?     
-			bnt      code_0683
+			bnt      code_07aa
 			pushi    #write
 			pushi    2
 			lal      local1
@@ -673,10 +677,10 @@ code_0646:
 			pushi    1
 			lat      temp0
 			send     8
-code_0683:
+code_07aa:
 			+al      local1
-			jmp      code_0646
-code_0687:
+			jmp      code_076d
+code_07ae:
 			ldi      65535
 			sat      temp1
 			pushi    #write
@@ -715,36 +719,37 @@ code_0687:
 			lea      @temp364
 			push    
 			self     10
-			jmp      code_0404
-code_06da:
+code_07fe:
+			jmp      code_084e
+code_0800:
 			lsl      local1
 			lofsa    okI
 			eq?     
-			bnt      code_06ee
+			bnt      code_0813
 			lal      local3
 			lati     temp364
 			sat      temp1
-			jmp      code_072e
-			jmp      code_0404
-code_06ee:
+			jmp      code_0851
+			jmp      code_084e
+code_0813:
 			lsl      local1
 			ldi      65535
 			eq?     
-			bt       code_06fd
+			bt       code_0822
 			lsl      local1
 			lofsa    cancelI
 			eq?     
-			bnt      code_0706
-code_06fd:
+			bnt      code_082a
+code_0822:
 			ldi      65535
 			sat      temp1
-			jmp      code_072e
-			jmp      code_0404
-code_0706:
+			jmp      code_0851
+			jmp      code_084e
+code_082a:
 			lsl      local4
 			ldi      1
 			eq?     
-			bnt      code_0404
+			bnt      code_084e
 			pushi    #cursor
 			pushi    1
 			pushi    1
@@ -761,8 +766,9 @@ code_0706:
 			pushi    0
 			lofsa    editI
 			send     10
-			jmp      code_0404
-code_072e:
+code_084e:
+			jmp      code_0526
+code_0851:
 			pushi    1
 			pushi    993
 			callk    DisposeScript,  2
@@ -875,7 +881,7 @@ code_072e:
 		(= temp0 (super doit: newName))
 		(self dispose:)
 		(if (not (StrLen param1))
-			(localproc_0a19)
+			(localproc_0218)
 			(= temp0 0)
 		)
 		(return (if (== temp0 newName) else (== temp0 button1)))

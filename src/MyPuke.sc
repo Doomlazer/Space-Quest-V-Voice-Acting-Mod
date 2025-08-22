@@ -168,7 +168,7 @@
 				(puke1HitRog init:)
 				(RogersHead startUpd:)
 			)
-			(6 (= cycles 4))
+			(6 (= ticks 4))
 			(7
 				(RogersEyes dispose:)
 				(RogersHead cel: 1)
@@ -188,7 +188,7 @@
 				(gSQ5 handsOff:)
 				(RogersHead startUpd:)
 				(RogersEyes hide:)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(1
 				(proc0_2 99)
@@ -262,7 +262,7 @@
 			(5 (= seconds 1))
 			(6
 				(both addToPic: dispose:)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(7
 				(global2 drawPic: 102 (global2 style?))
@@ -778,6 +778,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -1123,7 +1124,7 @@
 			(0
 				(gSQ5 handsOff:)
 				(RogersArm startUpd:)
-				(= cycles 6)
+				(= ticks 6)
 			)
 			(1
 				(RogersArm loop: 2 cel: 1 x: 38 y: 59 setPri: 15)

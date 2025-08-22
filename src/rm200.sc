@@ -307,7 +307,7 @@
 			)
 			(1
 				(ShakeScreen 3 3)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(2
 				(if (-- register) (= state (- state 2)))
@@ -359,7 +359,7 @@
 					view: 350
 					setLoop: 0
 					cel: 0
-					x: 271 167
+					posn: 271 167
 					setCycle: End self
 					signal: (| $0004 (flo signal?))
 				)
@@ -378,7 +378,7 @@
 			)
 			(2
 				(if (proc0_1 97) (northDoor setCycle: End))
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(3
 				(northDoor stopUpd:)
@@ -441,7 +441,7 @@
 			(4 0)
 			(5
 				(northDoor stopUpd:)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(6
 				(gTestMessager say: 4 0 2 1 self)
@@ -459,7 +459,7 @@
 					posn: 131 135
 					setCycle: Walk
 				)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(10
 				(droole setMotion: MoveTo 153 127 self)

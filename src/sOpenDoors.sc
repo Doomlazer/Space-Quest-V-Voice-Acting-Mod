@@ -29,17 +29,13 @@
 				(leftBayDoor
 					setLoop: 2
 					setCel: 0
-					setCycle: 0
 					setStep: 1 1
-					moveSpeed: 0
 					setMotion: MoveTo 39 64 self
 				)
 				(rightBayDoor
 					setLoop: 2
 					setCel: 1
-					setCycle: 0
 					setStep: 1 1
-					moveSpeed: 0
 					setMotion: MoveTo 217 64 self
 				)
 			)

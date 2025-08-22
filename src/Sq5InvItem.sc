@@ -46,37 +46,24 @@
 		(if (not modNum) (= modNum gModNum))
 		(switch theVerb
 			(1
-				(if (Message msgSIZE modNum noun 1 0 1)
+				(if (= temp0 (Message msgSIZE modNum noun 1 0 1))
 					(= temp1 (CelWide view loop cel))
-					(= temp0 (GetPort))
-					(Print
-						addIcon: view loop cel 0 0
-						addText: noun 1 0 1 (+ temp1 4) 0 modNum
-						init:
-					)
-					(SetPort temp0)
+					(gTestMessager say: noun 1 0 1 0 modNum)
 				)
 			)
 			(4
-				(if (Message msgSIZE modNum noun 4 0 1)
-					(= temp0 (GetPort))
-					(Print addText: noun 4 0 0 0 0 modNum init:)
-					(SetPort temp0)
+				(if (= temp0 (Message msgSIZE modNum noun 4 0 1))
+					(gTestMessager say: noun 4 0 1 0 modNum)
 				else
-					(= temp0 (GetPort))
-					(Print addText: 0 4 0 0 0 0 modNum init:)
-					(SetPort temp0)
+					(gTestMessager say: 0 4 0 1 0 modNum)
 				)
 			)
 			(else 
-				(if (Message msgSIZE modNum noun theVerb 0 1)
-					(= temp0 (GetPort))
-					(Print addText: noun theVerb 0 0 0 0 modNum init:)
-					(SetPort temp0)
+				(if
+				(= temp0 (Message msgSIZE modNum noun theVerb 0 1))
+					(gTestMessager say: noun theVerb 0 1 0 modNum)
 				else
-					(= temp0 (GetPort))
-					(Print addText: 0 7 0 0 0 0 modNum init:)
-					(SetPort temp0)
+					(gTestMessager say: 0 7 0 1 0 modNum)
 				)
 			)
 		)

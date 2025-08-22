@@ -232,7 +232,7 @@
 	)
 	
 	(method (init)
-		(self cel: 0 cycleSpeed: 1 setCycle: End self)
+		(self cel: 0 cycleSpeed: 6 setCycle: End self)
 		(super init: &rest)
 	)
 	
@@ -331,7 +331,7 @@
 	)
 	
 	(method (init)
-		(self cycleSpeed: 1 setCycle: Osc)
+		(self cycleSpeed: 6 setCycle: Osc)
 		(super init:)
 	)
 )
@@ -347,7 +347,7 @@
 	)
 	
 	(method (init)
-		(self cycleSpeed: 1 setCycle: Fwd)
+		(self cycleSpeed: 6 setCycle: Fwd)
 		(super init:)
 	)
 )
@@ -362,7 +362,7 @@
 	)
 	
 	(method (init)
-		(self cycleSpeed: 1 setCycle: Fwd)
+		(self cycleSpeed: 6 setCycle: Fwd)
 		(super init:)
 	)
 )
@@ -377,7 +377,7 @@
 	)
 	
 	(method (init)
-		(self cycleSpeed: 1 setCycle: Fwd)
+		(self cycleSpeed: 6 setCycle: Fwd)
 		(super init:)
 	)
 )
@@ -392,12 +392,12 @@
 	)
 	
 	(method (init)
-		(self cycleSpeed: 1 setCycle: End self)
+		(self cycleSpeed: 6 setCycle: End self)
 		(super init:)
 	)
 	
 	(method (cue)
-		(self setLoop: 6 cycleSpeed: 1 setCycle: Fwd)
+		(self setLoop: 6 cycleSpeed: 6 setCycle: Fwd)
 	)
 )
 

@@ -18,14 +18,14 @@
 	local2
 	local3
 )
-(procedure (localproc_0128)
+(procedure (localproc_012a)
 	(gUser canControl: 1 canInput: 1)
 	(gSq5IconBar enable: 2 1)
 	(gSQ5 setCursor: 982 1)
 	(gSq5IconBar select: (gSq5IconBar at: 2))
 )
 
-(procedure (localproc_015e)
+(procedure (localproc_0160)
 	(gUser canControl: 0 canInput: 0)
 	(gSq5IconBar disable: 0 3 4 5 6 7 8)
 )
@@ -37,6 +37,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -137,7 +138,7 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
-				(localproc_015e)
+				(localproc_0160)
 				(= seconds 2)
 			)
 			(1
@@ -161,13 +162,13 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
-				(localproc_015e)
+				(localproc_0160)
 				(gSq5Music2 number: 108 setLoop: 1 play:)
 				(latchTop setCel: 1)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(1
-				(localproc_0128)
+				(localproc_012a)
 				(self dispose:)
 			)
 		)
@@ -180,13 +181,13 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
-				(localproc_015e)
+				(localproc_0160)
 				(gSq5Music2 number: 108 setLoop: 1 play:)
 				(latchTop setCel: 0)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(1
-				(localproc_0128)
+				(localproc_012a)
 				(self dispose:)
 			)
 		)
@@ -199,14 +200,14 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
-				(localproc_015e)
+				(localproc_0160)
 				(gSq5Music2 number: 108 setLoop: 1 play:)
 				(latchBottom setCel: 1)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(1
 				(centerPanel hide:)
-				(localproc_0128)
+				(localproc_012a)
 				(self dispose:)
 			)
 		)
@@ -219,14 +220,14 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
-				(localproc_015e)
+				(localproc_0160)
 				(gSq5Music2 number: 108 setLoop: 1 play:)
 				(latchBottom setCel: 0)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(1
 				(centerPanel show:)
-				(localproc_0128)
+				(localproc_012a)
 				(self dispose:)
 			)
 		)
@@ -239,7 +240,7 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
-				(localproc_015e)
+				(localproc_0160)
 				(gSq5Music2 number: 232 setLoop: 1 play:)
 				(switch register
 					(2
@@ -273,7 +274,7 @@
 				)
 			)
 			(1
-				(localproc_0128)
+				(localproc_012a)
 				(self dispose:)
 			)
 		)
@@ -286,7 +287,7 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
-				(localproc_015e)
+				(localproc_0160)
 				(gSq5Music2 number: 431 setLoop: 1 play:)
 				(switch register
 					(4
@@ -306,7 +307,7 @@
 						(knobBL hide:)
 					)
 				)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(1
 				(switch register
@@ -315,14 +316,14 @@
 					(8 (doorTR setCel: 2))
 					(9 (doorBL setCel: 2))
 				)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(2
 				(if (== register 9)
 					(= local2 20)
 					(global2 setScript: sSlideLatches)
 				)
-				(localproc_0128)
+				(localproc_012a)
 				(self dispose:)
 			)
 		)
@@ -335,7 +336,7 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
-				(localproc_015e)
+				(localproc_0160)
 				(gSq5Music2 number: 431 setLoop: 1 play:)
 				(switch register
 					(4 (doorTL setCel: 1))
@@ -343,7 +344,7 @@
 					(8 (doorTR setCel: 1))
 					(9 (doorBL setCel: 1))
 				)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(1
 				(switch register
@@ -364,10 +365,10 @@
 						(knobBL show:)
 					)
 				)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(2
-				(localproc_0128)
+				(localproc_012a)
 				(self dispose:)
 			)
 		)
@@ -380,7 +381,7 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
-				(localproc_015e)
+				(localproc_0160)
 				(= local3 0)
 				(= cycles 1)
 			)
@@ -388,10 +389,10 @@
 				(latchTop y: (- 37 local3))
 				(latchBottom y: (+ 139 local3))
 				(if (< (= local3 (+ local3 3)) 35) (= state 0))
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(2
-				(localproc_0128)
+				(localproc_012a)
 				(self dispose:)
 			)
 		)
@@ -409,13 +410,13 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
-				(localproc_015e)
+				(localproc_0160)
 				(cloakLight hide:)
 				(cloakDevice hide:)
 				(light1 init:)
 				(light2 init:)
 				(proc0_10 212 200)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(1
 				(glow1 init:)
@@ -433,7 +434,7 @@
 			(4
 				(gSq5Music2 fade:)
 				(gEgo get: 12)
-				(localproc_0128)
+				(localproc_012a)
 				(global2 newRoom: 330)
 				(self dispose:)
 			)
@@ -452,7 +453,7 @@
 				(digit3 init:)
 				(digit4 init:)
 				(gSq5Music1 number: 124 setLoop: -1 play:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(1
 				(gTestMessager say: 8 0 0 0 self)

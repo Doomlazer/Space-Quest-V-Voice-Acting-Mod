@@ -16,13 +16,24 @@
 		oldIconBarState 0
 		curSequence 0
 		lastSequence 0
+		talker 0
+		cursor 0
+		bActive 0
+		port 0
 	)
 	
-	(method (dispose)
+	(method (dispose &tmp [temp0 2])
+		(= bActive 0)
+		(if cursor (gSQ5 setCursor: cursor))
 		(talkerSet dispose:)
-		(if gSq5IconBar
+		(if (and gSq5IconBar oldIconBarState)
 			(gSq5IconBar state: oldIconBarState)
 			(= oldIconBarState 0)
+		)
+		(SetPort port)
+		(= port 0)
+		(if (<= (gSQ5 masterVolume:) 123)
+			(gSQ5 masterVolume: (+ (gSQ5 masterVolume:) 4))
 		)
 		(if caller
 			(if (not gNewSet) (= gNewSet (Set new:)))
@@ -35,6 +46,7 @@
 				)
 			)
 		)
+		(= talker 0)
 		(super dispose:)
 	)
 	
@@ -52,6 +64,21 @@
 	)
 	
 	(method (say theCaller &tmp theTheCaller theTheCaller_2 theTheCaller_3 temp3 [temp4 20] temp24)
+		(if bActive
+			(proc921_1 {Tried to say two messages. messager.sc})
+			(self dispose:)
+		)
+		(= bActive 0)
+		(= port (GetPort))
+		(SetPort 0)
+		(if (gUser canControl:)
+			(= cursor gCursorNumber)
+		else
+			(= cursor 0)
+		)
+		(if (>= (gSQ5 masterVolume:) 4)
+			(gSQ5 masterVolume: (- (gSQ5 masterVolume:) 4))
+		)
 		(= theTheCaller
 			(= theTheCaller_2 (= theTheCaller_3 (= curSequence 0)))
 		)
@@ -148,13 +175,13 @@
 		(Memory memFREE temp1)
 	)
 	
-	(method (sayNext param1 param2 param3 param4 param5 &tmp temp0 [temp1 200] temp201)
+	(method (sayNext param1 param2 param3 param4 param5 &tmp theTalker [temp1 200] temp201)
 		(if argc
-			(= temp0
+			(= theTalker
 				(Message msgGET param1 param2 param3 param4 param5 @temp1)
 			)
 		else
-			(= temp0 (Message msgNEXT @temp1))
+			(= theTalker (Message msgNEXT @temp1))
 		)
 		(if (& global90 $0002)
 			(= temp201 (Memory memALLOC_CRIT 12))
@@ -162,18 +189,28 @@
 		)
 		(if
 			(and
-				temp0
+				theTalker
 				(or
 					(not lastSequence)
 					(and lastSequence (<= curSequence lastSequence))
 				)
 			)
-			(if (!= (= temp0 (self findTalker: temp0)) -1)
-				(talkerSet add: temp0)
+			(= theTalker (self findTalker: theTalker))
+			(if
+				(and
+					talker
+					(!= theTalker talker)
+					(== (talker disposeWhenDone?) 2)
+				)
+				(talker caller: 0 dispose: 1)
+			)
+			(= talker theTalker)
+			(if (!= theTalker -1)
+				(talkerSet add: theTalker)
 				(if (& global90 $0002)
-					(temp0 modNum: param1 say: temp201 self)
+					(theTalker modNum: param1 say: temp201 self)
 				else
-					(temp0
+					(theTalker
 						modNum: param1
 						say: @temp1 self param1 param2 param3 param4 param5
 					)

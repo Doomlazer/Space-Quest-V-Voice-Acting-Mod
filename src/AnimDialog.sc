@@ -103,6 +103,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -232,6 +233,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -292,8 +294,8 @@
 		textY 0
 		useFrame 0
 		blinkSpeed 100
+		_case 0
 		verb 0
-		case 0
 		whichSelect 0
 		normal 0
 		curNoun 0
@@ -398,7 +400,7 @@
 		)
 	)
 	
-	(method (display theText &tmp temp0 theTalkWidth temp2 newGSq5Win temp4 temp5 temp6 temp7 newPrint)
+	(method (display theText &tmp temp0 theTalkWidth temp2 newGSq5Win temp4 temp5 temp6 temp7 newPrint [temp9 500])
 		(if normal
 			(super display: theText &rest)
 		else
@@ -421,8 +423,23 @@
 					modeless: 0
 					font: font
 					addIcon: view temp0 cel 0 0
-					addText: theText (+ x textX)
 					width: theTalkWidth
+				)
+				(if (& global90 $0002)
+					(if
+						(Message
+							msgGET
+							(proc999_6 theText 0)
+							(proc999_6 theText 1)
+							(proc999_6 theText 2)
+							(proc999_6 theText 3)
+							(proc999_6 theText 4)
+							@temp9
+						)
+						(newPrint addText: @temp9 (+ x textX))
+					)
+				else
+					(newPrint addText: theText (+ x textX))
 				)
 			else
 				(if (not (+ textX textY))
@@ -441,8 +458,23 @@
 					posn: (+ x textX) (+ y textY)
 					modeless: 0
 					font: font
-					addText: theText 4
 					width: theTalkWidth
+				)
+				(if (& global90 $0002)
+					(if
+						(Message
+							msgGET
+							(proc999_6 theText 0)
+							(proc999_6 theText 1)
+							(proc999_6 theText 2)
+							(proc999_6 theText 3)
+							(proc999_6 theText 4)
+							@temp9
+						)
+						(newPrint addText: @temp9 4)
+					)
+				else
+					(newPrint addText: theText 4)
 				)
 			)
 			(if (not normal)

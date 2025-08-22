@@ -364,8 +364,8 @@
 		view 142
 		loop 1
 		signal $6000
-		cycleSpeed 0
-		moveSpeed 0
+		cycleSpeed 2
+		moveSpeed 2
 	)
 )
 

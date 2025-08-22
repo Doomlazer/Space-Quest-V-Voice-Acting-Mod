@@ -528,6 +528,9 @@
 				(gEgo view: 553 loop: 8 cel: 0 setCycle: End self)
 			)
 			(1
+				(gTestMessager say: local2 0 4 1 self)
+			)
+			(2
 				(floTalker
 					normal: 0
 					keepWindow: 1
@@ -537,13 +540,13 @@
 				)
 				(= cycles 1)
 			)
-			(2
+			(3
 				(gSQ5 handsOn:)
 				(gSq5IconBar select: (gSq5IconBar at: 2))
 				(gSQ5 setCursor: 982)
 				(gTestMessager say: local2 0 4 0 self)
 			)
-			(3
+			(4
 				(floTalker normal: 1 keepWindow: 0)
 				(= local1
 					(switch (floTalker whichSelect?)
@@ -552,10 +555,13 @@
 						(3 3)
 					)
 				)
+				(gTestMessager say: local2 0 4 (+ local1 1) self)
+			)
+			(5
 				(gTestMessager say: local2 0 local1 0 self)
 			)
-			(4 (gEgo setCycle: Beg self))
-			(5
+			(6 (gEgo setCycle: Beg self))
+			(7
 				(proc0_6 18)
 				(gEgo setHeading: 180)
 				(if (not (if (== local1 1) (== local2 8)))
@@ -565,14 +571,14 @@
 					(= seconds 1)
 				)
 			)
-			(6
+			(8
 				(gEgo view: 6 setLoop: 0 cel: 15 setCycle: Beg self)
 			)
-			(7
+			(9
 				(gEgo dispose:)
 				(= seconds 2)
 			)
-			(8
+			(10
 				(gSQ5 handsOn:)
 				(global2 newRoom: 240)
 			)

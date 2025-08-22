@@ -131,7 +131,7 @@
 	)
 )
 
-(procedure (localproc_016a)
+(procedure (localproc_02b4)
 	(cond 
 		((== gGModNum 246) (= global130 8))
 		((!= (eureka puke?) 0) (= global130 0))
@@ -529,7 +529,7 @@
 	
 	(method (init)
 		(= local78 53)
-		(localproc_016a)
+		(localproc_02b4)
 		(cond 
 			((== global130 9)
 				(self
@@ -1283,12 +1283,9 @@
 			(0
 				(if (== client global2) (gSQ5 handsOff:))
 				(= theRegister register)
+				(= register (* register 8))
 				(gEgo
-					setMotion:
-						PolyPath
-						[local20 register]
-						[local20 (+ (= register (* register 8)) 1)]
-						self
+					setMotion: PolyPath [local20 register] [local20 (+ register 1)] self
 				)
 			)
 			(1

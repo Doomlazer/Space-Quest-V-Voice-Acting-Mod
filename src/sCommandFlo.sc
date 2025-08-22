@@ -17,7 +17,7 @@
 	local0
 	local1
 )
-(procedure (localproc_008f param1)
+(procedure (localproc_003a param1)
 	(if (proc0_1 30)
 		(gTestMessager say: 28 0 4 (Random 1 3) param1)
 	else
@@ -25,7 +25,7 @@
 	)
 )
 
-(procedure (localproc_00ca param1)
+(procedure (localproc_0075 param1)
 	(if (proc0_1 30)
 		(gTestMessager say: 4 0 3 (Random 1 3) param1)
 	else
@@ -33,7 +33,7 @@
 	)
 )
 
-(procedure (localproc_05bd param1)
+(procedure (localproc_00b0 param1)
 	(cond 
 		((>= (eureka puke?) 4) (gTestMessager say: 18 0 16 1 (if argc param1 else 0)))
 		((proc0_1 61) (gTestMessager say: 18 0 13 1 (if argc param1 else 0)))
@@ -298,7 +298,7 @@
 				(gSQ5 handsOn:)
 				(gSq5IconBar select: (gSq5IconBar at: 2))
 				(gSQ5 setCursor: 982 1)
-				(switch
+				(= register
 					(Print
 						mode: 1
 						window: (ScriptID 205 0)
@@ -313,44 +313,37 @@
 						addColorButton: 6 1 0 0 18 0 60 205 13 29 31 0 0 0
 						init:
 					)
+				)
+				(= cycles 1)
+			)
+			(2
+				(gSQ5 handsOff:)
+				(gTestMessager say: 1 0 0 (+ register 12) self 205)
+			)
+			(3
+				(switch register
 					(0
-						(gSQ5 handsOff:)
 						(self setScript: sHailShip self)
 					)
 					(1
-						(gSQ5 handsOff:)
 						(self setScript: sHailStarcon self)
 					)
 					(2
-						(gSQ5 handsOff:)
 						(self setScript: sHailPlanet self)
 					)
-					(3
-						(gSQ5 handsOff:)
-						(localproc_05bd self)
-					)
-					(4
-						(gSQ5 handsOff:)
-						(localproc_008f self)
-					)
+					(3 (localproc_00b0 self))
+					(4 (localproc_003a self))
 					(5
-						(gSQ5 handsOff:)
 						(self setScript: sAbandonShip self)
 					)
-					(6
-						(gSQ5 handsOff:)
-						(localproc_00ca self)
-					)
-					(else 
-						(gSQ5 handsOff:)
-						(= ticks 5)
-					)
+					(6 (localproc_0075 self))
+					(else  (= ticks 5))
 				)
 			)
-			(2
+			(4
 				(self setScript: (ScriptID 201 4) self 0)
 			)
-			(3
+			(5
 				(gSQ5 handsOff:)
 				(cond 
 					((proc0_1 85) (= next (ScriptID 201 23)) (self dispose:))
@@ -359,7 +352,7 @@
 					(else (= cycles 1))
 				)
 			)
-			(4
+			(6
 				(gSQ5 handsOn:)
 				(gSq5IconBar select: (gSq5IconBar at: 4))
 				(gSQ5 setCursor: 984 1)

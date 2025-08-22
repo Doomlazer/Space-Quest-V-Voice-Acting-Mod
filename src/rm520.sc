@@ -1049,7 +1049,7 @@
 		(super dispose: &rest)
 	)
 	
-	(method (display theText &tmp theTalkWidth newGSq5Win)
+	(method (display theText &tmp theTalkWidth newGSq5Win [temp2 500])
 		(= theTalkWidth talkWidth)
 		((= newGSq5Win (gSq5Win new:)) color: color back: back)
 		(if
@@ -1065,10 +1065,25 @@
 			posn: x y
 			font: font
 			width: theTalkWidth
-			addText: theText
 			modeless: 1
-			init:
 		)
+		(if (& global90 $0002)
+			(if
+				(Message
+					msgGET
+					(proc999_6 theText 0)
+					(proc999_6 theText 1)
+					(proc999_6 theText 2)
+					(proc999_6 theText 3)
+					(proc999_6 theText 4)
+					@temp2
+				)
+				(Print addText: @temp2)
+			)
+		else
+			(Print addText: theText)
+		)
+		(Print init:)
 	)
 )
 
@@ -1232,7 +1247,7 @@
 		(super dispose: &rest)
 	)
 	
-	(method (display theText &tmp theTalkWidth newGSq5Win)
+	(method (display theText &tmp theTalkWidth newGSq5Win [temp2 500])
 		(= theTalkWidth talkWidth)
 		((= newGSq5Win (gSq5Win new:)) color: color back: back)
 		(if
@@ -1248,10 +1263,25 @@
 			posn: x y
 			font: font
 			width: theTalkWidth
-			addText: theText
 			modeless: 1
-			init:
 		)
+		(if (& global90 $0002)
+			(if
+				(Message
+					msgGET
+					(proc999_6 theText 0)
+					(proc999_6 theText 1)
+					(proc999_6 theText 2)
+					(proc999_6 theText 3)
+					(proc999_6 theText 4)
+					@temp2
+				)
+				(Print addText: @temp2)
+			)
+		else
+			(Print addText: theText)
+		)
+		(Print init:)
 	)
 )
 

@@ -117,7 +117,6 @@
 		loop 2
 		priority 12
 		signal $4010
-		cycleSpeed 0
 	)
 	
 	(method (doit)
@@ -152,7 +151,6 @@
 		loop 3
 		priority 12
 		signal $4010
-		cycleSpeed 0
 	)
 )
 
@@ -298,7 +296,6 @@
 					play: self
 				)
 				(Palette palSET_FLAG 0 254 10)
-				(Palette palSET_FROM_RESOURCE 600 2)
 				(gSQ5 handsOff:)
 			)
 			(3
@@ -313,21 +310,9 @@
 			)
 			(4
 				(gSq5Music2 number: 107 setLoop: 1 play:)
-				(rightLight
-					cycleSpeed: 0
-					moveSpeed: 0
-					setLoop: 3
-					setMotion: MoveTo 160 80
-				)
-				(leftLight
-					cycleSpeed: 0
-					moveSpeed: 0
-					setLoop: 2
-					setMotion: MoveTo 139 80
-				)
+				(rightLight setLoop: 3 setMotion: MoveTo 160 80)
+				(leftLight setLoop: 2 setMotion: MoveTo 139 80)
 				(simulator
-					cycleSpeed: 0
-					moveSpeed: 0
 					setLoop: 6
 					setCel: 0
 					setMotion: MoveTo 61 79 self
@@ -344,7 +329,7 @@
 			(6
 				(PalVary pvUNINIT)
 				(Palette palSET_FROM_RESOURCE 600 2)
-				(= cycles 2)
+				(= ticks 20)
 			)
 			(7
 				(PalVary pvINIT 602 3)
@@ -458,8 +443,7 @@
 					setMotion: MoveTo 92 189 self
 					setCycle: Fwd
 					setLoop: 0
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -482,8 +466,7 @@
 					setMotion: MoveTo 64 112 self
 					setCycle: Fwd
 					setLoop: 2
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -492,8 +475,7 @@
 					setMotion: MoveTo 29 117 self
 					setCycle: Fwd
 					setLoop: 2
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -516,8 +498,7 @@
 					setMotion: MoveTo 115 120 self
 					setCycle: Fwd
 					setLoop: 0
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -526,8 +507,7 @@
 					setMotion: MoveTo 111 135 self
 					setCycle: Fwd
 					setLoop: 4
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -550,8 +530,7 @@
 					setMotion: MoveTo 60 130 self
 					setCycle: Fwd
 					setLoop: 3
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -560,8 +539,7 @@
 					setMotion: MoveTo 81 156 self
 					setCycle: Fwd
 					setLoop: 3
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -584,8 +562,7 @@
 					setMotion: MoveTo 219 109 self
 					setCycle: Fwd
 					setLoop: 1
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -594,8 +571,7 @@
 					setMotion: MoveTo 269 119 self
 					setCycle: Fwd
 					setLoop: 1
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -618,8 +594,7 @@
 					setMotion: MoveTo 270 118 self
 					setCycle: Fwd
 					setLoop: 1
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -642,8 +617,7 @@
 					setMotion: MoveTo 186 135 self
 					setCycle: Fwd
 					setLoop: 1
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -652,8 +626,7 @@
 					setMotion: MoveTo 173 157 self
 					setCycle: Fwd
 					setLoop: 1
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -676,8 +649,7 @@
 					setMotion: MoveTo 238 125 self
 					setCycle: Fwd
 					setLoop: 1
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -686,8 +658,7 @@
 					setMotion: MoveTo 238 126 self
 					setCycle: Fwd
 					setLoop: 2
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -696,8 +667,7 @@
 					setMotion: MoveTo 218 133 self
 					setCycle: Fwd
 					setLoop: 2
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -706,8 +676,7 @@
 					setMotion: MoveTo 176 129 self
 					setCycle: Fwd
 					setLoop: 2
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -716,8 +685,7 @@
 					setMotion: MoveTo 176 132 self
 					setCycle: Fwd
 					setLoop: 3
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)
@@ -726,8 +694,7 @@
 					setMotion: MoveTo 173 154 self
 					setCycle: Fwd
 					setLoop: 3
-					moveSpeed: 0
-					cycleSpeed: 0
+					moveSpeed: 17
 					setStep: 15 15
 				)
 			)

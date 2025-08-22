@@ -100,7 +100,6 @@
 		view 217
 		priority 1
 		signal $6010
-		moveSpeed 0
 	)
 	
 	(method (init &tmp temp0 temp1 temp2 temp3)

@@ -320,7 +320,6 @@
 						init:
 						setCycle: 0
 						setStep: 8 12
-						moveSpeed: 0
 						setLoop: -1
 						setLoop: 2
 						setMotion: MoveTo 204 146 self

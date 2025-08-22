@@ -20,7 +20,7 @@
 	[local46 25] = [{EDITING} 0 0 {About} 0 0 {Map} 0 0 {Create} 0 0 {Type} 0 0 {Undo} 0 0 {Help} 0 0 {eXit} 120]
 	[local71 22] = [{CREATING} 0 0 {About} 0 0 {Map} 0 0 {Done} 0 0 {Undo} 0 0 {Help} 0 0 {eXit} 120]
 )
-(procedure (localproc_179a theTheTheLsLeft &tmp temp0 theTheLsLeft theTheLsTop)
+(procedure (localproc_0184 theTheTheLsLeft &tmp temp0 theTheLsLeft theTheLsTop)
 	(= theLsRight (= theLsBottom 0))
 	(= theLsLeft (= theLsTop 32767))
 	(= temp0 0)
@@ -50,7 +50,7 @@
 	(= theLsBottom (+ theLsBottom 2))
 )
 
-(procedure (localproc_1819 param1 param2 param3 param4)
+(procedure (localproc_01fe param1 param2 param3 param4)
 	(return
 		(+
 			(* (+ (/ param1 2) 1) (+ (/ param3 2) 1))
@@ -59,13 +59,13 @@
 	)
 )
 
-(procedure (localproc_1844 param1 param2 param3 param4 param5 param6 &tmp temp0)
+(procedure (localproc_0229 param1 param2 param3 param4 param5 param6 &tmp temp0)
 	(return
 		(if
 			(and
 				(<=
 					0
-					(localproc_1819
+					(localproc_01fe
 						(- param3 param1)
 						(- param4 param2)
 						(- param5 param1)
@@ -74,7 +74,7 @@
 				)
 				(<=
 					0
-					(localproc_1819
+					(localproc_01fe
 						(- param1 param3)
 						(- param2 param4)
 						(- param5 param3)
@@ -87,7 +87,7 @@
 				(= temp0 (GetDistance param1 param2 param3 param4))
 					(/
 						(Abs
-							(localproc_1819
+							(localproc_01fe
 								(- param4 param2)
 								(- param1 param3)
 								(- param5 param1)
@@ -111,7 +111,7 @@
 	)
 )
 
-(procedure (localproc_18f1 param1 param2)
+(procedure (localproc_02d1 param1 param2)
 	(Print
 		width: 240
 		font: 999
@@ -244,7 +244,7 @@
 	)
 	
 	(method (save param1)
-		(localproc_179a x y (param1 x?) (param1 y?))
+		(localproc_0184 x y (param1 x?) (param1 y?))
 		(if underBits (UnLoad 133 underBits))
 		(= underBits
 			(Graph
@@ -412,7 +412,7 @@
 			(if
 				(<
 					(= temp3
-						(localproc_1844
+						(localproc_0229
 							(theClosestPt x?)
 							(theClosestPt y?)
 							(temp5 x?)
@@ -426,7 +426,9 @@
 				(= temp4 temp3)
 				(= closestPt theClosestPt)
 			)
-			(breakif (== _EditablePolygonFirst _EditablePolygonLast))
+			(if (== _EditablePolygonFirst _EditablePolygonLast)
+				(break)
+			)
 			(= _EditablePolygonFirst the_EditablePolygonFirst)
 		)
 		(return temp4)
@@ -453,7 +455,9 @@
 				(= temp4 temp3)
 				(= closestPt theClosestPt)
 			)
-			(breakif (== _EditablePolygonFirst _EditablePolygonLast))
+			(if (== _EditablePolygonFirst _EditablePolygonLast)
+				(break)
+			)
 			(= _EditablePolygonFirst
 				(self next: _EditablePolygonFirst)
 			)
@@ -472,7 +476,7 @@
 		else
 			(= theCurPt_2 curPt)
 		)
-		(localproc_179a
+		(localproc_0184
 			(theCurPt_2 x?)
 			(theCurPt_2 y?)
 			(curPt x?)
@@ -487,7 +491,7 @@
 	)
 	
 	(method (endRedraw)
-		(localproc_179a
+		(localproc_0184
 			(curPt x?)
 			(curPt y?)
 			lsLeft
@@ -527,7 +531,9 @@
 			(= temp2 (NodeValue _EditablePolygonFirst))
 			(= temp3 (NodeValue the_EditablePolygonFirst))
 			(temp2 param1: temp3 &rest)
-			(breakif (== _EditablePolygonFirst _EditablePolygonLast))
+			(if (== _EditablePolygonFirst _EditablePolygonLast)
+				(break)
+			)
 			(= _EditablePolygonFirst the_EditablePolygonFirst)
 		)
 	)
@@ -633,9 +639,9 @@
 			pushi    0
 			self     4
 			sat      temp0
-code_050c:
+code_0b9d:
 			lat      temp0
-			bnt      code_0575
+			bnt      code_0c15
 			pushi    1
 			push    
 			callk    NodeValue,  2
@@ -644,9 +650,9 @@ code_050c:
 			lst      temp0
 			callk    NextNode,  2
 			sat      temp15
-code_0520:
+code_0bb2:
 			lat      temp15
-			bnt      code_056b
+			bnt      code_0c0a
 			pushi    1
 			push    
 			callk    NodeValue,  2
@@ -661,7 +667,7 @@ code_0520:
 			lat      temp16
 			send     4
 			eq?     
-			bnt      code_0561
+			bnt      code_0bff
 			pushi    #y
 			pushi    0
 			lat      temp2
@@ -672,7 +678,7 @@ code_0520:
 			lat      temp16
 			send     4
 			eq?     
-			bnt      code_0561
+			bnt      code_0bff
 			pushi    1
 			lst      temp15
 			callk    PrevNode,  2
@@ -685,19 +691,19 @@ code_0520:
 			pushi    0
 			lat      temp16
 			send     4
-code_0561:
+code_0bff:
 			pushi    1
 			lst      temp15
 			callk    NextNode,  2
 			sat      temp15
-			jmp      code_0520
-code_056b:
+			jmp      code_0bb2
+code_0c0a:
 			pushi    1
 			lst      temp0
 			callk    NextNode,  2
 			sat      temp0
-			jmp      code_050c
-code_0575:
+			jmp      code_0b9d
+code_0c15:
 			ldi      0
 			sat      temp4
 			ldi      0
@@ -711,9 +717,9 @@ code_0575:
 			self     4
 			sat      temp6
 			sat      temp0
-code_058e:
+code_0c2f:
 			ldi      1
-			bnt      code_061d
+			bnt      code_0cc9
 			pushi    1
 			lst      temp0
 			callk    NodeValue,  2
@@ -752,7 +758,7 @@ code_058e:
 			sat      temp4
 			lat      temp8
 			not     
-			bnt      code_0602
+			bnt      code_0cae
 			lst      temp4
 			lat      temp9
 			sub     
@@ -760,55 +766,55 @@ code_058e:
 			push    
 			ldi      180
 			gt?     
-			bnt      code_05eb
+			bnt      code_0c97
 			lst      temp5
 			ldi      360
 			sub     
 			sat      temp5
-			jmp      code_05fb
-code_05eb:
+			jmp      code_0ca7
+code_0c97:
 			lst      temp5
 			ldi      65356
 			lt?     
-			bnt      code_05fb
+			bnt      code_0ca7
 			lst      temp5
 			ldi      360
 			add     
 			sat      temp5
-code_05fb:
+code_0ca7:
 			lst      temp7
 			lat      temp5
 			add     
 			sat      temp7
-code_0602:
+code_0cae:
 			lat      temp4
 			sat      temp9
 			lst      temp0
 			lat      temp6
 			eq?     
-			bnt      code_0612
+			bnt      code_0cbe
 			lat      temp8
 			not     
-			bnt      code_0612
-code_0612:
+			bnt      code_0cbe
+code_0cbe:
 			ldi      0
 			sat      temp8
 			lat      temp1
 			sat      temp0
-			jmp      code_058e
-code_061d:
+			jmp      code_0c2f
+code_0cc9:
 			pTos     type
 			ldi      3
 			eq?     
-			bnt      code_0629
+			bnt      code_0cd5
 			lat      temp7
 			neg     
 			sat      temp7
-code_0629:
+code_0cd5:
 			lst      temp7
 			ldi      65176
 			eq?     
-			bnt      code_06b2
+			bnt      code_0d76
 			pushi    #first
 			pushi    0
 			self     4
@@ -817,17 +823,17 @@ code_0629:
 			pushi    0
 			self     4
 			sat      temp10
-code_0640:
+code_0cee:
 			lst      temp0
 			lat      temp10
 			ne?     
-			bnt      code_06d6
+			bnt      code_0d9c
 			lst      temp0
 			pushi    1
 			lst      temp10
 			callk    NextNode,  2
 			ne?     
-			bnt      code_06d6
+			bnt      code_0d9c
 			pushi    1
 			lst      temp0
 			callk    NodeValue,  2
@@ -882,13 +888,13 @@ code_0640:
 			lst      temp10
 			callk    PrevNode,  2
 			sat      temp10
-			jmp      code_0640
-			jmp      code_06d6
-code_06b2:
+			jmp      code_0cee
+			jmp      code_0d9c
+code_0d76:
 			lst      temp7
 			ldi      360
 			ne?     
-			bnt      code_06d6
+			bnt      code_0d9c
 			pushi    5
 			lea      @temp17
 			push    
@@ -901,7 +907,7 @@ code_06b2:
 			lea      @temp17
 			push    
 			calle    proc921_0,  2
-code_06d6:
+code_0d9c:
 			ret     
 		)
 	)
@@ -969,7 +975,7 @@ code_06d6:
 			(if
 			(not (if curMenu (curMenu handleEvent: newEvent)))
 				(GlobalToLocal newEvent)
-				(breakif (self handleEvent: newEvent))
+				(if (self handleEvent: newEvent) (break))
 			)
 			(newEvent dispose:)
 		)
@@ -1123,13 +1129,13 @@ code_06d6:
 					(KEY_h
 						(switch state
 							(0
-								(localproc_18f1
+								(localproc_02d1
 									{___________CREATING POLYGON\0D\n\0D\nClick to create each corner of the polygon, then choose Done from the menu to finish.__You can also press Esc or Ctrl-click to finish.\0D\n\0D\nTo UNDO a corner, choose Undo.\0D\n\0D\nTo change MAP displayed (visual or control), choose Map.\0D\n\0D\nTo EXIT the Polygon Editor, choose eXit or press Ctrl-S.}
 									0
 								)
 							)
 							(1
-								(localproc_18f1
+								(localproc_02d1
 									{_____________EDITING POLYGON\0D\n\0D\nTo MOVE a corner, click on it and drag it to the new position.\0D\nTo INSERT a new corner, Ctrl-click to create it, then drag it to the correct position.\0D\nTo DELETE a corner, Shift-click on it.\0D\nTo UNDO an action, choose Undo from the menu.\0D\nTo CREATE a new polygon, choose Create.\0D\nTo change a polygon's TYPE (Total, Near or Barred), choose Type.\0D\nTo change MAP displayed (visual or control), choose Map.\0D\nTo EXIT the Polygon Editor, choose eXit or press Ctrl-S.\0D\n\0D\nIn addition to using the mouse, you can use Space and BackSpace to select corners and Tab and BackTab to select polygons._}
 									0
 								)
@@ -1141,7 +1147,7 @@ code_06d6:
 					(KEY_ALT_v (self showMap: 1))
 					(KEY_ALT_c (self showMap: 4))
 					(KEY_a
-						(localproc_18f1
+						(localproc_02d1
 							{ by\0D\n\0D\nMark Wilden\0D\n\0D\nOriginal program by Chad Bye_}
 							1
 						)

@@ -24,7 +24,7 @@
 	local7
 	local8
 )
-(procedure (localproc_0222 param1)
+(procedure (localproc_0042 param1)
 	(= local6 0)
 	(cond 
 		((proc0_1 38)
@@ -55,7 +55,7 @@
 	((ScriptID 201 12) talkWidth: 120)
 )
 
-(procedure (localproc_04b8 param1)
+(procedure (localproc_0140 param1)
 	(cond 
 		((== gEurekaCurLocation 0)
 			(if (not (eureka destination?))
@@ -83,7 +83,7 @@
 	((ScriptID 201 12) talkWidth: 120)
 )
 
-(procedure (localproc_05c2 param1)
+(procedure (localproc_024d param1)
 	(cond 
 		((== (eureka destination?) 0)
 			(if (proc0_1 30)
@@ -117,7 +117,7 @@
 	((ScriptID 201 12) talkWidth: 120)
 )
 
-(procedure (localproc_06f6 param1)
+(procedure (localproc_0388 param1)
 	(cond 
 		((or (proc0_1 32) (!= (eureka state?) 2))
 			(if (proc0_1 30)
@@ -150,7 +150,7 @@
 	)
 )
 
-(procedure (localproc_0800 param1)
+(procedure (localproc_0495 param1)
 	(cond 
 		((eureka damaged?) (gTestMessager say: 12 0 11 1 param1))
 		((== gEurekaCurLocation 14)
@@ -175,7 +175,7 @@
 	)
 )
 
-(procedure (localproc_09b3 param1)
+(procedure (localproc_056e param1)
 	(= local3 0)
 	(cond 
 		((proc0_1 40)
@@ -194,7 +194,7 @@
 	)
 )
 
-(procedure (localproc_0a93 param1)
+(procedure (localproc_05ef param1)
 	(= local3 0)
 	(cond 
 		((proc0_1 40)
@@ -207,7 +207,7 @@
 	)
 )
 
-(procedure (localproc_0af8 param1)
+(procedure (localproc_0653 param1)
 	(if (proc0_1 30)
 		(gTestMessager say: 27 0 3 (Random 1 3) param1)
 	else
@@ -510,26 +510,29 @@
 			)
 			(2
 				(gSQ5 handsOff:)
+				(gTestMessager say: 1 0 0 (+ register 1) self 205)
+			)
+			(3
 				(switch register
 					(0
 						(self setScript: sLayInCourse self)
 					)
-					(1 (localproc_0222 self))
+					(1 (localproc_0042 self))
 					(2 (self setScript: sFire self))
-					(3 (localproc_04b8 self))
-					(4 (localproc_05c2 self))
-					(5 (localproc_06f6 self))
-					(6 (localproc_0800 self))
+					(3 (localproc_0140 self))
+					(4 (localproc_024d self))
+					(5 (localproc_0388 self))
+					(6 (localproc_0495 self))
 					(7
 						(self setScript: sEvasiveAction self)
 					)
-					(8 (localproc_09b3 self))
-					(9 (localproc_0a93 self))
-					(10 (localproc_0af8 self))
-					(else  (localproc_0af8 self))
+					(8 (localproc_056e self))
+					(9 (localproc_05ef self))
+					(10 (localproc_0653 self))
+					(else  (localproc_0653 self))
 				)
 			)
-			(3
+			(4
 				(if local0
 					(proc201_33)
 					(self setScript: (ScriptID 203 0) self 0)
@@ -537,13 +540,13 @@
 					(= cycles 1)
 				)
 			)
-			(4
+			(5
 				(gEgo hide:)
 				((ScriptID 205 0) dispose:)
 				(self setScript: (ScriptID 201 8) self)
 			)
-			(5 (= seconds 1))
-			(6
+			(6 (= seconds 1))
+			(7
 				(cond 
 					(local0 (= local0 0) (self setScript: sCoordsLocked self))
 					(local6
@@ -570,8 +573,8 @@
 					(else (= cycles 1))
 				)
 			)
-			(7 (= seconds 1))
-			(8
+			(8 (= seconds 1))
+			(9
 				(gSQ5 handsOn:)
 				(gSq5IconBar select: (gSq5IconBar at: 4))
 				(gSQ5 setCursor: 984 1)

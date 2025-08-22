@@ -192,7 +192,7 @@
 				(theComet init:)
 				(space setCycle: CT 10 1)
 				(= local421 1)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(6
 				(theComet
@@ -220,7 +220,7 @@
 				(Palette palSET_INTENSITY 1 175 0)
 				(Palette palSET_INTENSITY 240 242 0)
 				(Palette palSET_INTENSITY 182 208 0)
-				(= cycles 5)
+				(= ticks 5)
 			)
 			(9
 				(head init:)
@@ -234,65 +234,65 @@
 				((commetStar new:) init:)
 				((medStar new:) init:)
 				((fastStar new:) init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(10
 				((medStar new:) init:)
 				((slowStar new:) init:)
 				((fastStar new:) init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(11
 				((commetStar new:) init:)
 				((medStar new:) init:)
 				((fastStar new:) init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(12
 				((medStar new:) init:)
 				((fastStar new:) init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(13
 				((medStar new:) init:)
 				((fastStar new:) init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(14
 				((commetStar new:) init:)
 				((medStar new:) init:)
 				((fastStar new:) init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(15
 				((commetStar new:) init:)
 				((medStar new:) init:)
 				((fastStar new:) init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(16
 				((commetStar new:) init:)
 				((medStar new:) init:)
 				((fastStar new:) init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(17
 				((medStar new:) init:)
 				((fastStar new:) init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(18
 				((commetStar new:) init:)
 				((medStar new:) init:)
 				((fastStar new:) init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(19
 				((commetStar new:) init:)
 				((medStar new:) init:)
 				((slowStar new:) init:)
 				((fastStar new:) init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(20 (= seconds 4))
 			(21
@@ -477,6 +477,11 @@
 		(switch (= state newState)
 			(0
 				(Message msgGET 104 1 0 0 local415 @local13)
+				(if (& global90 $0002)
+					(= register (gSq5Music1 vol?))
+					(gSq5Music1 fade: 40 15 5 0)
+					(= local413 (DoAudio 2 104 1 0 0 local415))
+				)
 				(= local413 (StrLen @local13))
 				(= local414 0)
 				(= cycles 1)
@@ -508,6 +513,10 @@
 				(if (< local414 local413) (-- state) (= ticks 15))
 			)
 			(2
+				(if (& global90 $0002)
+					(DoAudio 3)
+					(gSq5Music1 fade: register 15 5 0)
+				)
 				(= seconds 0)
 				(Display
 					@local213
@@ -585,6 +594,7 @@
 			(3
 				(gSq5Music1 number: 3 setLoop: -1 play:)
 				(talkBubble init:)
+				(if (& global90 $0002) (DoAudio 2 104 2 0 0 1))
 				(= seconds 4)
 			)
 			(4
@@ -609,11 +619,13 @@
 				(rogCloseup init:)
 				(rogMouth init: setCycle: RTRandCycle)
 				(talkBubble view: 101 loop: 2 cel: 0 x: 80 y: 10 show:)
+				(if (& global90 $0002) (DoAudio 2 104 2 0 0 2))
 				(= seconds 4)
 			)
 			(8
 				(rogMouth hide:)
 				(talkBubble view: 101 loop: 3 cel: 0 x: 20 y: 10)
+				(if (& global90 $0002) (DoAudio 2 104 2 0 0 3))
 				(= seconds 4)
 			)
 			(9
@@ -626,6 +638,7 @@
 					setCycle: RTRandCycle
 				)
 				(talkBubble view: 97 loop: 3 cel: 0 x: 80 y: 6)
+				(if (& global90 $0002) (DoAudio 2 104 2 0 0 4))
 				(= seconds 4)
 			)
 			(10

@@ -6,7 +6,7 @@
 (use Obj)
 
 
-(procedure (localproc_042b param1 &tmp temp0 [temp1 2] temp3 temp4)
+(procedure (localproc_0032 param1 &tmp temp0 [temp1 2] temp3 temp4)
 	(= temp3 -100)
 	(= temp0 0)
 	(while (!= temp3 30583)
@@ -16,7 +16,7 @@
 	(return (-- temp0))
 )
 
-(procedure (localproc_0454 param1 &tmp temp0 temp1 temp2 temp3)
+(procedure (localproc_005b param1 &tmp temp0 temp1 temp2 temp3)
 	(= temp3 (param1 size?))
 	(= temp0 0)
 	(while (< temp0 temp3)
@@ -213,7 +213,7 @@
 				)
 				((= newPolygon (Polygon new:))
 					points: temp16
-					size: (localproc_042b temp16)
+					size: (localproc_0032 temp16)
 					type: 2
 					dynamic: 1
 				)
@@ -226,7 +226,7 @@
 			((clientMover obstacles?) delete: newPolygon)
 			((clientMover obstacles?) delete: temp17)
 			(if (IsObject (clientMover obstacles?))
-				(localproc_0454 (clientMover obstacles?))
+				(localproc_005b (clientMover obstacles?))
 			)
 			(temp17 dispose:)
 			(newPolygon dispose:)

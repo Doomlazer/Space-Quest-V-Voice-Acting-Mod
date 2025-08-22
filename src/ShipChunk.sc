@@ -58,7 +58,7 @@
 	[local79 6] = [120 134 158 150 190 120]
 	[local85 300]
 )
-(procedure (localproc_055b param1 &tmp temp0 temp1 temp2 temp3)
+(procedure (localproc_037a param1 &tmp temp0 temp1 temp2 temp3)
 	(= temp0 (+ (* (/ gPEventX 9) 9) 2))
 	(= temp1 (- (* (/ gPEventY 8) 8) 3))
 	(= temp2 0)
@@ -78,35 +78,28 @@
 	(SetCursor (+ temp0 temp2) (+ temp1 temp3))
 )
 
-(procedure (localproc_0614 param1 param2 &tmp temp0)
-	(return
-		(==
-			[local33 param1]
-			[local33 (+
-				temp0
-				(= [local33 (+ temp0 param1)]
-					(+
-						[local33 (+ (= temp0 (if (== param2 0) 4 else 8)) param1)]
-						1
-					)
-				)
-			)]
+(procedure (localproc_0432 param1 param2 &tmp temp0)
+	(= [local33 (+ temp0 param1)]
+		(+
+			[local33 (+ (= temp0 (if (== param2 0) 4 else 8)) param1)]
+			1
 		)
 	)
+	(return (== [local33 param1] [local33 (+ temp0 param1)]))
 )
 
-(procedure (localproc_0641)
+(procedure (localproc_0461)
 	(gSQ5 handsOn:)
 	(gSq5IconBar disable: 0 3 4 5 6)
 	((gSq5IconBar at: 2) cursor: 999)
 	(gSq5IconBar curIcon: (gSq5IconBar at: 2))
 )
 
-(procedure (localproc_067d param1)
+(procedure (localproc_049d param1)
 	(return (<= [local33 param1] [local33 (+ param1 4)]))
 )
 
-(procedure (localproc_0689 param1 param2 param3 &tmp temp0 temp1)
+(procedure (localproc_04aa param1 param2 param3 &tmp temp0 temp1)
 	(= temp0 (- param1 1))
 	(while (<= temp0 (+ param1 1))
 		(= temp1 (- param2 1))
@@ -115,7 +108,7 @@
 				(and
 					(or (== temp1 param2) (== temp0 param1))
 					(proc999_4 0 0 9 9 temp0 temp1)
-					(not (& $0008 (localproc_07ef temp0 temp1 param3 0)))
+					(not (& $0008 (localproc_0615 temp0 temp1 param3 0)))
 				)
 				(= local22 temp0)
 				(= local23 temp1)
@@ -129,7 +122,7 @@
 	(return 0)
 )
 
-(procedure (localproc_06fc &tmp temp0 temp1 temp2 temp3)
+(procedure (localproc_051d &tmp temp0 temp1 temp2 temp3)
 	(= temp2 0)
 	(while (< temp2 3)
 		(= temp0 0)
@@ -139,11 +132,11 @@
 				(if
 					(and
 						(>
-							(& $000f (= temp3 (localproc_07ef temp0 temp1 temp2 0)))
+							(& $000f (= temp3 (localproc_0615 temp0 temp1 temp2 0)))
 							8
 						)
-						(not (localproc_067d (- (& $0007 temp3) 1)))
-						(localproc_0689 temp0 temp1 temp2)
+						(not (localproc_049d (- (& $0007 temp3) 1)))
+						(localproc_04aa temp0 temp1 temp2)
 					)
 					(return 1)
 				)
@@ -156,8 +149,8 @@
 	(return 0)
 )
 
-(procedure (localproc_076b &tmp [temp0 3] temp3 temp4)
-	(if (localproc_06fc)
+(procedure (localproc_058a &tmp [temp0 3] temp3 temp4)
+	(if (localproc_051d)
 		(= local13 local22)
 		(= local12 local23)
 	else
@@ -169,7 +162,7 @@
 				(not
 					(&
 						$0008
-						(= temp3 (localproc_07ef local13 local12 local24 0))
+						(= temp3 (localproc_0615 local13 local12 local24 0))
 					)
 				)
 				(break)
@@ -179,7 +172,7 @@
 	(return local24)
 )
 
-(procedure (localproc_07bd param1 param2 param3 param4 &tmp temp0 temp1)
+(procedure (localproc_05e1 param1 param2 param3 param4 &tmp temp0 temp1)
 	(= temp0 -32768)
 	(= param2 (* param2 4))
 	(= temp0 (>> temp0 (+ param1 param2)))
@@ -187,14 +180,14 @@
 	(return (& [local63 (+ (* param3 4) param4)] temp0))
 )
 
-(procedure (localproc_07ef param1 param2 param3 param4 &tmp temp0 temp1)
+(procedure (localproc_0615 param1 param2 param3 param4 &tmp temp0 temp1)
 	(= temp0 (+ (* param3 50) (* param2 5) (/ param1 2)))
 	(= temp1 (if (& param1 $0001) 255 else -256))
 	(= temp0 (& [local85 (+ param4 temp0)] temp1))
 	(return (if (& param1 $0001) temp0 else (>> temp0 $0008)))
 )
 
-(procedure (localproc_0834 param1 param2 param3 param4 param5 &tmp temp0 temp1 temp2)
+(procedure (localproc_065a param1 param2 param3 param4 param5 &tmp temp0 temp1 temp2)
 	(= temp0 (+ (* param3 50) (* param2 5) (/ param1 2)))
 	(= temp1 (if (& param1 $0001) -256 else 255))
 	(= [local85 (+ param4 temp0)]
@@ -209,7 +202,7 @@
 	)
 )
 
-(procedure (localproc_089b &tmp temp0)
+(procedure (localproc_06c1 &tmp temp0)
 	(= temp0 0)
 	(while (< temp0 300)
 		(= [local85 temp0] 0)
@@ -217,12 +210,12 @@
 	)
 )
 
-(procedure (localproc_08b3 param1 param2 param3 param4 param5 param6 &tmp temp0 temp1)
+(procedure (localproc_06d9 param1 param2 param3 param4 param5 param6 &tmp temp0 temp1)
 	(= temp0 0)
 	(while (< temp0 4)
 		(= temp1 0)
 		(while (< temp1 4)
-			(if (localproc_07bd temp1 temp0 param1 param2)
+			(if (localproc_05e1 temp1 temp0 param1 param2)
 				(cond 
 					(
 						(not
@@ -238,7 +231,7 @@
 						(return 0)
 					)
 					(
-						(localproc_07ef
+						(localproc_0615
 							(- (+ temp1 param4) 1)
 							(- (+ temp0 param5) 1)
 							param3
@@ -255,13 +248,13 @@
 	(return 1)
 )
 
-(procedure (localproc_0935 param1 param2 param3 param4 param5 param6 param7 &tmp temp0 temp1)
+(procedure (localproc_0759 param1 param2 param3 param4 param5 param6 param7 &tmp temp0 temp1)
 	(= temp0 0)
 	(while (< temp0 4)
 		(= temp1 0)
 		(while (< temp1 4)
-			(if (localproc_07bd temp1 temp0 param1 param2)
-				(localproc_0834
+			(if (localproc_05e1 temp1 temp0 param1 param2)
+				(localproc_065a
 					(- (+ temp1 param4) 1)
 					(- (+ temp0 param5) 1)
 					param3
@@ -275,7 +268,7 @@
 	)
 )
 
-(procedure (localproc_0987)
+(procedure (localproc_07aa)
 	(shipSelector loop: (+ theShipNum 6))
 	(if
 		((= theShip
@@ -299,7 +292,7 @@
 	)
 )
 
-(procedure (localproc_0a0a &tmp temp0 temp1)
+(procedure (localproc_082d &tmp temp0 temp1)
 	(= temp0 0)
 	(= temp1 1)
 	(while (< temp0 10)
@@ -318,7 +311,7 @@
 	(Graph grUPDATE_BOX 97 106 176 113 1)
 )
 
-(procedure (localproc_0a89 param1 param2 &tmp temp0 temp1 temp2 temp3)
+(procedure (localproc_08ac param1 param2 &tmp temp0 temp1 temp2 temp3)
 	(= temp0 0)
 	(while (< temp0 10)
 		(= temp1 0)
@@ -326,7 +319,7 @@
 			(cond 
 				(
 					(&
-						(= temp2 (localproc_07ef temp1 temp0 param1 param2))
+						(= temp2 (localproc_0615 temp1 temp0 param1 param2))
 						$0008
 					)
 					(if (& temp2 $0007) (= temp3 0) else (= temp3 1))
@@ -356,16 +349,16 @@
 	)
 )
 
-(procedure (localproc_0b1d param1 param2 param3 param4 &tmp temp0 temp1 temp2)
+(procedure (localproc_093e param1 param2 param3 param4 &tmp temp0 temp1 temp2)
 	(= temp1 (- param2 2))
 	(while (< temp1 (+ param2 2))
 		(= temp0 (- param1 2))
 		(while (< temp0 (+ param1 2))
-			(= temp2 (localproc_07ef temp0 temp1 param3 param4))
+			(= temp2 (localproc_0615 temp0 temp1 param3 param4))
 			(if
 			(and (proc999_4 0 0 9 9 temp0 temp1) (& temp2 $0007))
 				(= temp2 (| temp2 $0010))
-				(localproc_0834 temp0 temp1 param3 param4 temp2)
+				(localproc_065a temp0 temp1 param3 param4 temp2)
 			)
 			(++ temp0)
 		)
@@ -373,7 +366,7 @@
 	)
 )
 
-(procedure (localproc_0b8c &tmp temp0 temp1 temp2 temp3)
+(procedure (localproc_09ad &tmp temp0 temp1 temp2 temp3)
 	(= temp3 0)
 	(while (< temp3 3)
 		(= temp1 0)
@@ -382,10 +375,10 @@
 			(while (< temp0 10)
 				(if
 					(&
-						(= temp2 (localproc_07ef temp0 temp1 temp3 150))
+						(= temp2 (localproc_0615 temp0 temp1 temp3 150))
 						$0007
 					)
-					(localproc_0834 temp0 temp1 temp3 150 (| temp2 $0010))
+					(localproc_065a temp0 temp1 temp3 150 (| temp2 $0010))
 				)
 				(++ temp0)
 			)
@@ -395,7 +388,7 @@
 	)
 )
 
-(procedure (localproc_0beb &tmp temp0 temp1 temp2 temp3 temp4)
+(procedure (localproc_0a09 &tmp temp0 temp1 temp2 temp3 temp4)
 	(= temp0 0)
 	(while (< temp0 4)
 		(repeat
@@ -403,9 +396,12 @@
 			(= temp4 (Random 0 9))
 			(= temp2 (Random 0 2))
 			(= temp1 (Random 0 3))
-			(breakif (localproc_08b3 temp0 temp1 temp2 temp3 temp4 150))
+			(if
+			(localproc_06d9 temp0 temp1 temp2 temp3 temp4 150)
+				(break)
+			)
 		)
-		(localproc_0935
+		(localproc_0759
 			temp0
 			temp1
 			temp2
@@ -421,7 +417,7 @@
 	)
 )
 
-(procedure (localproc_0c87 param1 &tmp temp0 temp1)
+(procedure (localproc_0aa9 param1 &tmp temp0 temp1)
 	(= temp0 0)
 	(while (< temp0 (gOldCast size?))
 		(if
@@ -451,6 +447,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -522,6 +519,7 @@
 		z 50
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -600,8 +598,8 @@
 							(= inPlace 0)
 							(self hide:)
 							(= theShip self)
-							(localproc_0935 shipNum cel lev col row 0 0)
-							(localproc_0987)
+							(localproc_0759 shipNum cel lev col row 0 0)
+							(localproc_07aa)
 						else
 							(grid doVerb: 4)
 						)
@@ -638,9 +636,9 @@
 	)
 	
 	(method (place)
-		(if (localproc_08b3 shipNum cel lev col row 0)
+		(if (localproc_06d9 shipNum cel lev col row 0)
 			(self inPlace: 1 show: normalize:)
-			(localproc_0935 shipNum cel lev col row 0 (+ shipNum 1))
+			(localproc_0759 shipNum cel lev col row 0 (+ shipNum 1))
 			(= theShip 0)
 		)
 	)
@@ -675,8 +673,8 @@
 	
 	(method (doit)
 		(if (GameIsRestarting)
-			(localproc_0a0a)
-			(localproc_0a89
+			(localproc_082d)
+			(localproc_08ac
 				theRegister
 				(if (== local32 0) 150 else 0)
 			)
@@ -761,7 +759,7 @@
 				0
 			)
 			((& (pEvent type?) evJOYSTICK)
-				(localproc_055b (pEvent message?))
+				(localproc_037a (pEvent message?))
 				(pEvent claimed: 1)
 				(return 1)
 			)
@@ -927,6 +925,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -1129,7 +1128,7 @@
 			(switch theVerb
 				(4
 					(= theShipNum (mod (-- theShipNum) 4))
-					(localproc_0987)
+					(localproc_07aa)
 					(grid setScript: showShip)
 				)
 				(else 
@@ -1218,14 +1217,12 @@
 		(if (gUser canControl:)
 			(switch theVerb
 				(4
-					(if theShip
-						(if (not (theShip inPlace?))
-							(theShip setCel: (mod (- (theShip cel?) 1) 4))
-							(specialCursor
-								view: (theShip view?)
-								loop: (theShip loop?)
-								cel: (theShip cel?)
-							)
+					(if (and theShip (not (theShip inPlace?)))
+						(theShip setCel: (mod (- (theShip cel?) 1) 4))
+						(specialCursor
+							view: (theShip view?)
+							loop: (theShip loop?)
+							cel: (theShip cel?)
 						)
 					)
 				)
@@ -1433,7 +1430,7 @@
 								(
 									(&
 										$0008
-										(localproc_07ef
+										(localproc_0615
 											local13
 											local12
 											theRegister
@@ -1697,7 +1694,7 @@
 					(= local12 (- temp1 13))
 					(if theShip
 						(if
-							(localproc_08b3
+							(localproc_06d9
 								theShipNum
 								cel
 								theRegister
@@ -1771,7 +1768,7 @@
 			)
 			(2
 				(if (or (== local32 150) (== local31 0))
-					(localproc_0c87 theRegister)
+					(localproc_0aa9 theRegister)
 				)
 				(if (< (gSQ5 _detailLevel?) 3)
 					(grid setScale: 0 scaleX: 127 scaleY: 127 posn: 115 97)
@@ -1815,7 +1812,7 @@
 					)
 				)
 				(if (or (== local32 150) (== local31 0))
-					(localproc_0c87 theRegister)
+					(localproc_0aa9 theRegister)
 				)
 			)
 			(6 (lines show:) (= cycles 2))
@@ -1833,12 +1830,12 @@
 			)
 			(8
 				(if (== local31 3)
-					(localproc_0a89
+					(localproc_08ac
 						theRegister
 						(if (== local32 0) 150 else 0)
 					)
 				)
-				(if (== client grid) (localproc_0641))
+				(if (== client grid) (localproc_0461))
 				(self dispose:)
 			)
 		)
@@ -1865,12 +1862,12 @@
 					)
 					(self setScript: changeGrid self (temp0 lev?))
 				else
-					(if (== client grid) (localproc_0641))
+					(if (== client grid) (localproc_0461))
 					(self dispose:)
 				)
 			)
 			(1
-				(if (== client grid) (localproc_0641))
+				(if (== client grid) (localproc_0461))
 				(self dispose:)
 			)
 		)
@@ -2075,13 +2072,13 @@
 			)
 			(4
 				(gSq5Music2 stop:)
-				(localproc_0b1d
+				(localproc_093e
 					local13
 					local12
 					theRegister
 					(if (== local32 0) 150 else 0)
 				)
-				(localproc_0a89
+				(localproc_08ac
 					theRegister
 					(if (== local32 0) 150 else 0)
 				)
@@ -2092,7 +2089,7 @@
 				(if (== local32 0)
 					(rogersTurn cue:)
 				else
-					(localproc_0641)
+					(localproc_0461)
 				)
 				(self dispose:)
 			)
@@ -2169,7 +2166,7 @@
 				(if
 					(&
 						(= local19
-							(localproc_07ef
+							(localproc_0615
 								local17
 								local16
 								theRegister
@@ -2212,7 +2209,7 @@
 				(if (== local32 150) (= local2 12) else (= local2 10))
 				(if (& local19 $0007)
 					(if
-						(localproc_0614
+						(localproc_0432
 							(- (& local19 $0007) 1)
 							(if (== local32 0) 150 else 0)
 						)
@@ -2247,14 +2244,14 @@
 				(= cycles 2)
 			)
 			(6
-				(localproc_0834
+				(localproc_065a
 					local17
 					local16
 					theRegister
 					(if (== local32 0) 150 else 0)
 					(| local19 $0008)
 				)
-				(localproc_0a89
+				(localproc_08ac
 					theRegister
 					(if (== local32 0) 150 else 0)
 				)
@@ -2274,7 +2271,7 @@
 					(if (== local32 0)
 						(rogersTurn cue:)
 					else
-						(localproc_0641)
+						(localproc_0461)
 					)
 				else
 					(global2 setScript: endGame)
@@ -2319,7 +2316,7 @@
 			(4
 				(= theRegister theTheRegister)
 				(grid init: show:)
-				(= temp0 (localproc_076b))
+				(= temp0 (localproc_058a))
 				(self setScript: changeGrid self temp0)
 			)
 			(5
@@ -2329,7 +2326,7 @@
 				(ship4 stopUpd:)
 				(self setScript: fire self)
 			)
-			(6 (localproc_0641))
+			(6 (localproc_0461))
 			(7
 				(= theTheRegister theRegister)
 				(self dispose:)
@@ -2387,7 +2384,7 @@
 						)
 				)
 			)
-			(5 (localproc_0641))
+			(5 (localproc_0461))
 			(6
 				(= theTheRegister_2 theRegister)
 				(self dispose:)
@@ -2518,10 +2515,10 @@
 			)
 			(6
 				(gSq5Music1 fade: 5 10 0 0)
-				(localproc_0641)
+				(localproc_0461)
 				(logo dispose:)
 				(= local31 1)
-				(localproc_0641)
+				(localproc_0461)
 				(controlBar init:)
 			)
 			(7
@@ -2533,10 +2530,10 @@
 				)
 			)
 			(8
-				(localproc_0641)
+				(localproc_0461)
 				(controlBar init:)
 				(lines init:)
-				(localproc_089b)
+				(localproc_06c1)
 				(= theRegister 0)
 				(grid init:)
 				(changeGrid start: 1)
@@ -2551,14 +2548,14 @@
 				(ship1 hide:)
 				(shipSelector init:)
 				(specialCursor init:)
-				(localproc_0a0a)
+				(localproc_082d)
 				(nextBut doVerb: 4)
 				(= local31 0)
 			)
 			(9)
 			(10
 				(gSQ5 handsOff:)
-				(localproc_0beb)
+				(localproc_0a09)
 				(= local31 3)
 				(shipSelector dispose:)
 				(= cycles 2)
@@ -2731,7 +2728,7 @@
 		(if
 		(and (== theVerb 1) (== local31 3) (== local32 0))
 			(= local25 (mod (++ local25) 3))
-			(if (== 4 (+ local25 local26)) (localproc_0b8c))
+			(if (== 4 (+ local25 local26)) (localproc_09ad))
 		)
 	)
 )
@@ -2749,15 +2746,15 @@
 			lsp      theVerb
 			ldi      1
 			eq?     
-			bnt      code_330c
+			bnt      code_31c5
 			lsl      local31
 			ldi      3
 			eq?     
-			bnt      code_330c
+			bnt      code_31c5
 			lsl      local32
 			ldi      0
 			eq?     
-			bnt      code_330c
+			bnt      code_31c5
 			+al      local26
 			push    
 			ldi      3
@@ -2767,10 +2764,10 @@
 			lsl      local25
 			add     
 			eq?     
-			bnt      code_330c
+			bnt      code_31c5
 			pushi    0
-			call     localproc_0b8c,  0
-code_330c:
+			call     localproc_09ad,  0
+code_31c5:
 			ret     
 		)
 	)

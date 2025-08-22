@@ -41,7 +41,7 @@
 				(shape12 posn: 170 138 init:)
 				(shape151 posn: 190 145 init:)
 				(shape152 posn: 163 77 init:)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(2
 				(shape12 dispose:)
@@ -51,7 +51,7 @@
 				(shape141 posn: 190 145 init:)
 				(shape142 posn: 163 77 init:)
 				(shape23 posn: 288 100 init:)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(3
 				(shape13 dispose:)
@@ -62,7 +62,7 @@
 				(shape141 posn: 190 145 init:)
 				(shape151 posn: 163 77 init:)
 				(shape22 posn: 288 100 init:)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(4
 				(shape17 dispose:)
@@ -72,7 +72,7 @@
 				(shape151 posn: 190 145 init:)
 				(shape16 posn: 168 145 init:)
 				(shape23 posn: 288 100 init:)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(5
 				(shape151 dispose:)
@@ -81,7 +81,7 @@
 				(shape16 posn: 168 145 init:)
 				(shape191 posn: 195 136 init:)
 				(shape192 posn: 163 77 init:)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(6
 				(shape16 dispose:)
@@ -91,7 +91,7 @@
 				(shape181 posn: 195 136 init:)
 				(shape182 posn: 163 77 init:)
 				(shape25 posn: 288 100 init:)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(7
 				(shape17 dispose:)
@@ -102,7 +102,7 @@
 				(shape13 posn: 170 138 init:)
 				(shape191 posn: 163 77 init:)
 				(shape24 posn: 288 100 init:)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(8
 				(shape181 dispose:)
@@ -112,49 +112,49 @@
 				(shape191 posn: 195 136 init:)
 				(shape12 posn: 170 138 init:)
 				(shape25 posn: 288 100 init:)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(9
 				(shape191 dispose:)
 				(shape12 dispose:)
 				(shape25 dispose:)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(10
 				(gSq5Music2 fade:)
 				(injure init:)
 				(terminate init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(11
 				(outline init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(12
 				(outline setCel: 1)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(13
 				(outline setCel: 2)
 				(rogHead init:)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(14
 				(rogHead setCel: 0)
 				(egoHead init: setPri: 15 setCycle: End self)
 			)
-			(15 (= cycles 5))
+			(15 (= ticks 5))
 			(16
 				(egoHead setCycle: Beg self)
 			)
 			(17
 				(rogHead setCel: 1)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(18
 				(rogHead dispose:)
 				(outline setCycle: End)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(19
 				(egoHead dispose:)
@@ -169,7 +169,7 @@
 			(21 0)
 			(22
 				(arm addToPic: setPri: 15)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(23
 				(eyess dispose:)
@@ -228,7 +228,7 @@
 				(DrawCel 167 5 0 301 88 0)
 				(DrawCel 167 5 0 292 92 0)
 				(DrawCel 167 5 0 295 96 0)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(26
 				(Graph grRESTORE_BOX local0)
@@ -280,7 +280,7 @@
 				(DrawCel 167 5 1 290 88 0)
 				(DrawCel 167 5 1 281 92 0)
 				(DrawCel 167 5 1 284 96 0)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(27
 				(Graph grRESTORE_BOX local0)
@@ -332,7 +332,7 @@
 				(DrawCel 167 5 2 277 88 0)
 				(DrawCel 167 5 2 268 92 0)
 				(DrawCel 167 5 2 271 96 0)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(28
 				(Graph grRESTORE_BOX local0)
@@ -384,7 +384,7 @@
 				(DrawCel 167 5 3 237 88 0)
 				(DrawCel 167 5 3 228 92 0)
 				(DrawCel 167 5 3 231 96 0)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(29
 				(Graph grRESTORE_BOX local0)
@@ -442,7 +442,7 @@
 				(DrawCel 167 5 3 295 68 0)
 				(DrawCel 167 5 3 238 83 0)
 				(DrawCel 167 5 3 279 94 0)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(30
 				(Graph grRESTORE_BOX local0)
@@ -491,7 +491,7 @@
 				(DrawCel 167 5 3 228 61 0)
 				(DrawCel 167 5 3 213 31 0)
 				(DrawCel 167 5 3 285 84 0)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(31
 				(Graph grRESTORE_BOX local0)
@@ -508,7 +508,7 @@
 				(DrawCel 167 5 3 271 59 0)
 				(DrawCel 167 5 3 205 25 0)
 				(DrawCel 167 5 3 218 76 0)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(32
 				(Graph grRESTORE_BOX local0)
@@ -521,14 +521,14 @@
 				(DrawCel 167 5 3 134 25 0)
 				(DrawCel 167 5 3 147 76 0)
 				(DrawCel 167 5 3 271 79 0)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(33
 				(Graph grRESTORE_BOX local0)
 				(Graph grUPDATE_BOX 0 65 96 320 1)
 				(= local0 (Graph grSAVE_BOX 0 65 96 320 1))
 				(DrawCel 167 5 3 164 60 0)
-				(= cycles 4)
+				(= ticks 4)
 			)
 			(34
 				(Graph grRESTORE_BOX local0)

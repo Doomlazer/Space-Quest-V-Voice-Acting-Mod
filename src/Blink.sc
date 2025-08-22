@@ -69,6 +69,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -124,15 +125,21 @@
 	)
 	
 	(method (init)
-		(if global83
+		(if (& global90 $0002)
 			(self curVolume: (gSQ5 masterVolume:))
 			(if (>= (gSQ5 masterVolume:) 4)
 				(gSQ5 masterVolume: (- curVolume 4))
 			)
-			(if (not modeless)
-				(= saveCursor (gSQ5 setCursor: global21 1))
-			)
 		)
+		(if
+			(or
+				(and (& global90 $0002) (not modeless))
+				(not (HaveMouse))
+			)
+			(= saveCursor gCursorNumber)
+			(gSQ5 setCursor: global21 1)
+		)
+		(= gLastTicks (+ global86 (GetTime)))
 		(= initialized 1)
 	)
 	
@@ -141,8 +148,8 @@
 		(and (!= ticks -1) (> (- gLastTicks ticks) 0))
 			(if
 				(and
-					(if global83 (== (DoAudio 6) -1) else 1)
-					(or (not keepWindow) global83)
+					(if (& global90 $0002) (== (DoAudio 6) -1) else 1)
+					(or (not keepWindow) (& global90 $0002))
 				)
 				(self dispose: disposeWhenDone)
 				(return 0)
@@ -169,14 +176,22 @@
 					)
 				)
 			)
-			(if global83 (DoAudio 3))
+			(if (& global90 $0002) (DoAudio 3))
 			(= modNum -1)
 			(= initialized 0)
 		)
 		(if gDialog (gDialog dispose:))
-		(if global83 (gSQ5 masterVolume: curVolume))
-		(if (and saveCursor (not (HaveMouse)))
-			(gSQ5 setCursor: saveCursor)
+		(if (& global90 $0002) (gSQ5 masterVolume: curVolume))
+		(if saveCursor
+			(if
+				(or
+					(and (& global90 $0002) (not modeless))
+					(not (HaveMouse))
+				)
+				(gSQ5 setCursor: saveCursor)
+			)
+		else
+			(= saveCursor 0)
 		)
 		(if caller (caller cue: cueVal))
 		(= cueVal 0)
@@ -254,7 +269,7 @@
 		(return temp0)
 	)
 	
-	(method (display theText &tmp theTalkWidth newGSq5Win)
+	(method (display theText &tmp theTalkWidth newGSq5Win [temp2 500])
 		(if (> (+ x talkWidth) 318)
 			(= theTalkWidth (- 318 x))
 		else
@@ -274,10 +289,23 @@
 			posn: x y
 			font: font
 			width: theTalkWidth
-			addText: theText
 			modeless: 1
-			init:
 		)
+		(if (& global90 $0002)
+			(Message
+				msgGET
+				(proc999_6 theText 0)
+				(proc999_6 theText 1)
+				(proc999_6 theText 2)
+				(proc999_6 theText 3)
+				(proc999_6 theText 4)
+				@temp2
+			)
+			(Print addText: @temp2)
+		else
+			(Print addText: theText)
+		)
+		(Print init:)
 	)
 	
 	(method (startAudio param1 &tmp temp0 temp1 temp2 temp3 temp4)
@@ -286,7 +314,9 @@
 		(= temp2 (proc999_6 param1 2))
 		(= temp3 (proc999_6 param1 3))
 		(= temp4 (proc999_6 param1 4))
-		(= ticks (DoAudio 2 temp0 temp1 temp2 temp3 temp4))
+		(if (ResCheck 146 temp0 temp1 temp2 temp3 temp4)
+			(= ticks (DoAudio 2 temp0 temp1 temp2 temp3 temp4))
+		)
 	)
 )
 
@@ -297,6 +327,7 @@
 		z 0
 		heading 0
 		noun 0
+		case 0
 		modNum -1
 		nsTop 0
 		nsLeft 0
@@ -475,7 +506,7 @@
 		)
 	)
 	
-	(method (display theText &tmp temp0 theTalkWidth temp2 newGSq5Win)
+	(method (display theText &tmp temp0 theTalkWidth temp2 newGSq5Win [temp4 500])
 		((= newGSq5Win (gSq5Win new:)) color: color back: back)
 		(if
 		(and (not (HaveMouse)) (!= gCursorNumber 996))
@@ -513,22 +544,44 @@
 				modeless: 1
 				font: font
 				width: theTalkWidth
-				addText: theText
-				init:
 			)
+			(if (& global90 $0002)
+				(if
+					(Message
+						msgGET
+						(proc999_6 theText 0)
+						(proc999_6 theText 1)
+						(proc999_6 theText 2)
+						(proc999_6 theText 3)
+						(proc999_6 theText 4)
+						@temp4
+					)
+					(Print addText: @temp4)
+				)
+			else
+				(Print addText: theText)
+			)
+			(Print init:)
 		)
 	)
 	
-	(method (startAudio param1 &tmp temp0 temp1 temp2 temp3 temp4)
+	(method (startAudio param1 &tmp temp0 temp1 temp2 temp3 temp4 temp5)
 		(self show:)
-		(super startAudio: param1)
 		(if mouth
 			(= temp0 (proc999_6 param1 0))
 			(= temp1 (proc999_6 param1 1))
 			(= temp2 (proc999_6 param1 2))
 			(= temp3 (proc999_6 param1 3))
 			(= temp4 (proc999_6 param1 4))
-			(mouth setCycle: MouthSync temp0 temp1 temp2 temp3 temp4)
+			(if (ResCheck 147 temp0 temp1 temp2 temp3 temp4)
+				(mouth setCycle: MouthSync temp0 temp1 temp2 temp3 temp4)
+				(= temp5 (super startAudio: param1))
+			else
+				(= temp5 (super startAudio: param1))
+				(mouth setCycle: RandCycle temp5 0)
+			)
+		else
+			(= temp5 (super startAudio: param1))
 		)
 		(if (and eyes (not (eyes cycler?)))
 			(eyes setCycle: Blink blinkSpeed)

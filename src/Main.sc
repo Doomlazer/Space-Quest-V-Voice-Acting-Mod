@@ -133,7 +133,7 @@
 	global87
 	gLastTicks
 	gSQ5Narrator
-	global90 =  1
+	global90 =  3
 	gTestMessager
 	global92
 	gOldWH
@@ -219,7 +219,7 @@
 	global173
 	global174
 	global175
-	global176
+	global176 =  -1
 	global177
 	global178
 	global179
@@ -547,7 +547,7 @@
 		(super init:)
 		(= gEgo ego)
 		(User alterEgo: gEgo canControl: 0 canInput: 0)
-		(= global90 1)
+		(= global90 3)
 		(= global34 1)
 		(= global103 (DoSound sndGET_POLYPHONY))
 		(= global16 5000)

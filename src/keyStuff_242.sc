@@ -58,14 +58,14 @@
 	)
 )
 
-(procedure (localproc_006c param1)
+(procedure (localproc_01cd param1)
 	(= local12 1)
 	(= [local1 local0] param1)
 	(= local0 (mod (++ local0) 10))
 	(= local12 0)
 )
 
-(procedure (localproc_0083)
+(procedure (localproc_01e3)
 	(= local12 1)
 	(if (> local0 0)
 		(return [local1 (-- local0)])
@@ -75,7 +75,7 @@
 	(return (= local12 0))
 )
 
-(procedure (localproc_009d param1)
+(procedure (localproc_01fd param1)
 	(if (< param1 10)
 		(if (== (d3 loop?) 15)
 			(d3 startUpd: setLoop: (d2 loop?))
@@ -91,7 +91,7 @@
 	)
 )
 
-(procedure (localproc_0266 param1)
+(procedure (localproc_0284 param1)
 	(return
 		(cond 
 			(
@@ -117,12 +117,12 @@
 				(and
 					(proc999_4
 						(+ (pad x?) 15)
-						(+ (pad y?) 27 52)
-						(+ (pad x?) 15 48)
-						(+ (pad y?) 27 65)
+						(+ (pad y?) 79)
+						(+ (pad x?) 63)
+						(+ (pad y?) 92)
 						param1
 					)
-					(localproc_062a)
+					(localproc_060c)
 					(not (proc241_3))
 				)
 				(return 14)
@@ -130,9 +130,9 @@
 			(
 				(and
 					(proc999_4
-						(+ (pad x?) 15 53)
+						(+ (pad x?) 68)
 						(- (+ (pad y?) 27) 13)
-						(+ (pad x?) 15 101)
+						(+ (pad x?) 116)
 						(+ (pad y?) 27)
 						param1
 					)
@@ -144,10 +144,10 @@
 			(
 				(and
 					(proc999_4
-						(+ (pad x?) 15 53)
+						(+ (pad x?) 68)
 						(+ (pad y?) 27)
-						(+ (pad x?) 15 101)
-						(+ (pad y?) 27 13)
+						(+ (pad x?) 116)
+						(+ (pad y?) 40)
 						param1
 					)
 					(not (proc241_3))
@@ -158,10 +158,10 @@
 			(
 				(and
 					(proc999_4
-						(+ (pad x?) 15 53)
-						(+ (pad y?) 27 13)
-						(+ (pad x?) 15 101)
-						(+ (pad y?) 27 26)
+						(+ (pad x?) 68)
+						(+ (pad y?) 40)
+						(+ (pad x?) 116)
+						(+ (pad y?) 53)
 						param1
 					)
 					(not (proc241_3))
@@ -172,10 +172,10 @@
 			(
 				(and
 					(proc999_4
-						(+ (pad x?) 15 16)
-						(+ (pad y?) 27 39)
-						(+ (pad x?) 15 32)
-						(+ (pad y?) 27 52)
+						(+ (pad x?) 31)
+						(+ (pad y?) 66)
+						(+ (pad x?) 47)
+						(+ (pad y?) 79)
 						param1
 					)
 					(not (proc241_3))
@@ -184,10 +184,10 @@
 			)
 			(
 				(proc999_4
-					(+ (pad x?) 15 32)
-					(+ (pad y?) 27 39)
-					(+ (pad x?) 15 48)
-					(+ (pad y?) 27 52)
+					(+ (pad x?) 47)
+					(+ (pad y?) 66)
+					(+ (pad x?) 63)
+					(+ (pad y?) 79)
 					param1
 				)
 				(return 13)
@@ -197,7 +197,7 @@
 	)
 )
 
-(procedure (localproc_0509 param1)
+(procedure (localproc_04e7 param1)
 	(switch param1
 		(0 16)
 		(14 0)
@@ -211,7 +211,7 @@
 	)
 )
 
-(procedure (localproc_0556 param1)
+(procedure (localproc_0534 param1)
 	(switch param1
 		(0 39)
 		(14 52)
@@ -225,7 +225,7 @@
 	)
 )
 
-(procedure (localproc_05a3 param1 &tmp temp0 temp1)
+(procedure (localproc_0581 param1 &tmp temp0 temp1)
 	(d0 loop: 15)
 	(d1 loop: 15)
 	(d2 loop: 15)
@@ -242,7 +242,7 @@
 	)
 )
 
-(procedure (localproc_062a &tmp temp0 temp1 d0Loop d1Loop d2Loop d3Loop)
+(procedure (localproc_060c &tmp temp0 temp1 d0Loop d1Loop d2Loop d3Loop)
 	(= d0Loop (d0 loop?))
 	(= d1Loop (d1 loop?))
 	(= d2Loop (d2 loop?))
@@ -326,8 +326,8 @@
 	(method (show param1)
 		(self
 			posn:
-				(+ (localproc_0509 param1) (pad x?) 15)
-				(+ (localproc_0556 param1) (pad y?) 27)
+				(+ (localproc_04e7 param1) (pad x?) 15)
+				(+ (localproc_0534 param1) (pad y?) 27)
 			setLoop: param1
 			setCel: 1
 		)
@@ -347,8 +347,8 @@
 		(= temp0 (+ (proc241_2) 10))
 		(self
 			posn:
-				(+ (localproc_0509 temp0) (pad x?) 15)
-				(+ (localproc_0556 temp0) (pad y?) 27)
+				(+ (localproc_04e7 temp0) (pad x?) 15)
+				(+ (localproc_0534 temp0) (pad y?) 27)
 			setLoop: temp0
 			setCel: 1
 		)
@@ -367,7 +367,7 @@
 	
 	(method (init)
 		(self signal: 16400)
-		(self x: (+ (pad x?) 15 22) y: (- (+ (pad y?) 27) 9))
+		(self x: (+ (pad x?) 37) y: (- (+ (pad y?) 27) 9))
 		(super init: &rest)
 	)
 )
@@ -395,7 +395,7 @@
 		(tempKey init: hide:)
 		(directions init: setOnMeCheck: 26505)
 		(tempKey2 init: show:)
-		(localproc_05a3 theRegister)
+		(localproc_0581 theRegister)
 		(gOldMH addToFront: self)
 		(gOldKH addToFront: self)
 	)
@@ -403,7 +403,7 @@
 	(method (doit &tmp temp0)
 		(super doit: &rest)
 		(if (and (not script) local0 (not local12))
-			(= temp0 (localproc_0083))
+			(= temp0 (localproc_01e3))
 			(self setScript: keyFlash 0 temp0)
 		)
 	)
@@ -448,10 +448,10 @@
 						(
 							(and
 								(== pEventMessage KEY_RETURN)
-								(!= (= temp1 (localproc_0266 pEvent)) -1)
+								(!= (= temp1 (localproc_0284 pEvent)) -1)
 							)
 							(pEvent claimed: 1)
-							(localproc_006c temp1)
+							(localproc_01cd temp1)
 							(pEvent claimed?)
 							(return)
 						)
@@ -466,19 +466,19 @@
 						(
 						(and (<= KEY_0 pEventMessage) (<= pEventMessage KEY_9))
 							(pEvent claimed: 1)
-							(localproc_006c (- (pEvent message?) KEY_0))
+							(localproc_01cd (- (pEvent message?) KEY_0))
 							(pEvent claimed?)
 							(return)
 						)
 						((proc999_5 pEventMessage 27 67 99)
 							(pEvent claimed: 1)
-							(localproc_006c 11)
+							(localproc_01cd 11)
 							(pEvent claimed?)
 							(return)
 						)
 						((proc999_5 pEventMessage 69 101)
 							(pEvent claimed: 1)
-							(localproc_006c 14)
+							(localproc_01cd 14)
 							(pEvent claimed?)
 							(return)
 						)
@@ -488,11 +488,11 @@
 				(
 					(and
 						(& (pEvent type?) evMOUSEBUTTON)
-						(!= (= temp1 (localproc_0266 pEvent)) -1)
+						(!= (= temp1 (localproc_0284 pEvent)) -1)
 						(not (pEvent modifiers?))
 					)
 					(pEvent claimed: 1)
-					(localproc_006c temp1)
+					(localproc_01cd temp1)
 					(pEvent claimed?)
 					(return)
 				)
@@ -531,7 +531,7 @@
 				(= ticks 5)
 			)
 			(1
-				(localproc_009d register)
+				(localproc_01fd register)
 				(= ticks 5)
 			)
 			(2
@@ -542,7 +542,7 @@
 					(14
 						(if
 						(or (d0 loop?) (d1 loop?) (d2 loop?) (d3 loop?))
-							(proc241_1 (localproc_062a))
+							(proc241_1 (localproc_060c))
 						)
 						(if (== (tempKey2 loop?) 10)
 							(proc241_4 471)
@@ -597,7 +597,7 @@
 				(if (> (d1 loop?) 9) (d1 loop: 0))
 				(if (> (d2 loop?) 9) (d2 loop: 0))
 				(if (> (d3 loop?) 9) (d3 loop: 0))
-				(= cycles 6)
+				(= ticks 6)
 			)
 			(2
 				(pad dispose: delete:)
@@ -623,7 +623,7 @@
 				(d3 startUpd: loop: 0)
 				(proc241_3 0)
 				(= theRegister 0)
-				(localproc_05a3 0)
+				(localproc_0581 0)
 				(colon dispose:)
 				(= cycles 1)
 			)

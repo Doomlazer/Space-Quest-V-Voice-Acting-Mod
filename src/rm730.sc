@@ -758,6 +758,9 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+				(gTestMessager say: 1 24 1 1 self)
+			)
+			(1
 				(gSQ5 handsOff:)
 				(cliffyTalker
 					normal: 0
@@ -768,17 +771,17 @@
 				)
 				(= cycles 1)
 			)
-			(1
+			(2
 				(gSQ5 handsOn:)
 				(gSq5IconBar select: (gSq5IconBar at: 2))
 				(gSQ5 setCursor: 982)
 				(gTestMessager say: 1 24 1 0 self)
 			)
-			(2
+			(3
 				(cliffyTalker normal: 1 keepWindow: 0)
 				(= cycles 1)
 			)
-			(3
+			(4
 				(if (== (cliffyTalker whichSelect?) 1)
 					(= next sBeamMeUp)
 				else
@@ -787,7 +790,7 @@
 				)
 				(= cycles 1)
 			)
-			(4 (self dispose:))
+			(5 (self dispose:))
 		)
 	)
 )

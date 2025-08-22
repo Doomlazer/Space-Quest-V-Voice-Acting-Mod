@@ -88,7 +88,7 @@
 			(6
 				(PalVary pvUNINIT)
 				(PalVary pvINIT 534 4)
-				(= cycles 6)
+				(= ticks 6)
 			)
 			(7
 				(starBurst

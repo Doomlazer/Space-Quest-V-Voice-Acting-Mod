@@ -128,54 +128,54 @@ code_0228:
 			push    
 			lal      newDButton_2
 			eq?     
-			bnt      code_0252
+			bnt      code_0255
 			lst      temp1
 			pToa     maximum
 			lt?     
 			bnt      code_0228
 			+at      temp1
 			jmp      code_0228
-code_0252:
+code_0255:
 			lst      temp0
 			lal      newDButton
 			eq?     
-			bnt      code_0264
+			bnt      code_0267
 			lst      temp1
 			pToa     minimum
 			gt?     
 			bnt      code_0228
 			-at      temp1
 			jmp      code_0228
-code_0264:
+code_0267:
 			lst      temp0
 			lal      newDButton_3
 			eq?     
-			bnt      code_026f
-			jmp      code_0292
+			bnt      code_0272
+			jmp      code_0295
 			jmp      code_0228
-code_026f:
+code_0272:
 			lst      temp0
 			lal      newDButton_4
 			eq?     
-			bnt      code_027c
+			bnt      code_027f
 			pToa     normal
 			sat      temp1
 			jmp      code_0228
-code_027c:
+code_027f:
 			lst      temp0
 			ldi      0
 			eq?     
-			bt       code_028a
+			bt       code_028d
 			lst      temp0
 			lal      newDButton_5
 			eq?     
 			bnt      code_0228
-code_028a:
+code_028d:
 			lap      param1
 			sat      temp1
-			jmp      code_0292
+			jmp      code_0295
 			jmp      code_0228
-code_0292:
+code_0295:
 			pushi    #dispose
 			pushi    0
 			self     4

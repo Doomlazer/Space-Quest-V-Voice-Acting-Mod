@@ -104,11 +104,11 @@
 	(= local13 0)
 )
 
-(procedure (localproc_0544)
+(procedure (localproc_0230)
 	(if (proc0_1 84) ((ScriptID 202 2) init:) (proc204_1))
 )
 
-(procedure (localproc_055f &tmp temp0 temp1 temp2 temp3 [temp4 6])
+(procedure (localproc_024d &tmp temp0 temp1 temp2 temp3 [temp4 6])
 	(= temp1 0)
 	(= temp0 0)
 	(while (< temp0 14)
@@ -135,7 +135,7 @@
 	(return 15)
 )
 
-(procedure (localproc_05f7)
+(procedure (localproc_02b2)
 	(cond 
 		((proc0_1 84)
 			(if (!= (gSq5Music1 number?) 42)
@@ -157,14 +157,14 @@
 	)
 )
 
-(procedure (localproc_06b3)
+(procedure (localproc_036c)
 	(if (or (proc0_1 84) (>= (eureka puke?) 4))
 	else
 		(gSq5Music2 number: 206 loop: -1 play:)
 	)
 )
 
-(procedure (localproc_0fd7 &tmp temp0 temp1)
+(procedure (localproc_0398 &tmp temp0 temp1)
 	(= temp0 0)
 	(while (< temp0 (gOldCast size?))
 		(= temp1 (gOldCast at: temp0))
@@ -173,15 +173,15 @@
 	)
 )
 
-(procedure (localproc_1011)
+(procedure (localproc_03ce)
 	(return local73)
 )
 
-(procedure (localproc_1019)
+(procedure (localproc_03d1)
 	(return local74)
 )
 
-(procedure (localproc_1021 &tmp temp0 temp1)
+(procedure (localproc_03d4 &tmp temp0 temp1)
 	(= temp1 4)
 	(= temp0 1)
 	(while (< temp0 temp1)
@@ -195,10 +195,10 @@
 	(slowStar init:)
 )
 
-(procedure (localproc_1077)
+(procedure (localproc_0429)
 	(if (!= gEurekaCurLocation 0)
 		(if (proc0_1 32) (= local10 0) else (= local10 1))
-		(localproc_1021)
+		(localproc_03d4)
 	)
 )
 
@@ -283,7 +283,7 @@
 				(if (eureka destination?)
 					(= eurekaDestination (eureka destination?))
 				)
-				(= local14 (localproc_055f))
+				(= local14 (localproc_024d))
 				(eureka destination: local14)
 				(cond 
 					((== (eureka destination?) 0) (eureka destination: 0))
@@ -359,7 +359,7 @@
 					setPri: 12
 					hide:
 				)
-				(localproc_0544)
+				(localproc_0230)
 				(switch gGModNum
 					(107
 						(eureka
@@ -580,7 +580,7 @@
 								(eureka state: 3 destination: 0 curLocation: 5)
 								(= local10 1)
 								(= global127 3)
-								(localproc_1021)
+								(localproc_03d4)
 							)
 							(6
 								(= gEurekaCurLocation 14)
@@ -678,7 +678,7 @@
 						)
 					)
 				)
-				(localproc_1077)
+				(localproc_0429)
 				(flo init:)
 				(droole init:)
 				(bigPlanet init:)
@@ -696,12 +696,12 @@
 					((ScriptID 202 14) init:)
 					((ScriptID 202 15) init:)
 				)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(1
-				(localproc_05f7)
-				(localproc_06b3)
-				(= cycles 1)
+				(localproc_02b2)
+				(localproc_036c)
+				(= ticks 1)
 			)
 			(2 (self dispose:))
 		)
@@ -717,7 +717,7 @@
 			(1
 				(drooleArm show: setScript: sDrooleArm)
 				(droole setLoop: 0 setCycle: 0 stopUpd:)
-				(= cycles 2)
+				(= ticks 2)
 			)
 			(2 (self dispose:))
 		)
@@ -768,7 +768,7 @@
 							(not (proc0_1 56))
 						)
 					)
-					(= cycles 4)
+					(= ticks 4)
 				else
 					(proc201_7 self)
 				)
@@ -844,17 +844,17 @@
 									(eureka timer: 0 setScript: 0)
 									(= local12 0)
 									(= next (ScriptID 208 0))
-									(= cycles 1)
+									(= ticks 1)
 								)
 								(2
 									(= next (ScriptID 208 1))
 									(eureka timer: 0)
-									(= cycles 1)
+									(= ticks 1)
 								)
 								(3
 									(= next (ScriptID 208 1))
 									(eureka timer: 0)
-									(= cycles 1)
+									(= ticks 1)
 								)
 							)
 						else
@@ -881,12 +881,12 @@
 									)
 									(3
 										(= next (ScriptID 221 5))
-										(= cycles 1)
+										(= ticks 1)
 									)
 									(4
 										(eureka warnings: 1)
 										(global2 newRoom: 222)
-										(= cycles 1)
+										(= ticks 1)
 									)
 								)
 							)
@@ -1135,13 +1135,13 @@
 			)
 			(1
 				(Palette palSET_INTENSITY 64 127 0)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(2
 				(Palette palSET_FROM_RESOURCE 4101 2)
 				(Palette palSET_INTENSITY 64 127 0)
 				(droole setScript: sStepOnGas)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(3
 				(= register 0)
@@ -1152,11 +1152,11 @@
 				)
 				(= local8 1)
 				(= local10 0)
-				(localproc_0fd7)
+				(localproc_0398)
 			)
 			(4
 				(Palette palSET_INTENSITY 64 127 100)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(5
 				(Palette palSET_FROM_RESOURCE 412 2)
@@ -1174,7 +1174,7 @@
 						0
 						30
 				)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(6
 				(gSq5Music2 number: 206 setLoop: -1 play:)
@@ -1234,12 +1234,12 @@
 				else
 					(gSq5Music2 number: 128 loop: -1 play:)
 				)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(2
 				(Palette palSET_FROM_RESOURCE 4102 2)
 				(Palette palSET_INTENSITY 64 127 0)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(3
 				(= register 0)
@@ -1249,16 +1249,16 @@
 					(= register (+ register 10))
 				)
 				(= local9 1)
-				(localproc_0fd7)
+				(localproc_0398)
 			)
 			(4
 				(Palette palSET_INTENSITY 64 127 100)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(5
 				(Palette palSET_FROM_RESOURCE 412 2)
 				(= local9 0)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(6
 				(= local10 1)
@@ -1304,11 +1304,11 @@
 					(switch (eureka curLocation?)
 						(1
 							(if (proc0_1 35) (proc0_3 38) else (proc0_2 38))
-							(= cycles 1)
+							(= ticks 1)
 						)
 						(2
 							(if (proc0_1 36) (proc0_3 38) else (proc0_2 38))
-							(= cycles 1)
+							(= ticks 1)
 						)
 						(5
 							(if (and (not (proc0_1 93)) (proc0_1 30))
@@ -1316,7 +1316,7 @@
 							else
 								(= local2 0)
 							)
-							(= cycles 1)
+							(= ticks 1)
 						)
 						(6
 							(if (and (not (proc0_1 94)) (proc0_1 33))
@@ -1324,7 +1324,7 @@
 							else
 								(= local3 0)
 							)
-							(= cycles 1)
+							(= ticks 1)
 							((ScriptID 221 0) init:)
 						)
 						(12
@@ -1362,7 +1362,7 @@
 					warnings: 2
 					destination: 0
 				)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(4
 				(proc201_27 1)
@@ -1419,7 +1419,7 @@
 					(8 (proc0_10 180 10))
 				)
 				(if (not (proc0_1 61)) (bigPlanet addToPic:))
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(3
 				(if (not (proc0_1 61))
@@ -1463,7 +1463,7 @@
 				(= gEurekaCurLocation 16)
 				(eureka state: 1)
 				(= local7 0)
-				(= cycles 1)
+				(= ticks 1)
 			)
 			(3
 				(gSQ5 handsOn:)
@@ -1499,7 +1499,6 @@
 			ignoreActors: 1
 			scaleX: 20
 			scaleY: 20
-			moveSpeed: 0
 			setStep: 5 5
 		)
 		(super init: &rest)
@@ -1579,7 +1578,6 @@
 						scaleSignal: 1
 						setCel: 0
 						setLoop: 0
-						moveSpeed: 0
 						ignoreActors: 1
 					)
 				)
@@ -1697,7 +1695,7 @@
 		view 217
 		priority 4
 		signal $6010
-		moveSpeed 0
+		moveSpeed 1
 	)
 	
 	(method (init &tmp temp0 temp1 temp2 temp3)
@@ -2125,7 +2123,7 @@
 			(= gSq5Win gSq5Win_2)
 			(self textX: 50 textY: -100 talkWidth: 150)
 		)
-		(if (localproc_1011)
+		(if (localproc_03ce)
 			(self loop: 1 cel: 1)
 			(super init: 0 0 floMouth &rest)
 		else
@@ -2182,7 +2180,7 @@
 			(= gSq5Win gSq5Win_2)
 			(self textX: -120 textY: -100 talkWidth: 120)
 		)
-		(if (localproc_1019)
+		(if (localproc_03d1)
 			(self loop: 1 cel: 2 x: 268 y: 120)
 			(super init: 0 drooleEyes drooleMouth &rest)
 		else

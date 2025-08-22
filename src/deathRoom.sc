@@ -112,6 +112,13 @@
 					dsALIGN
 					1
 				)
+				(if (& global90 $0002)
+					(if (< global119 36)
+						(DoAudio 2 20 2 0 0 global119)
+					else
+						(DoAudio 2 20 1 0 0 (- global119 35))
+					)
+				)
 				(rogPart1 view: 2000 loop: 0 cel: 0 x: 24 y: 79 init:)
 				(rogPart2
 					view: 2000
@@ -133,7 +140,6 @@
 					setLoop: 2
 					cel: (rogPart2 lastCel:)
 					setStep: 2 10
-					moveSpeed: 0
 					setCycle: 0
 					setMotion: MoveTo 67 200 self
 				)
@@ -174,6 +180,13 @@
 					140
 					dsALIGN
 					1
+				)
+				(if (& global90 $0002)
+					(if (< global119 36)
+						(DoAudio 2 20 2 0 0 global119)
+					else
+						(DoAudio 2 20 1 0 0 (- global119 35))
+					)
 				)
 				(rogPart1 view: 2001 loop: 0 cel: 0 x: 24 y: 79 init:)
 				(rogPart2
@@ -232,6 +245,13 @@
 					140
 					dsALIGN
 					1
+				)
+				(if (& global90 $0002)
+					(if (< global119 36)
+						(DoAudio 2 20 2 0 0 global119)
+					else
+						(DoAudio 2 20 1 0 0 (- global119 35))
+					)
 				)
 				(rogPart1 view: 2002 loop: 0 cel: 0 x: 24 y: 79 init:)
 				(= seconds 2)
@@ -312,6 +332,13 @@
 					dsALIGN
 					1
 				)
+				(if (& global90 $0002)
+					(if (< global119 36)
+						(DoAudio 2 20 2 0 0 global119)
+					else
+						(DoAudio 2 20 1 0 0 (- global119 35))
+					)
+				)
 				(rogPart1 view: 2003 loop: 0 cel: 0 x: 24 y: 79 init:)
 				(rogPart2
 					view: 2003
@@ -373,6 +400,13 @@
 					dsALIGN
 					1
 				)
+				(if (& global90 $0002)
+					(if (< global119 36)
+						(DoAudio 2 20 2 0 0 global119)
+					else
+						(DoAudio 2 20 1 0 0 (- global119 35))
+					)
+				)
 				(rogPart1
 					view: 2004
 					loop: 0
@@ -421,6 +455,13 @@
 					140
 					dsALIGN
 					1
+				)
+				(if (& global90 $0002)
+					(if (< global119 36)
+						(DoAudio 2 20 2 0 0 global119)
+					else
+						(DoAudio 2 20 1 0 0 (- global119 35))
+					)
 				)
 				(rogPart1 view: 2005 loop: 0 cel: 0 x: 24 y: 79 init:)
 				(rogPart2
@@ -471,6 +512,13 @@
 					dsALIGN
 					1
 				)
+				(if (& global90 $0002)
+					(if (< global119 36)
+						(DoAudio 2 20 2 0 0 global119)
+					else
+						(DoAudio 2 20 1 0 0 (- global119 35))
+					)
+				)
 				(rogPart1 view: 2006 loop: 0 cel: 0 x: 20 y: 63 init:)
 				(= seconds 2)
 			)
@@ -509,6 +557,13 @@
 					140
 					dsALIGN
 					1
+				)
+				(if (& global90 $0002)
+					(if (< global119 36)
+						(DoAudio 2 20 2 0 0 global119)
+					else
+						(DoAudio 2 20 1 0 0 (- global119 35))
+					)
 				)
 				(rogPart1 view: 2001 loop: 0 cel: 0 x: 24 y: 79 init:)
 				(rogPart2
@@ -603,6 +658,13 @@
 					dsALIGN
 					1
 				)
+				(if (& global90 $0002)
+					(if (< global119 36)
+						(DoAudio 2 20 2 0 0 global119)
+					else
+						(DoAudio 2 20 1 0 0 (- global119 35))
+					)
+				)
 				(localproc_006e)
 				(self dispose:)
 			)
@@ -667,6 +729,7 @@
 		(switch theVerb
 			(4
 				(self cel: 1)
+				(if (& global90 $0002) (DoAudio 3))
 				(gSQ5 restart:)
 			)
 			(else 
@@ -687,6 +750,7 @@
 		(switch theVerb
 			(4
 				(self cel: 1)
+				(if (& global90 $0002) (DoAudio 3))
 				(gSQ5 restore:)
 			)
 			(else 
@@ -706,7 +770,11 @@
 	
 	(method (doVerb theVerb)
 		(switch theVerb
-			(4 (self cel: 1) (= global4 1))
+			(4
+				(self cel: 1)
+				(if (& global90 $0002) (DoAudio 3))
+				(= global4 1)
+			)
 			(else 
 				(super doVerb: theVerb &rest)
 			)

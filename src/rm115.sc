@@ -224,31 +224,19 @@
 			(0
 				(gSQ5 handsOff:)
 				(Ghead setCycle: Beg)
-				(= cycles 3)
+				(= ticks 3)
 			)
 			(1
 				(gTestMessager say: 8 1 0 0 self)
 			)
 			(2
 				(warning startUpd: hide:)
-				(= cycles 3)
+				(= ticks 3)
 			)
-			(3
-				(warning show:)
-				(= cycles 3)
-			)
-			(4
-				(warning hide:)
-				(= cycles 3)
-			)
-			(5
-				(warning show:)
-				(= cycles 3)
-			)
-			(6
-				(warning hide:)
-				(= cycles 3)
-			)
+			(3 (warning show:) (= ticks 3))
+			(4 (warning hide:) (= ticks 3))
+			(5 (warning show:) (= ticks 3))
+			(6 (warning hide:) (= ticks 3))
 			(7
 				(warning show: stopUpd:)
 				(Ghead setCycle: End)

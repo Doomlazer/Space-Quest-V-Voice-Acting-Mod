@@ -4,7 +4,7 @@
 (use BorderWindow)
 
 
-(procedure (localproc_0135 param1 param2 param3 param4 param5 param6 param7 param8 param9 param10 param11 param12 param13 &tmp temp0 temp1)
+(procedure (localproc_006c param1 param2 param3 param4 param5 param6 param7 param8 param9 param10 param11 param12 param13 &tmp temp0 temp1)
 	(= temp0 (GetPort))
 	(SetPort 0)
 	(Graph
@@ -147,7 +147,7 @@
 		(= xOffset (+ bevelWid sideBordWid))
 		(= yOffset (+ bevelWid topBordHgt))
 		(if (not temp6) (super open:))
-		(localproc_0135
+		(localproc_006c
 			theTop
 			theLeft
 			theBottom

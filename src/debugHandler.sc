@@ -19,7 +19,7 @@
 (local
 	[local0 27]
 )
-(procedure (localproc_0052)
+(procedure (localproc_0018)
 	(if (proc999_5 (global2 style?) 11 12 13 14)
 		(global2 drawPic: (global2 picture?) 100 style: 100)
 	)
@@ -116,7 +116,7 @@
 						)
 						(KEY_ALT_b (PolyEdit doit:))
 						(KEY_ALT_c
-							(localproc_0052)
+							(localproc_0018)
 							(Show 4)
 						)
 						(KEY_ALT_e
@@ -294,7 +294,7 @@
 							((ScriptID 952) doit: @global42 0)
 						)
 						(KEY_ALT_p
-							(localproc_0052)
+							(localproc_0018)
 							(Show 2)
 						)
 						(KEY_ALT_q

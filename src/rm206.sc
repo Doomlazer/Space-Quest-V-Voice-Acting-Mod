@@ -69,7 +69,7 @@
 			)
 			(7
 				(alienEyes dispose:)
-				(= cycles 2)
+				(= cycles 1)
 			)
 			(8
 				(gTestMessager say: 1 0 0 0 self)

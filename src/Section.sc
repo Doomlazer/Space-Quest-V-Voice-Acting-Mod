@@ -156,6 +156,7 @@
 		z 100
 		heading 0
 		noun 0
+		case 0
 		modNum 246
 		nsTop 0
 		nsLeft 0
