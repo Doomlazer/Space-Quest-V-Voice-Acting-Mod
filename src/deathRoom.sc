@@ -282,14 +282,15 @@
 				(= ticks 5)
 			)
 			(5
+				(++ local284)
+				(if (< 12 local284 21)
+					(rogPart2 loop: 2)
+				else
+					(rogPart2 loop: 1)
+				)
 				(rogPart2
 					cel: [local256 local284]
-					x:
-						[local200 (if (and (< 12 (++ local284)) (< local284 21))
-							(rogPart2 loop: 2)
-						else
-							(rogPart2 loop: 1)
-						)]
+					x: [local200 local284]
 					y: [local228 local284]
 				)
 				(if (< local284 27) (-- state))
